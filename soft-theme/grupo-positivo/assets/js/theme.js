@@ -5,6 +5,44 @@ var theme = {
   vars: {
     initApp: true,
     selectedChar: 0,
+    charData: [
+      {
+        name: "Manu",
+        age: 16,
+        status:
+          "Não pratica atividades físicas, quase não bebe água e está com sobrepeso.",
+        diet: [
+          "Procure variar suas opções de alimento.",
+          "Frutas e verduras podem ser consumidas à vontade. ",
+          "Os carboidratos são importantes, mas, por certo tempo, evite comer muitas porções.",
+          "Beba mais água e evite sucos  industrializados e refrigerantes.",
+        ],
+      },
+      {
+        name: "João",
+        age: 45,
+        status:
+          "É atleta e participa de maratonas quase todos os finais de semana. Como treina com frequência, precisa de muita energia.",
+        diet: [
+          "Procure manter uma dieta balanceada, com todos os tipos de nutrientes.",
+          "Priorize alimentos energéticos para o ajudarem em seus treinos.",
+          "Consuma também proteínas.",
+          "Frutas e verduras podem ser consumidas à vontade. ",
+        ],
+      },
+      {
+        name: "Ana",
+        age: 8,
+        status:
+          "Depois de alguns exames, descobriu que está ingerindo muito açúcar e com falta de proteínas.",
+        diet: [
+          "Mantenha uma dieta balanceada.",
+          "Aumente o consumo de proteínas.",
+          "Frutas e verduras podem ser consumidas à vontade.",
+          "Reduza o consumo de carboidratos e evite doces.",
+        ],
+      },
+    ],
   },
 
   audios: {
@@ -296,7 +334,6 @@ var theme = {
 
   opening: function () {
     theme.default();
-    theme.resetVars();
 
     if (theme.vars.initApp == true)
       $("#soft main #soft-pages #opening #top-buttons").css("display", "none");
@@ -309,6 +346,16 @@ var theme = {
       ease: "expo.out",
       onComplete: function () {},
     });
+
+    $("p").each(function () {
+      var text = $(this).html();
+      text = text.replace(
+        "[char-name]",
+        theme.vars.charData[theme.vars.selectedChar].name
+      );
+      $(this).html(text);
+    });
+
     gsap.to($("#soft main #soft-pages #opening .btn-opening"), {
       delay: 2.4,
       duration: 1,
@@ -328,6 +375,80 @@ var theme = {
   },
   description: function () {
     theme.default();
+
+    if (theme.vars.initApp == true)
+      $("#soft main #soft-pages #description #top-buttons").css(
+        "display",
+        "none"
+      );
+
+    $(".tables").each(function () {
+      var text = $(this).html();
+      text = text.replace(
+        "[char-name]",
+        theme.vars.charData[theme.vars.selectedChar].name
+      );
+      text = text.replace(
+        "[char-age]",
+        theme.vars.charData[theme.vars.selectedChar].age
+      );
+      text = text.replace(
+        "[char-status]",
+        theme.vars.charData[theme.vars.selectedChar].status
+      );
+
+      text = text.replace(
+        '<tr char-diet=""></tr>',
+        theme.vars.charData[theme.vars.selectedChar].diet
+          .map(function (content) {
+            return '<tr><td colspan="2">- ' + content + "</td></tr>";
+          })
+          .join("")
+      );
+
+      $(this).html(text);
+    });
+
+    gsap.to($("#soft main #soft-pages #description .description-text-bg"), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+
+    var char = parseInt(theme.vars.selectedChar) + 1;
+    var selector = "#soft main #soft-pages #description .character-" + char;
+    gsap.to($(selector), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+
+    gsap.to($("#soft main #soft-pages #description .btn-description"), {
+      delay: 2.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {
+        theme.endTransition();
+      },
+    });
+
+    $(document)
+      .off("click", "#soft main #soft-pages #description .btn-description")
+      .on(
+        "click",
+        "#soft main #soft-pages #description .btn-description",
+        function () {
+          theme.goToPage("gameplay");
+        }
+      );
   },
   gameplay: function () {
     theme.default();

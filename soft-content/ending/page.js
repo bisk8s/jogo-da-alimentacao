@@ -1,4 +1,4 @@
-var pageGameplay = {
+var pageEnding = {
   pageLoader: {
     loaderShowMethod: "theme.showLoader()",
     loaderFiles: {

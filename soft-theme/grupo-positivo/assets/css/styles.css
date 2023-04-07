@@ -561,6 +561,131 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
 body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
   display: none;
 }
+body#soft main #soft-pages .soft-current-page#description {
+  background-image: url(../img/../img/intro/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#description .tables {
+  width: 91.6666666667vh;
+  height: 47.6851851852vh;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 8.6111111111vh;
+}
+body#soft main #soft-pages .soft-current-page#description .tables .table-1 {
+  width: 58.3333333333vh;
+  height: 8.3333333333vh;
+}
+body#soft main #soft-pages .soft-current-page#description .tables .table-2 th {
+  height: 8.3333333333vh;
+}
+body#soft main #soft-pages .soft-current-page#description th {
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+}
+body#soft main #soft-pages .soft-current-page#description td {
+  color: #A77655;
+}
+body#soft main #soft-pages .soft-current-page#description .character {
+  position: absolute;
+  left: 18.5185185185vh;
+  bottom: 25vh;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#description .character::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#description .character.character-1 {
+  background-image: url(../img/../img/charSelection/Manu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20.462962963vh;
+  height: 50.2916666667vh;
+}
+body#soft main #soft-pages .soft-current-page#description .character.character-2 {
+  background-image: url(../img/../img/charSelection/Joao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 17.8657407407vh;
+  height: 54.9351851852vh;
+}
+body#soft main #soft-pages .soft-current-page#description .character.character-3 {
+  background-image: url(../img/../img/charSelection/Ana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 17.8657407407vh;
+  height: 31.6388888889vh;
+}
+body#soft main #soft-pages .soft-current-page#description .description-text-bg {
+  background-image: url(../img/../img/description/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 108.7962962963vh;
+  height: 58.9814814815vh;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#description .description-text-bg p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 83.3333333333vh;
+  height: 7.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#description .btn-description {
+  width: 22.7777777778vh;
+  height: 7.7777777778vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15.7407407407vh;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#description .btn-description::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#description .btn-description .bg {
+  width: 22.7777777778vh;
+  height: 7.7777777778vh;
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#description .btn-description p {
+  font-size: 3.2407407407vh;
+  letter-spacing: 0.1851851852vh;
+  margin-top: -5%;
+}
+body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons .btn-home {
+  display: none;
+}
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;

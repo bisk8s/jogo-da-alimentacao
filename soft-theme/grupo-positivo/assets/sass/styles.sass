@@ -417,6 +417,108 @@ body#soft
               .btn-home
                 display: none
 
+        // description
+        &#description
+          @include background('../img/intro/bg.png')
+          background-size: cover
+
+          .tables
+            width: px(990)
+            height: px(515)
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: px(93)
+            // right: 0
+            .table-1
+              width: px(630)
+              height: px(90)
+            .table-2
+              th
+                height: px(90)
+
+          th
+            text-transform: uppercase
+            text-align: left
+            white-space: nowrap
+          td
+            color: #A77655
+
+          .character
+            position: absolute
+            left: px(200)
+            bottom: px(270)
+            box-sizing: border-box
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            &::before
+              content: none
+
+            &.character-1
+              @include background('../img/charSelection/Manu.png')
+              width: px(260 * 0.85)
+              height: px(639 * 0.85)
+            &.character-2
+              @include background('../img/charSelection/Joao.png')
+              width: px(227 * 0.85)
+              height: px(698 * 0.85)
+            &.character-3
+              @include background('../img/charSelection/Ana.png')
+              width: px(227 * 0.85)
+              height: px(402 * 0.85)
+
+          .description-text-bg
+            @include background('../img/description/bg.png')
+            width: px(1175)
+            height: px(637)
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            opacity: 0
+            transform: scale(0)
+            p
+              position: absolute
+              margin: auto
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              width: px(900)
+              height: px(80)
+
+          .btn-description
+            width: px(246)
+            height: px(84)
+            box-sizing: border-box
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: px(170)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            &::before
+              content: none
+            .bg
+              width: px(246)
+              height: px(84)
+              @include background('../img/description/botao.png')
+            p
+              font-size: px(35)
+              letter-spacing: px(2)
+              margin-top: -5%
+
+          #top-buttons
+            .buttons
+              .btn-home
+                display: none
+
   .overlay
     background-color: rgba(255, 255, 255, 0.5)
     position: absolute

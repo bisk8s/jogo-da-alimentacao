@@ -63,9 +63,15 @@ var softContent = [
         pageClass: "",
         pageAttribute: "",
         pageFilePath: "description/page.js",
-        pageVarBase: "description",
+        pageVarBase: "pageDescription",
         pageActive: true,
-        pageContent: {},
+        pageContent: {
+          nameLabel: "NOME:",
+          ageLabel: "IDADE:",
+          statusLabel: "SITUAÇÃO ATUAL:",
+          missionLabel: "DIETA DE [char-name]:",
+          bntDescription: "Jogar",
+        },
       },
 
       {

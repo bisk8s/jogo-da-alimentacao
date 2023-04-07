@@ -1,4 +1,4 @@
-var pageGameplay = {
+var pageFats = {
   pageLoader: {
     loaderShowMethod: "theme.showLoader()",
     loaderFiles: {
