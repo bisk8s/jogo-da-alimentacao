@@ -318,6 +318,7 @@ body#soft main #soft-pages .soft-current-page#intro .logo {
   left: 0;
   right: 0;
   bottom: 0;
+  transform: scale(0);
   width: 111.2037037037vh;
   height: 34.3518518519vh;
   margin: auto;
@@ -471,39 +472,94 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-bg.charac
   height: 75.5555555556vh;
   left: 122.4074074074vh;
 }
-body#soft main #soft-pages .soft-current-page .character-name {
+body#soft main #soft-pages .soft-current-page#charSelection .character-name {
   position: absolute;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
 }
-body#soft main #soft-pages .soft-current-page .character-name p {
+body#soft main #soft-pages .soft-current-page#charSelection .character-name p {
   font-size: 2.3148148148vh;
   color: #98B8A8;
   letter-spacing: 0.1851851852vh;
 }
-body#soft main #soft-pages .soft-current-page .character-name.character-name-1 {
+body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-1 {
   left: 29.6296296296vh;
   top: 16.2037037037vh;
 }
-body#soft main #soft-pages .soft-current-page .character-name.character-name-2 {
+body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-2 {
   left: 86.2962962963vh;
   top: 11.5740740741vh;
 }
-body#soft main #soft-pages .soft-current-page .character-name.character-name-3 {
+body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-3 {
   left: 141.0185185185vh;
   top: 37.7777777778vh;
 }
-body#soft main #soft-pages .soft-current-page .character-name #top-buttons .buttons .btn-home {
+body#soft main #soft-pages .soft-current-page#charSelection #top-buttons .buttons .btn-home {
   display: none;
 }
-body#soft main #soft-pages .soft-current-page#gameplay {
-  background-image: url(../img/../img/gameplay/bg.jpg);
+body#soft main #soft-pages .soft-current-page#opening {
+  background-image: url(../img/../img/intro/bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#opening .opening-text-bg {
+  background-image: url(../img/../img/opening/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 106.0185185185vh;
+  height: 42.1296296296vh;
+  top: 28.7962962963vh;
+  left: 38.4259259259vh;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#opening .opening-text-bg p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 83.3333333333vh;
+  height: 7.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#opening .btn-opening {
+  width: 22.7777777778vh;
+  height: 7.7777777778vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25.7407407407vh;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#opening .btn-opening::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#opening .btn-opening .bg {
+  width: 22.7777777778vh;
+  height: 7.7777777778vh;
+  background-image: url(../img/../img/opening/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
+  font-size: 3.2407407407vh;
+  letter-spacing: 0.1851851852vh;
+  margin-top: -5%;
+}
+body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
+  display: none;
 }
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);

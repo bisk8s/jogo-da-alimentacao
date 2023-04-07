@@ -1,4 +1,4 @@
-var pageGameplay = {
+var pageOpening = {
   pageLoader: {
     loaderShowMethod: "theme.showLoader()",
     loaderFiles: {
@@ -6,7 +6,10 @@ var pageGameplay = {
     },
   },
 
-  pageHtml: "<p>in progress</p>",
+  pageHtml:
+    ' <div class="opening-text-bg"><p soft-page-content="openingText"></p></div>\
+      <div class="soft-btn btn-opening btn"><div class="bg"></div><p soft-page-content="bntOpening"></p></div>\
+    ',
 
   pageTemplate: "no-template",
 
@@ -18,6 +21,6 @@ var pageGameplay = {
     },
   ],
 
-  pageShowMethod: "theme.gameplay()",
+  pageShowMethod: "theme.opening()",
   pageHideMethod: "",
 };

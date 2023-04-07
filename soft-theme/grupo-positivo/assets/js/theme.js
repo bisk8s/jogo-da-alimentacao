@@ -197,12 +197,13 @@ var theme = {
   // Método da tela Início
   intro: function () {
     theme.default();
+    theme.resetVars();
 
     if (theme.vars.initApp == true)
       $("#soft main #soft-pages #intro #top-buttons").css("display", "none");
 
     gsap.to($("#soft main #soft-pages #intro .logo"), {
-      delay: 1,
+      delay: 1.4,
       duration: 1,
       autoAlpha: 1,
       scale: 1,
@@ -210,7 +211,7 @@ var theme = {
       onComplete: function () {},
     });
     gsap.to($("#soft main #soft-pages #intro .btn-intro"), {
-      delay: 1.4,
+      delay: 2.4,
       duration: 1,
       autoAlpha: 1,
       scale: 1,
@@ -288,15 +289,72 @@ var theme = {
         "#soft main #soft-pages #charSelection .btn-select",
         function () {
           theme.vars.selectedChar = $(this).attr("data-char");
-          alert("selecionou o " + theme.vars.selectedChar);
-          theme.goToPage("gameplay");
+          theme.goToPage("opening");
         }
       );
   },
 
-  // Método da tela Gameplay
-  gameplay: function () {
+  opening: function () {
+    theme.default();
     theme.resetVars();
+
+    if (theme.vars.initApp == true)
+      $("#soft main #soft-pages #opening #top-buttons").css("display", "none");
+
+    gsap.to($("#soft main #soft-pages #opening .opening-text-bg"), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+    gsap.to($("#soft main #soft-pages #opening .btn-opening"), {
+      delay: 2.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {
+        theme.endTransition();
+      },
+    });
+
+    $(document)
+      .off("click", "#soft main #soft-pages #opening .btn-opening")
+      .on("click", "#soft main #soft-pages #opening .btn-opening", function () {
+        theme.goToPage("description");
+      });
+  },
+  description: function () {
+    theme.default();
+  },
+  gameplay: function () {
+    theme.default();
+  },
+  choices: function () {
+    theme.default();
+  },
+  fats: function () {
+    theme.default();
+  },
+  proteins: function () {
+    theme.default();
+  },
+  vitamins: function () {
+    theme.default();
+  },
+  carbs: function () {
+    theme.default();
+  },
+  tips: function () {
+    theme.default();
+  },
+  nextChar: function () {
+    theme.default();
+  },
+  ending: function () {
+    theme.default();
   },
 
   resetVars: function () {},

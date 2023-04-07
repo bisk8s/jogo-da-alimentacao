@@ -220,6 +220,7 @@ body#soft
             left: 0
             right: 0
             bottom: 0
+            transform: scale(0)
             width: px(1201)
             height: px(371)
             margin: auto
@@ -248,12 +249,11 @@ body#soft
               line-height: px(122)
 
           #top-buttons
-
             .buttons
-
               .btn-home
                 display: none
 
+        // charSelection
         &#charSelection
           @include background('../img/intro/bg.png')
           background-size: cover
@@ -337,26 +337,26 @@ body#soft
               height: px(816)
               left: px(1322)
 
-        .character-name
-          position: absolute
-          box-sizing: border-box
-          opacity: 0
-          transform: scale(0)
-          z-index: 2
-          p
-            font-size: px(25)
-            color: #98B8A8
-            letter-spacing: px(2)
+          .character-name
+            position: absolute
+            box-sizing: border-box
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            p
+              font-size: px(25)
+              color: #98B8A8
+              letter-spacing: px(2)
 
-          &.character-name-1
-            left: px(320)
-            top: px(175)
-          &.character-name-2
-            left: px(932)
-            top: px(125)
-          &.character-name-3
-            left: px(1523)
-            top: px(408)
+            &.character-name-1
+              left: px(320)
+              top: px(175)
+            &.character-name-2
+              left: px(932)
+              top: px(125)
+            &.character-name-3
+              left: px(1523)
+              top: px(408)
 
           #top-buttons
 
@@ -365,10 +365,57 @@ body#soft
               .btn-home
                 display: none
 
-        // Gameplay
-        &#gameplay
-          @include background('../img/gameplay/bg.jpg')
+        // opening
+        &#opening
+          @include background('../img/intro/bg.png')
           background-size: cover
+
+          .opening-text-bg
+            @include background('../img/opening/bg.png')
+            width: px(1145)
+            height: px(455)
+            top: px(311)
+            left: px(415)
+            position: absolute
+            opacity: 0
+            transform: scale(0)
+            p
+              position: absolute
+              margin: auto
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              width: px(900)
+              height: px(80)
+
+          .btn-opening
+            width: px(246)
+            height: px(84)
+            box-sizing: border-box
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: px(278)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            &::before
+              content: none
+            .bg
+              width: px(246)
+              height: px(84)
+              @include background('../img/opening/botao.png')
+            p
+              font-size: px(35)
+              letter-spacing: px(2)
+              margin-top: -5%
+
+          #top-buttons
+            .buttons
+              .btn-home
+                display: none
 
   .overlay
     background-color: rgba(255, 255, 255, 0.5)
