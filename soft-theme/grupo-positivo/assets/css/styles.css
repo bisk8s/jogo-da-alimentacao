@@ -1,0 +1,1061 @@
+@keyframes pulse-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse-right {
+  0% {
+    margin-right: 0;
+  }
+  50% {
+    margin-right: 10px;
+  }
+  100% {
+    margin-right: 0;
+  }
+}
+@keyframes pulse-filter-neg {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes pulse-filter-pos {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(3px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Heavitas";
+  src: url("fonts/Heavitas.ttf") format("truetype"), url("fonts/Heavitas.svg#Heavitas") format("svg"), url("fonts/Heavitas.eot"), url("fonts/Heavitas.woff") format("woff"), url("fonts/Heavitas.otf") format("opentype");
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Poppins-Regular";
+  src: url("fonts/Poppins-Regular.ttf") format("truetype"), url("fonts/Poppins-Regular.svg#Poppins-Regular") format("svg"), url("fonts/Poppins-Regular.eot"), url("fonts/Poppins-Regular.woff") format("woff"), url("fonts/Poppins-Regular.otf") format("opentype");
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Poppins-Bold";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype"), url("fonts/Poppins-Bold.svg#Poppins-Bold") format("svg"), url("fonts/Poppins-Bold.eot"), url("fonts/Poppins-Bold.woff") format("woff"), url("fonts/Poppins-Bold.otf") format("opentype");
+}
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "TriplexExtraboldOldstyle";
+  src: url("fonts/TriplexExtraboldOldstyle.ttf") format("truetype"), url("fonts/TriplexExtraboldOldstyle.svg#TriplexExtraboldOldstyle") format("svg"), url("fonts/TriplexExtraboldOldstyle.eot"), url("fonts/TriplexExtraboldOldstyle.woff") format("woff"), url("fonts/TriplexExtraboldOldstyle.otf") format("opentype");
+}
+.pulse-scale {
+  animation-name: pulse-scale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-right {
+  animation-name: pulse-right;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-filter-neg {
+  animation-name: pulse-filter-neg;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pulse-filter-pos {
+  animation-name: pulse-filter-pos;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.events-none, .events-none * {
+  pointer-events: none !important;
+}
+
+body#soft {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body#soft * {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 55px;
+  color: #392E1D;
+}
+body#soft p b {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+}
+body#soft .scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body#soft .scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+body#soft .btn {
+  cursor: pointer;
+}
+body#soft .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  background: black;
+  border-radius: 100% 100% 90px 90px;
+  box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body#soft .btn .bg {
+  background-size: 100% 100% !important;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body#soft .btn p {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  line-height: 125px;
+  position: absolute;
+  width: 100%;
+}
+body#soft .btn.inactive {
+  pointer-events: none !important;
+}
+body#soft .btn:hover {
+  transform: scale(1.1) !important;
+  filter: brightness(1.2);
+}
+body#soft .btn:active {
+  transform: scale(1.05) !important;
+  filter: brightness(1.1);
+}
+body#soft .ease, body#soft .ease * {
+  transition: all ease-in-out 0.2s;
+}
+body#soft main {
+  background-color: #fff;
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+body#soft main #soft-loader {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10%;
+  height: 20%;
+  max-width: 80px;
+  max-height: 80px;
+}
+body#soft main #soft-loader div {
+  background-image: url(../img/loader.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+body#soft main #soft-loader div i {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 100px;
+  display: none;
+}
+body#soft main #soft-pages {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+body#soft main #soft-pages .soft-page {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(2);
+}
+body#soft main #soft-pages .soft-current-page {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  display: block;
+}
+body#soft main #soft-pages .soft-current-page .logo {
+  position: absolute;
+  width: 450px;
+  height: 240px;
+  margin: auto;
+  left: 5px;
+  right: 0;
+}
+body#soft main #soft-pages .soft-current-page h1 {
+  background-image: url(../img/../img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  text-indent: -9999px;
+  width: 100%;
+  height: 100%;
+}
+body#soft main #soft-pages .soft-current-page#splash-screen {
+  background-image: none;
+  background-color: #fff;
+}
+body#soft main #soft-pages .soft-current-page#splash-screen .logo-aprende-brasil {
+  background-image: url(../img/../img/splashscreen/logo-aprende-brasil.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  max-height: 130px;
+  width: 40%;
+  height: 12%;
+  margin: auto;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#intro {
+  background-image: url(../img/../img/intro/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#intro .logo {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 111.2037037037vh;
+  height: 34.3518518519vh;
+  margin: auto;
+  background-image: url(../img/../img/intro/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#intro .btn-intro {
+  position: absolute;
+  bottom: 18.5185185185vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  width: 30.1851851852vh;
+  height: 11.2962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#intro .btn-intro::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#intro .btn-intro .bg {
+  background-image: url(../img/../img/intro/btn.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#intro .btn-intro p {
+  font-size: 4.6296296296vh;
+  line-height: 11.2962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#intro #top-buttons .buttons .btn-home {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#charSelection {
+  background-image: url(../img/../img/intro/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select {
+  position: absolute;
+  bottom: 7.4074074074vh;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  width: 21.8518518519vh;
+  height: 7.962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-1 {
+  left: 25vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-2 {
+  left: 80.2777777778vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-3 {
+  left: 132.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select .bg {
+  background-image: url(../img/../img/charSelection/Botao2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select p {
+  font-size: 2.7777777778vh;
+  line-height: 7.962962963vh;
+  letter-spacing: 0.3703703704vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character {
+  position: absolute;
+  bottom: 18.5185185185vh;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character.character-1 {
+  background-image: url(../img/../img/charSelection/Manu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24.0740740741vh;
+  height: 59.1666666667vh;
+  left: 22.1296296296vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character.character-2 {
+  background-image: url(../img/../img/charSelection/Joao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 21.0185185185vh;
+  height: 64.6296296296vh;
+  left: 78.7037037037vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character.character-3 {
+  background-image: url(../img/../img/charSelection/Ana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 21.0185185185vh;
+  height: 37.2222222222vh;
+  left: 132.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character-bg {
+  position: absolute;
+  bottom: 12.5vh;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character-bg::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character-bg.character-bg-1 {
+  background-image: url(../img/../img/charSelection/Manubg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 42.037037037vh;
+  height: 74.1666666667vh;
+  left: 12.962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character-bg.character-bg-2 {
+  background-image: url(../img/../img/charSelection/Joaobg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 46.8518518519vh;
+  height: 80.2777777778vh;
+  left: 67.3148148148vh;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .character-bg.character-bg-3 {
+  background-image: url(../img/../img/charSelection/Anabg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 42.1296296296vh;
+  height: 75.5555555556vh;
+  left: 122.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page .character-name {
+  position: absolute;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page .character-name p {
+  font-size: 2.3148148148vh;
+  color: #98B8A8;
+  letter-spacing: 0.1851851852vh;
+}
+body#soft main #soft-pages .soft-current-page .character-name.character-name-1 {
+  left: 29.6296296296vh;
+  top: 16.2037037037vh;
+}
+body#soft main #soft-pages .soft-current-page .character-name.character-name-2 {
+  left: 86.2962962963vh;
+  top: 11.5740740741vh;
+}
+body#soft main #soft-pages .soft-current-page .character-name.character-name-3 {
+  left: 141.0185185185vh;
+  top: 37.7777777778vh;
+}
+body#soft main #soft-pages .soft-current-page .character-name #top-buttons .buttons .btn-home {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay {
+  background-image: url(../img/../img/gameplay/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft .overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.5);
+}
+body#soft .overlay .wrap-scaled .content-box {
+  background-image: url(../img/../img/content-box-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+  width: 78%;
+  max-width: 950px;
+  margin: auto;
+  padding: 90px;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+body#soft .overlay .wrap-scaled .content-box h2 {
+  text-transform: uppercase;
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 60px;
+  display: inline-block;
+  margin-bottom: 45px;
+  color: #FDDE01;
+  width: 100%;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 20px;
+}
+body#soft .overlay .wrap-scaled .content-box > div * {
+  font-size: 35px;
+  line-height: 55px;
+  color: #fff;
+}
+body#soft .overlay .wrap-scaled .content-box > div * h3 {
+  font-size: 45px;
+}
+body#soft .overlay .wrap-scaled .content-box > div * span {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: uppercase;
+}
+body#soft .overlay .wrap-scaled .content-box > div * strong {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  font-size: 40px;
+  display: inline-block;
+  padding: 10px 0;
+  text-transform: initial;
+  color: #FDDE01;
+}
+body#soft .overlay .wrap-scaled .content-box img {
+  margin: 20px auto;
+  display: block;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons {
+  text-align: center;
+  margin-top: 45px;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next {
+  height: 120px;
+  width: 270px;
+  margin: 0 15px;
+  display: inline-block;
+  position: relative;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev .bg, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next .bg {
+  background-image: url(../img/../img/button-bg-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev p, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next p {
+  color: #004AC6;
+  line-height: 122px;
+}
+
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block {
+  top: initial !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  pointer-events: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block .laura {
+  background-image: url(../img/../img/gameplay/laura-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block .ice-block {
+  position: absolute;
+  bottom: -100%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left {
+  transform-origin: left bottom;
+  left: 0 !important;
+  right: initial;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left .laura {
+  width: 450px;
+  height: 600px;
+  left: -100%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left .ice-block {
+  background-image: url(../img/../img/gameplay/left-ice-block.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  left: -100%;
+  width: 1000px;
+  height: 330px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right {
+  transform-origin: right bottom;
+  left: initial !important;
+  right: 0 !important;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right .laura {
+  width: 450px;
+  height: 600px;
+  right: -100%;
+  transform: scale(-1, 1);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right .ice-block {
+  background-image: url(../img/../img/gameplay/right-ice-block.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  right: -100%;
+  width: 800px;
+  height: 470px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.question {
+  transform-origin: left bottom;
+  left: 0 !important;
+  right: initial;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.question .laura {
+  background-image: url(../img/../img/gameplay/laura-3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  width: 730px;
+  height: 700px;
+  left: -100%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-0 .wrap-scaled .content-box {
+  max-width: 750px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-0 .wrap-scaled .content-box .btn-prev {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box {
+  max-width: 750px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box h2 {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box p strong {
+  padding-top: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box {
+  max-width: 860px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box h2 {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box p strong {
+  padding: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box img.coin {
+  display: inline-block;
+  margin: 0 0 -15px 10px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box {
+  max-width: 750px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box p strong {
+  padding: 10px 0 0;
+  font-size: 50px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box .btn-prev p {
+  line-height: 40px;
+  padding-top: 22px;
+  width: 70%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box {
+  max-width: 700px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .stars {
+  background-image: none !important;
+  top: 0 !important;
+  position: relative !important;
+  height: 120px !important;
+  transform: scale(1.5);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box p strong {
+  padding: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .btn-prev p {
+  line-height: 40px;
+  padding-top: 22px;
+  width: 70%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .btn-next {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box {
+  max-width: 800px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo {
+  display: inline-block;
+  width: 250px;
+  transform: rotate(-10deg);
+  margin: 0 15px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo::before {
+  height: 75%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo img {
+  width: 100%;
+  display: block;
+  outline: 10px solid #fff;
+  outline-offset: -5px;
+  position: relative;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo::after {
+  background-image: url(../img/../img/gameplay/photo-tape.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  top: -17px;
+  left: 70px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo:hover {
+  z-index: 5;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: initial;
+  font-size: 38px;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  text-indent: -9999px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span.correct {
+  background-color: #7FFF00;
+  color: #004AC5;
+  text-indent: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span.incorrect {
+  background-color: #FF2E1F;
+  text-indent: 0;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn {
+  width: 170px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn::before {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn .bg {
+  background-image: url(../img/../img/gameplay/question-btn.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn p {
+  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
+  text-transform: initial;
+  color: #004AC6;
+  line-height: 84px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn:active .bg {
+  background-image: url(../img/../img/gameplay/question-btn-active.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn:active p {
+  line-height: 88px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct .bg {
+  background-image: url(../img/../img/gameplay/question-btn-correct.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct-active .bg {
+  background-image: url(../img/../img/gameplay/quest-btn-correct-active.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct-active p {
+  line-height: 88px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.incorrect-active .bg {
+  background-image: url(../img/../img/gameplay/quest-btn-incorrect-active.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.incorrect-active p {
+  line-height: 88px;
+  color: #fff;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .btn-next {
+  margin-top: 40px;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .btn-next.inactive {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-9 .wrap-scaled .content-box > div p span:first-letter, body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-10 .wrap-scaled .content-box > div p span:first-letter {
+  text-transform: uppercase;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-9 .wrap-scaled .content-box .buttons .alternative-btn p:first-letter, body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-10 .wrap-scaled .content-box .buttons .alternative-btn p:first-letter {
+  text-transform: uppercase;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom .wrap-scaled .content-box {
+  background-image: none;
+  max-width: 100%;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom .wrap-scaled .content-box img {
+  display: block;
+  outline: 30px solid #fff;
+  outline-offset: -5px;
+  margin-bottom: 80px;
+  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block {
+  top: initial !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  pointer-events: none;
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block .laura {
+  background-image: url(../img/../img/gameplay/laura-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block.right {
+  transform-origin: right bottom;
+  left: initial !important;
+  right: 0 !important;
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block.right .laura {
+  width: 450px;
+  height: 600px;
+  right: -100%;
+  transform: scale(-2.5, 2.5) translate3d(-12%, 35%, 0);
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay.overlay-0 .wrap-scaled .content-box {
+  max-width: 830px;
+}
+body#soft main #soft-pages .soft-current-page#text-draw .overlay.overlay-0 .wrap-scaled .content-box .btn-prev {
+  display: none;
+}
+body#soft .overlay#exit-home .wrap-scaled .content-box {
+  max-width: 720px;
+}
+body#soft .overlay#credits .wrap-scaled .content-box .btn-next {
+  display: none;
+}
+body#soft #top-buttons {
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+body#soft #top-buttons .buttons {
+  position: absolute;
+  text-align: center;
+  pointer-events: all;
+  right: 35px;
+  top: 25px;
+  transform-origin: top right;
+}
+body#soft #top-buttons .buttons > div {
+  display: inline-block;
+  width: 50px;
+  height: 45px;
+  margin: 0 2px;
+  position: relative;
+}
+body#soft #top-buttons .buttons > div::before {
+  width: 80%;
+  height: 65%;
+  border-radius: 70% 70% 30px 30px;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5);
+  top: 7px;
+}
+body#soft #top-buttons .buttons .btn-home .bg {
+  background-image: url(../img/../img/top-buttons/icon-home.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-credits .bg {
+  background-image: url(../img/../img/top-buttons/icon-credits.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-on .bg {
+  background-image: url(../img/../img/top-buttons/icon-sound-on.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-off .bg {
+  background-image: url(../img/../img/top-buttons/icon-sound-off.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-fullscreen .bg {
+  background-image: url(../img/../img/top-buttons/icon-fullscreen-on.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons.no-home {
+  width: 118px;
+}
+body#soft #top-buttons .buttons.no-home .btn-home {
+  transform: scale(0);
+  display: none;
+}
+body#soft #top-buttons .buttons.no-home .btn-sound {
+  margin-left: -2px;
+}
+body#soft #device-rotate {
+  background-image: url(../img/../img/device-rotate.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+body#soft.fullscreen .btn-fullscreen .bg {
+  background-image: url("../img/top-buttons/icon-fullscreen-off.png") !important;
+}
+body#soft.iOS .btn-fullscreen {
+  display: none !important;
+}
+body#soft #snow {
+  background-image: url(../img/../img/snow.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat;
+  background-size: 30%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none !important;
+  z-index: 9999;
+  opacity: 0.1;
+}
+
+@media print {
+  @page {
+    size: portrait;
+  }
+  #top-buttons {
+    display: none;
+  }
+
+  .laura-score {
+    display: none;
+  }
+
+  .wrap-scaled {
+    transform: scale(1) !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .wrap-scaled .text-box {
+    transform: scale(0.5) !important;
+    left: 360px !important;
+    height: 600px !important;
+    width: 1200px !important;
+    top: -32% !important;
+  }
+  .wrap-scaled .text-box img {
+    width: 100% !important;
+  }
+  .wrap-scaled .draw-box {
+    transform: scale(0.6) !important;
+    left: 398px !important;
+    top: 52% !important;
+    height: 800px !important;
+  }
+  .wrap-scaled .draw-box img {
+    width: 100% !important;
+  }
+  .wrap-scaled .draw-box #canvas {
+    transform: scale(1.03) !important;
+    top: 60px !important;
+  }
+  .wrap-scaled .draw-box .btn {
+    display: none !important;
+  }
+}
