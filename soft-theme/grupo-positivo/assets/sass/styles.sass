@@ -210,7 +210,7 @@ body#soft
 
         // Início
         &#intro
-          @include background('../img/intro/bg.png')
+          @include background('../img/bg/bg1.png')
           background-size: cover
 
           .logo
@@ -224,7 +224,7 @@ body#soft
             width: px(1201)
             height: px(371)
             margin: auto
-            @include background('../img/intro/logo.png')
+            @include background('../img/intro/Logo.png')
 
           .btn-intro
             position: absolute
@@ -242,7 +242,7 @@ body#soft
               content: none
 
             .bg
-              @include background('../img/intro/btn.png')
+              @include background('../img/intro/Botao.png')
 
             p
               font-size: px(50)
@@ -255,7 +255,7 @@ body#soft
 
         // charSelection
         &#charSelection
-          @include background('../img/intro/bg.png')
+          @include background('../img/bg/bg1.png')
           background-size: cover
 
           .btn-select
@@ -367,7 +367,7 @@ body#soft
 
         // opening
         &#opening
-          @include background('../img/intro/bg.png')
+          @include background('../img/bg/bg1.png')
           background-size: cover
 
           .opening-text-bg
@@ -419,7 +419,7 @@ body#soft
 
         // description
         &#description
-          @include background('../img/intro/bg.png')
+          @include background('../img/bg/bg1.png')
           background-size: cover
 
           .tables
@@ -660,6 +660,59 @@ body#soft
                 &.selected
                   @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
 
+                  // opening
+        &#tips
+          @include background('../img/bg/bg2.png')
+          background-size: cover
+
+          .tips-text-bg
+            @include background('../img/tips/Dicas.png')
+            width: px(1145)
+            height: px(486)
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            position: absolute
+            margin: auto
+            opacity: 0
+            transform: scale(0)
+            p
+              position: absolute
+              margin: auto
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              width: px(900)
+              height: px(350)
+
+          .btn-tips
+            width: px(116)
+            height: px(87)
+            box-sizing: border-box
+            position: absolute
+            right: px(410)
+            top: px(320)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            &::before
+              content: none
+            .bg
+              width: px(116)
+              height: px(87)
+              @include background('../img/tips/Botao-fechar.png')
+            p
+              font-size: px(35)
+              letter-spacing: px(2)
+              margin-top: -5%
+
+          #top-buttons
+            .buttons
+              .btn-home
+                display: none
+
   .overlay
     background-color: rgba(255, 255, 255, 0.5)
     position: absolute
@@ -734,7 +787,7 @@ body#soft
             position: relative
 
             .bg
-              @include background('../img/button-bg-1.png')
+              @include background('../img/button-bg1.png')
 
             p
               color: #004AC6

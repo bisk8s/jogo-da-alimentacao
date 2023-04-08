@@ -376,6 +376,7 @@ var theme = {
         theme.goToPage("description");
       });
   },
+
   description: function () {
     theme.default();
 
@@ -453,6 +454,7 @@ var theme = {
         }
       );
   },
+
   gameplay: function () {
     theme.default();
     if (theme.vars.initApp == true)
@@ -587,6 +589,38 @@ var theme = {
       onComplete: function () {},
     });
   },
+
+  tips: function () {
+    if (theme.vars.initApp == true)
+      $("#soft main #soft-pages #opening #top-buttons").css("display", "none");
+
+    gsap.to($("#soft main #soft-pages #tips .tips-text-bg"), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+
+    gsap.to($("#soft main #soft-pages #tips .btn-tips"), {
+      delay: 2.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {
+        theme.endTransition();
+      },
+    });
+
+    $(document)
+      .off("click", "#soft main #soft-pages #tips .btn-tips")
+      .on("click", "#soft main #soft-pages #tips .btn-tips", function () {
+        history.back();
+      });
+  },
+
   choices: function () {
     theme.default();
   },
@@ -600,9 +634,6 @@ var theme = {
     theme.default();
   },
   carbs: function () {
-    theme.default();
-  },
-  tips: function () {
     theme.default();
   },
   nextChar: function () {

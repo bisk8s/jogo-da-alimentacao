@@ -146,7 +146,14 @@ var softContent = [
         pageFilePath: "tips/page.js",
         pageVarBase: "pageTips",
         pageActive: true,
-        pageContent: {},
+        pageContent: {
+          tipsText:
+            "Preste atenção às informações sobre o perfil de cada personagem e a \
+            dieta indicada para eles. Isso vai ajudá-lo a selecionar os alimentos \
+            corretos e completar as metas de nutrientes para cada personagem. Fique \
+            atento também aos feedbacks do jogo, para garantir que você esteja \
+            selecionando a quantidade correta de itens em cada prateleira. Boa sorte!",
+        },
       },
       {
         pageTitle: "Proxima Fase",

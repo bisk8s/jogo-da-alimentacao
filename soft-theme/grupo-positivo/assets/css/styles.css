@@ -305,7 +305,7 @@ body#soft main #soft-pages .soft-current-page#splash-screen .logo-aprende-brasil
   transform: scale(0);
 }
 body#soft main #soft-pages .soft-current-page#intro {
-  background-image: url(../img/../img/intro/bg.png);
+  background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -322,7 +322,7 @@ body#soft main #soft-pages .soft-current-page#intro .logo {
   width: 111.2037037037vh;
   height: 34.3518518519vh;
   margin: auto;
-  background-image: url(../img/../img/intro/logo.png);
+  background-image: url(../img/../img/intro/Logo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -344,7 +344,7 @@ body#soft main #soft-pages .soft-current-page#intro .btn-intro::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#intro .btn-intro .bg {
-  background-image: url(../img/../img/intro/btn.png);
+  background-image: url(../img/../img/intro/Botao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -357,7 +357,7 @@ body#soft main #soft-pages .soft-current-page#intro #top-buttons .buttons .btn-h
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#charSelection {
-  background-image: url(../img/../img/intro/bg.png);
+  background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -500,7 +500,7 @@ body#soft main #soft-pages .soft-current-page#charSelection #top-buttons .button
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#opening {
-  background-image: url(../img/../img/intro/bg.png);
+  background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -562,7 +562,7 @@ body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#description {
-  background-image: url(../img/../img/intro/bg.png);
+  background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -898,6 +898,69 @@ body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul.selected {
   background-repeat: no-repeat;
   background-size: contain;
 }
+body#soft main #soft-pages .soft-current-page#tips {
+  background-image: url(../img/../img/bg/bg2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#tips .tips-text-bg {
+  background-image: url(../img/../img/tips/Dicas.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 106.0185185185vh;
+  height: 45vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#tips .tips-text-bg p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 83.3333333333vh;
+  height: 32.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#tips .btn-tips {
+  width: 10.7407407407vh;
+  height: 8.0555555556vh;
+  box-sizing: border-box;
+  position: absolute;
+  right: 37.962962963vh;
+  top: 29.6296296296vh;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+}
+body#soft main #soft-pages .soft-current-page#tips .btn-tips::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#tips .btn-tips .bg {
+  width: 10.7407407407vh;
+  height: 8.0555555556vh;
+  background-image: url(../img/../img/tips/Botao-fechar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#tips .btn-tips p {
+  font-size: 3.2407407407vh;
+  letter-spacing: 0.1851851852vh;
+  margin-top: -5%;
+}
+body#soft main #soft-pages .soft-current-page#tips #top-buttons .buttons .btn-home {
+  display: none;
+}
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -973,7 +1036,7 @@ body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev, body#soft .over
   position: relative;
 }
 body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev .bg, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next .bg {
-  background-image: url(../img/../img/button-bg-1.png);
+  background-image: url(../img/../img/button-bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

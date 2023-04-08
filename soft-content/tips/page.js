@@ -6,7 +6,10 @@ var pageTips = {
     },
   },
 
-  pageHtml: "<p>in progress</p>",
+  pageHtml:
+    ' <div class="tips-text-bg"><p soft-page-content="tipsText"></p></div>\
+      <div class="soft-btn btn-tips btn"><div class="bg"></div><p soft-page-content="bntTips"></p></div>\
+    ',
 
   pageTemplate: "no-template",
 
