@@ -9,9 +9,9 @@ var pageGameplay = {
   pageHtml:
     '\
     <div data-screen="fats" class="prateleira prateleira-lipidios"></div>\
-    <div data-screen="proteins" class="prateleira prateleira-proteinas"></div>\
+    <div data-screen="prots" class="prateleira prateleira-proteinas"></div>\
     <div data-screen="carbs" class="prateleira prateleira-carboidratos"></div>\
-    <div data-screen="vitamins" class="prateleira prateleira-vitaminas"></div>\
+    <div data-screen="vits" class="prateleira prateleira-vitaminas"></div>\
     <div class="pawns">\
         <div class="pawn character-1"></div>\
         <div class="pawn character-2"></div>\

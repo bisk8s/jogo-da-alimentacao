@@ -117,7 +117,7 @@ var softContent = [
       },
       {
         pageTitle: "Proteinas",
-        pageId: "proteins",
+        pageId: "prots",
         pageClass: "hasFreezer",
         pageAttribute: "",
         pageFilePath: "proteins/page.js",
@@ -131,7 +131,7 @@ var softContent = [
       },
       {
         pageTitle: "Vitaminas",
-        pageId: "vitamins",
+        pageId: "vits",
         pageClass: "hasFreezer",
         pageAttribute: "",
         pageFilePath: "vitamins/page.js",

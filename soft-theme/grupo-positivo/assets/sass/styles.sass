@@ -724,10 +724,10 @@ body#soft
         &#fats
           @include background('../img/bg/bg3.png')
           background-size: cover
-        &#vitamins
+        &#vits
           @include background('../img/bg/bg3.png')
           background-size: cover
-        &#proteins
+        &#prots
           @include background('../img/bg/bg3.png')
           background-size: cover
         &#carbs
@@ -787,13 +787,20 @@ body#soft
               width: px(550)
               margin: auto
               display: flex
-              flex-wrap: wrap
               justify-content: space-evenly
+              flex-direction: row
+              align-items: flex-end
+              flex-wrap: wrap
               .food
+                pointer-events: auto !important
                 display: inline-block
-                height: px(306)
+                margin-top: px(106)
+                height: px(200)
                 background-position-y: bottom !important
                 margin-bottom: px(-55)
+                &.blank
+                  pointer-events: none !important
+                  width: px(150)
                 &.Azeite
                   @include background('../img/food/fats/Azeite.png')
                   width: px(101)

@@ -5,6 +5,55 @@ var theme = {
   vars: {
     initApp: true,
     selectedChar: 0,
+    food: {
+      fats: [
+        "Azeite",
+        "Manteiga",
+        "Cookies",
+        "Castanhas",
+        "Bolinho",
+        "Chocolate",
+      ],
+      vits: [
+        "Mamao",
+        "Maca",
+        "Abobrinha",
+        "Couve",
+        "Tomates",
+        "Banana",
+        "Laranjas",
+        "Brocolis",
+        "Cenoura",
+        "Melancia",
+      ],
+      prots: [
+        "Ovos",
+        "Ervilhas",
+        "Feijao",
+        "Iogurte",
+        "Queijo",
+        "Carne",
+        "Frango",
+        "Peixe",
+        "Leite",
+      ],
+      carbs: [
+        "Cereal",
+        "Mandioca",
+        "Arroz",
+        "Massa",
+        "Pao",
+        "Aveia",
+        "Milho",
+        "Carbos",
+      ],
+    },
+    choices: {
+      fats: [],
+      vits: [],
+      prots: [],
+      carbs: [],
+    },
     charData: [
       {
         name: "Manu",
@@ -668,22 +717,74 @@ var theme = {
       .on("click", "#soft main #soft-pages .btn-back", function () {
         history.back();
       });
+
+    $(document)
+      .off("click", ".food")
+      .on("click", ".food", function () {
+        const me = $(this);
+        gsap.to(me, {
+          opacity: 0,
+          onComplete: function () {
+            const page = $(".soft-page").attr("id");
+            const food = me
+              .attr("class")
+              .split(" ")
+              .filter(function (s) {
+                return s != "food";
+              });
+            theme.vars.food[page] = theme.vars.food[page].filter(function (s) {
+              return s != food;
+            });
+            theme.vars.choices[page].push(food);
+            me.off("click");
+          },
+        });
+      });
   },
 
   choices: function () {
     theme.freezerScreens();
+
+    var choices = [
+      ...theme.vars.choices.carbs,
+      ...theme.vars.choices.fats,
+      ...theme.vars.choices.prots,
+      ...theme.vars.choices.vits,
+    ];
+
+    fillAndShuffle(choices).forEach(function (item) {
+      $(".freezer-content").append('<div class="food ' + item + '">');
+    });
+
+    $(document).off("click", ".food");
   },
   fats: function () {
     theme.freezerScreens();
+
+    fillAndShuffle(theme.vars.food.fats).forEach(function (item) {
+      $(".freezer-content").append('<div class="food ' + item + '">');
+    });
   },
   proteins: function () {
     theme.freezerScreens();
+
+    fillAndShuffle(theme.vars.food.prots).forEach(function (item) {
+      $(".freezer-content").append('<div class="food ' + item + '">');
+    });
   },
   vitamins: function () {
     theme.freezerScreens();
+
+    fillAndShuffle(theme.vars.food.vits).forEach(function (item) {
+      $(".freezer-content").append('<div class="food ' + item + '">');
+    });
   },
   carbs: function () {
     theme.freezerScreens();
+
+    fillAndShuffle(theme.vars.food.carbs).forEach(function (item) {
+      $(".freezer-content").append('<div class="food ' + item + '">');
+    });
   },
 
   nextChar: function () {
@@ -734,3 +835,17 @@ $(document)
     if ($("body").hasClass("fullscreen")) soft.fullScreen("off");
     else soft.fullScreen("on");
   });
+
+function fillAndShuffle(arr) {
+  const newarray = [...arr]; // cria uma cópia do array original
+  while (newarray.length < 9) {
+    // enquanto o novo array tiver menos de 9 itens
+    newarray.push("blank"); // adiciona uma string vazia ao final do novo array
+  }
+  for (let i = newarray.length - 1; i > 0; i--) {
+    // começa do último item e vai até o segundo
+    const j = Math.floor(Math.random() * (i + 1)); // escolhe um índice aleatório entre 0 e i
+    [newarray[i], newarray[j]] = [newarray[j], newarray[i]]; // troca os valores dos índices i e j
+  }
+  return newarray.slice(0, 9); // retorna o novo array com 9 itens embaralhados
+}

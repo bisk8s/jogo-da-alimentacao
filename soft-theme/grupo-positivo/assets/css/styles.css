@@ -979,14 +979,14 @@ body#soft main #soft-pages .soft-current-page#fats {
   background-size: contain;
   background-size: cover;
 }
-body#soft main #soft-pages .soft-current-page#vitamins {
+body#soft main #soft-pages .soft-current-page#vits {
   background-image: url(../img/../img/bg/bg3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
 }
-body#soft main #soft-pages .soft-current-page#proteins {
+body#soft main #soft-pages .soft-current-page#prots {
   background-image: url(../img/../img/bg/bg3.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1082,14 +1082,22 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-conte
   width: 50.9259259259vh;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food {
+  pointer-events: auto !important;
   display: inline-block;
-  height: 28.3333333333vh;
+  margin-top: 9.8148148148vh;
+  height: 18.5185185185vh;
   background-position-y: bottom !important;
   margin-bottom: -5.0925925926vh;
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.blank {
+  pointer-events: none !important;
+  width: 13.8888888889vh;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Azeite {
   background-image: url(../img/../img/food/fats/Azeite.png);
