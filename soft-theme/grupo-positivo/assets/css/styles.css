@@ -1215,6 +1215,27 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul li.select
   background-repeat: no-repeat;
   background-size: contain;
 }
+body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback {
+  background-image: url(../img/../img/Box_feedback.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 59.9074074074vh;
+  height: 31.2037037037vh;
+  position: absolute;
+  left: 92.5925925926vh;
+  top: 52.7777777778vh;
+  opacity: 0;
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback p {
+  color: #fff;
+  text-align: center;
+  width: 50.9259259259vh;
+}
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer {
   background-image: url(../img/../img/choices/Prateleira.png);
   background-position: center;

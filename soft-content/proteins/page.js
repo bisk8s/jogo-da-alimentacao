@@ -37,6 +37,7 @@ var pageProteins = {
     <div data-screen="tips" class="icon icon-tips"><p soft-page-content="tipsText"/></div>\
     <div data-screen="choices" class="icon icon-choices"><p/ soft-page-content="choicesText"></div>\
     <div class="soft-btn btn-back btn"><div class="bg" /></div>\
+    <div class="box-feedback"><p soft-page-content="feedback"/></div>\
     \
   ',
 

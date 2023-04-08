@@ -524,7 +524,6 @@ var theme = {
 
     // Listen for the custom event
     $prateleira.on("pawnsOverlappingPrateleira", function () {
-      // console.log("Pawns are overlapping Prateleira ", this);
       theme.goToPage($(this).attr("data-screen"));
     });
 
@@ -585,28 +584,9 @@ var theme = {
       movePawn();
     });
 
-    // $(document)
-    //   .off("mouseenter", "#gameplay .prateleira")
-    //   .on("mouseenter", "#gameplay .prateleira", function () {
-    //     gsap.to($(this), {
-    //       duration: 0.05,
-    //       x: -10,
-    //       yoyo: true,
-    //       repeat: 5,
-    //       ease: "power1.inOut",
-    //     });
-    //   });
-
     $(document)
       .off("click", "#gameplay .prateleira")
       .on("click", "#gameplay .prateleira", function () {
-        // gsap.to($(this), {
-        //   duration: 0.05,
-        //   y: -10,
-        //   yoyo: true,
-        //   repeat: 5,
-        //   ease: "power1.inOut",
-        // });
         theme.goToPage($(this).attr("data-screen"));
       });
 
@@ -747,7 +727,20 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages .btn-back")
       .on("click", "#soft main #soft-pages .btn-back", function () {
-        history.back();
+        const charIndex = theme.vars.selectedChar;
+        const charData = theme.vars.charData[charIndex];
+        const correctAnswers = charData.correctAnswer;
+        const key = $(".soft-page").attr("id");
+        const answer = correctAnswers[key];
+        const selected = theme.vars.choices[key].length;
+
+        if (selected === answer) {
+          history.back();
+        } else {
+          theme.showAlert(
+            "OPS! Ainda falta uma porção desse tipo de alimento."
+          );
+        }
       });
 
     $(document)
@@ -790,8 +783,31 @@ var theme = {
             repeat: 5,
             ease: "power1.inOut",
           });
+          const message =
+            charData.name +
+            " não precisa de mais uma porção desse tipo de alimento.<br/>Continue o jogo.";
+          theme.showAlert(message);
         }
       });
+  },
+
+  showAlert: function (message) {
+    $(".box-feedback p").html(message);
+    gsap.to($(".box-feedback"), {
+      duration: 1,
+      scale: 1,
+      opacity: 1,
+      ease: "power1.inOut",
+      onComplete: function () {
+        gsap.to($(".box-feedback"), {
+          delay: 1,
+          duration: 1,
+          scale: 0,
+          opacity: 0,
+          ease: "power1.inOut",
+        });
+      },
+    });
   },
 
   choices: function () {

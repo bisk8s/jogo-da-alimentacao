@@ -903,6 +903,24 @@ body#soft
                   @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
                   &.selected
                     @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
+
+          .box-feedback
+            @include background('../img/Box_feedback.png')
+            width: px(647)
+            height: px(337)
+            position: absolute
+            left: px(1000)
+            top: px(570)
+            opacity: 0
+            transform: scale(0)
+            display: flex
+            justify-content: center
+            align-items: center
+            p
+              color: #fff
+              text-align: center
+              width: px(550)
+
           .freezer
             @include background('../img/choices/Prateleira.png')
             position: absolute
