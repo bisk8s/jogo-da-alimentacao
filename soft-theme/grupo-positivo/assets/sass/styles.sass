@@ -534,6 +534,7 @@ body#soft
 
           .icon
             pointer-events: auto !important
+            transition: all 0.5s
             p
               position: absolute
               bottom: px(-40)
@@ -660,7 +661,7 @@ body#soft
                 &.selected
                   @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
 
-                  // opening
+        // opening
         &#tips
           @include background('../img/bg/bg2.png')
           background-size: cover
@@ -712,6 +713,229 @@ body#soft
             .buttons
               .btn-home
                 display: none
+
+        // opening
+        &#choices
+          @include background('../img/bg/bg2.png')
+          background-size: cover
+          .icon-choices
+            display: none
+
+        &#fats
+          @include background('../img/bg/bg3.png')
+          background-size: cover
+        &#vitamins
+          @include background('../img/bg/bg3.png')
+          background-size: cover
+        &#proteins
+          @include background('../img/bg/bg3.png')
+          background-size: cover
+        &#carbs
+          @include background('../img/bg/bg3.png')
+          background-size: cover
+
+        &.hasFreezer
+          .profile-pics
+            position: absolute
+            left: px(75)
+            top: px(60)
+            width: px(279)
+            height: px(270)
+            .profile-pic
+              position: absolute
+              width: px(279)
+              height: px(270)
+              opacity: 0
+              transform: scale(0)
+              &.character-1
+                @include background('../img/gameplay/HUD/perfil-manu.png')
+              &.character-2
+                @include background('../img/gameplay/HUD/perfil-joao.png')
+              &.character-3
+                @include background('../img/gameplay/HUD/perfil-ana.png')
+          .bars
+            position: absolute
+            right: px(80)
+            top: px(290)
+            .bar
+              width: px(500)
+              height: px(140)
+              p
+                text-align: right
+              ul
+                list-style: none
+                display: flex
+                justify-content: end
+                margin-top: px(20)
+                li
+                  width: px(42)
+                  height: px(24)
+                  @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
+                &.selected
+                  @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
+          .freezer
+            @include background('../img/choices/Prateleira.png')
+            position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            width: px(607)
+            height: px(975)
+            .freezer-content
+              width: px(550)
+              margin: auto
+              display: flex
+              flex-wrap: wrap
+              justify-content: space-evenly
+              .food
+                display: inline-block
+                height: px(306)
+                background-position-y: bottom !important
+                margin-bottom: px(-55)
+                &.Azeite
+                  @include background('../img/food/fats/Azeite.png')
+                  width: px(101)
+                &.Manteiga
+                  @include background('../img/food/fats/Manteiga.png')
+                  width: px(166)
+                &.Cookies
+                  @include background('../img/food/fats/Cookies.png')
+                  width: px(196)
+                &.Castanhas
+                  @include background('../img/food/fats/Castanhas.png')
+                  width: px(152)
+                &.Bolinho
+                  @include background('../img/food/fats/Bolinho.png')
+                  width: px(85)
+                &.Chocolate
+                  @include background('../img/food/fats/Chocolate.png')
+                  width: px(96)
+                &.Mamao
+                  @include background('../img/food/vits/Mamao.png')
+                  width: px(193)
+                &.Maca
+                  @include background('../img/food/vits/Maca.png')
+                  width: px(98)
+                &.Abobrinha
+                  @include background('../img/food/vits/Abobrinha.png')
+                  width: px(142)
+                &.Couve
+                  @include background('../img/food/vits/Couve.png')
+                  width: px(168)
+                &.Tomates
+                  @include background('../img/food/vits/Tomates.png')
+                  width: px(153)
+                &.Banana
+                  @include background('../img/food/vits/Banana.png')
+                  width: px(147)
+                &.Laranjas
+                  @include background('../img/food/vits/Laranjas.png')
+                  width: px(152)
+                &.Brocolis
+                  @include background('../img/food/vits/Brocolis.png')
+                  width: px(114)
+                &.Cenoura
+                  @include background('../img/food/vits/Cenoura.png')
+                  width: px(153)
+                &.Melancia
+                  @include background('../img/food/vits/Melancia.png')
+                  width: px(136)
+                &.Ovos
+                  @include background('../img/food/prots/Ovos.png')
+                  width: px(191)
+                &.Ervilhas
+                  @include background('../img/food/prots/Ervilhas.png')
+                  width: px(87)
+                &.Feijao
+                  @include background('../img/food/prots/Feijao.png')
+                  width: px(170)
+                &.Iogurte
+                  @include background('../img/food/prots/Iogurte.png')
+                  width: px(103)
+                &.Queijo
+                  @include background('../img/food/prots/Queijo.png')
+                  width: px(162)
+                &.Carne
+                  @include background('../img/food/prots/Carne.png')
+                  width: px(230)
+                &.Frango
+                  @include background('../img/food/prots/Frango.png')
+                  width: px(235)
+                &.Peixe
+                  @include background('../img/food/prots/Peixe.png')
+                  width: px(195)
+                &.Leite
+                  @include background('../img/food/prots/Leite.png')
+                  width: px(111)
+                &.Cereal
+                  @include background('../img/food/carbs/Cereal.png')
+                  width: px(151)
+                &.Mandioca
+                  @include background('../img/food/carbs/Mandioca.png')
+                  width: px(158)
+                &.Arroz
+                  @include background('../img/food/carbs/Arroz.png')
+                  width: px(175)
+                &.Massa
+                  @include background('../img/food/carbs/Massa.png')
+                  width: px(137)
+                &.Pao
+                  @include background('../img/food/carbs/Pao.png')
+                  width: px(230)
+                &.Aveia
+                  @include background('../img/food/carbs/Aveia.png')
+                  width: px(115)
+                &.Milho
+                  @include background('../img/food/carbs/Milho.png')
+                  width: px(194)
+
+          .btn-back
+            width: px(116)
+            height: px(87)
+            box-sizing: border-box
+            position: absolute
+            right: px(80)
+            top: px(70)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            &::before
+              content: none
+            .bg
+              width: px(116)
+              height: px(87)
+              @include background('../img/tips/Botao-fechar.png')
+
+          .icon
+            pointer-events: auto !important
+            opacity: 0
+            transition: all 0.5s
+            p
+              position: absolute
+              bottom: px(-40)
+              font-size: px(20)
+              left: 0
+              right: 0
+              margin: auto
+              text-align: center
+            &:hover
+              transform: scale(1.2)
+            &.icon-tips
+              @include background('../img/gameplay/HUD/icons/tips.png')
+              width: px(128)
+              height: px(106)
+              position: absolute
+              left: px(150)
+              top: px(390)
+            &.icon-choices
+              @include background('../img/gameplay/HUD/icons/bag.png')
+              width: px(111)
+              height: px(113)
+              position: absolute
+              left: px(150)
+              top: px(550)
 
   .overlay
     background-color: rgba(255, 255, 255, 0.5)

@@ -591,8 +591,10 @@ var theme = {
   },
 
   tips: function () {
+    theme.default();
+
     if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #opening #top-buttons").css("display", "none");
+      $("#soft main #soft-pages #top-buttons").css("display", "none");
 
     gsap.to($("#soft main #soft-pages #tips .tips-text-bg"), {
       delay: 1.4,
@@ -621,21 +623,69 @@ var theme = {
       });
   },
 
-  choices: function () {
+  freezerScreens: function () {
     theme.default();
+
+    if (theme.vars.initApp == true)
+      $("#soft main #soft-pages #top-buttons").css("display", "none");
+
+    var char = parseInt(theme.vars.selectedChar) + 1;
+    var selector = ".character-" + char;
+    gsap.to($(selector), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+
+    gsap.to($(".icon"), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      ease: "expo.out",
+    });
+    $(document)
+      .off("click", ".icon")
+      .on("click", ".icon", function () {
+        theme.goToPage($(this).attr("data-screen"));
+      });
+
+    gsap.to($("#soft main #soft-pages .btn-back"), {
+      delay: 2,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {
+        theme.endTransition();
+      },
+    });
+
+    $(document)
+      .off("click", "#soft main #soft-pages .btn-back")
+      .on("click", "#soft main #soft-pages .btn-back", function () {
+        history.back();
+      });
+  },
+
+  choices: function () {
+    theme.freezerScreens();
   },
   fats: function () {
-    theme.default();
+    theme.freezerScreens();
   },
   proteins: function () {
-    theme.default();
+    theme.freezerScreens();
   },
   vitamins: function () {
-    theme.default();
+    theme.freezerScreens();
   },
   carbs: function () {
-    theme.default();
+    theme.freezerScreens();
   },
+
   nextChar: function () {
     theme.default();
   },
