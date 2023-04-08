@@ -436,7 +436,7 @@ body#soft
               height: px(90)
             .table-2
               th
-                height: px(90)
+                height: px(50)
 
           th
             text-transform: uppercase
@@ -532,6 +532,33 @@ body#soft
             left: px(40)
             bottom: px(0)
 
+          .icon
+            pointer-events: auto !important
+            p
+              position: absolute
+              bottom: px(-40)
+              font-size: px(20)
+              left: 0
+              right: 0
+              margin: auto
+              text-align: center
+            &:hover
+              transform: scale(1.2)
+            &.icon-tips
+              @include background('../img/gameplay/HUD/icons/tips.png')
+              width: px(128)
+              height: px(106)
+              position: absolute
+              left: px(490)
+              bottom: px(70)
+            &.icon-choices
+              @include background('../img/gameplay/HUD/icons/bag.png')
+              width: px(111)
+              height: px(113)
+              position: absolute
+              left: px(670)
+              bottom: px(70)
+
           .pawns
             position: absolute
             left: px(0)
@@ -600,6 +627,38 @@ body#soft
               position: absolute
               left: px(1400)
               top: px(350)
+
+          .bars
+            position: absolute
+            left: px(870)
+            top: px(830)
+            .bar
+              width: px(300)
+              position: absolute
+              &.carb
+                left: px(0)
+                top: px(0)
+              &.prot
+                left: px(0)
+                top: px(140)
+              &.fat
+                left: px(420)
+                top: px(0)
+              &.vit
+                left: px(420)
+                top: px(140)
+              ul
+                list-style: none
+                display: flex
+                position: absolute
+                left: px(0)
+                top: px(60)
+                li
+                  width: px(42)
+                  height: px(24)
+                  @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
+                &.selected
+                  @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
 
   .overlay
     background-color: rgba(255, 255, 255, 0.5)
