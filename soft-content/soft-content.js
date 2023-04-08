@@ -177,13 +177,16 @@ var softContent = [
       },
       {
         pageTitle: "Proxima Fase",
-        pageId: "nextChar",
+        pageId: "newChar",
         pageClass: "",
         pageAttribute: "",
-        pageFilePath: "nextChar/page.js",
-        pageVarBase: "pageNextChar",
+        pageFilePath: "newChar/page.js",
+        pageVarBase: "pageNewChar",
         pageActive: true,
-        pageContent: {},
+        pageContent: {
+          nextText: "Legal! <br/> <br/> Agora selecione um novo personagem.",
+          bntNext: "Tela seleção",
+        },
       },
       {
         pageTitle: "Fim",
@@ -193,7 +196,11 @@ var softContent = [
         pageFilePath: "ending/page.js",
         pageVarBase: "pageEnding",
         pageActive: true,
-        pageContent: {},
+        pageContent: {
+          nextText:
+            "Fim de jogo! <br/> <br/> Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, é só abrir o menu inferior.",
+          bntNext: "Jogar novamente",
+        },
       },
     ],
 

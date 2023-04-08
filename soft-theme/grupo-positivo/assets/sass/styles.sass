@@ -417,6 +417,106 @@ body#soft
               .btn-home
                 display: none
 
+        // newChar
+        &#newChar
+          @include background('../img/bg/bg1.png')
+          background-size: cover
+
+          .text-bg
+            @include background('../img/newChar/bg.png')
+            width: px(1145)
+            height: px(455)
+            top: px(311)
+            left: px(415)
+            position: absolute
+            opacity: 0
+            transform: scale(0)
+            p
+              position: absolute
+              margin: auto
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              width: px(900)
+              height: px(80)
+
+          .btn-next
+            box-sizing: border-box
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: px(278)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            width: px(280)
+            height: px(84)
+            @include background('../img/newChar/botao.png')
+            &::before
+              content: none
+            p
+              font-size: px(35)
+              letter-spacing: px(2)
+              margin-top: px(-5)
+              text-align: center
+
+          #top-buttons
+            .buttons
+              .btn-home
+                display: none
+
+        // ending
+        &#ending
+          @include background('../img/bg/bg1.png')
+          background-size: cover
+
+          .text-bg
+            @include background('../img/ending/bg.png')
+            width: px(1145)
+            height: px(455)
+            top: px(311)
+            left: px(415)
+            position: absolute
+            opacity: 0
+            transform: scale(0)
+            p
+              position: absolute
+              margin: auto
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              width: px(900)
+              height: px(300)
+
+          .btn-next
+            box-sizing: border-box
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: px(278)
+            opacity: 0
+            transform: scale(0)
+            z-index: 2
+            width: px(350)
+            height: px(84)
+            @include background('../img/ending/botao.png')
+            &::before
+              content: none
+            p
+              font-size: px(35)
+              letter-spacing: px(2)
+              margin-top: px(-5)
+              text-align: center
+
+          #top-buttons
+            .buttons
+              .btn-home
+                display: none
+
         // description
         &#description
           @include background('../img/bg/bg1.png')

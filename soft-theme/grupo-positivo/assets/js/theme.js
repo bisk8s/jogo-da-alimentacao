@@ -116,54 +116,54 @@ var theme = {
   },
 
   audios: {
-    bg: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/bg-sound.mp3"],
-      loop: true,
-      volume: 0.4,
-      onend: function () {},
-    }),
-    click: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/click.mp3"],
-      loop: false,
-      volume: 0.2,
-      onend: function () {},
-    }),
-    overlayOpen: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/overlay-open.mp3"],
-      loop: false,
-      volume: 1,
-      onend: function () {},
-    }),
-    lauraJump: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/laura-jump.mp3"],
-      loop: false,
-      volume: 0.4,
-      onend: function () {},
-    }),
-    correctAnswer: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/correct-answer.mp3"],
-      loop: false,
-      volume: 0.6,
-      onend: function () {},
-    }),
-    incorrectAnswer: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3"],
-      loop: false,
-      volume: 0.6,
-      onend: function () {},
-    }),
-    endGameSuccess: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/end-game-success.mp3"],
-      loop: false,
-      volume: 1,
-      onend: function () {},
-    }),
-    endGameFailed: new Howl({
-      src: ["soft-theme/grupo-positivo/assets/medias/end-game-failed.mp3"],
-      loop: false,
-      volume: 1,
-      onend: function () {},
-    }),
+    // bg: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/bg-sound.mp3"],
+    //   loop: true,
+    //   volume: 0.4,
+    //   onend: function () {},
+    // }),
+    // click: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/click.mp3"],
+    //   loop: false,
+    //   volume: 0.2,
+    //   onend: function () {},
+    // }),
+    // overlayOpen: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/overlay-open.mp3"],
+    //   loop: false,
+    //   volume: 1,
+    //   onend: function () {},
+    // }),
+    // lauraJump: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/laura-jump.mp3"],
+    //   loop: false,
+    //   volume: 0.4,
+    //   onend: function () {},
+    // }),
+    // correctAnswer: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/correct-answer.mp3"],
+    //   loop: false,
+    //   volume: 0.6,
+    //   onend: function () {},
+    // }),
+    // incorrectAnswer: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3"],
+    //   loop: false,
+    //   volume: 0.6,
+    //   onend: function () {},
+    // }),
+    // endGameSuccess: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/end-game-success.mp3"],
+    //   loop: false,
+    //   volume: 1,
+    //   onend: function () {},
+    // }),
+    // endGameFailed: new Howl({
+    //   src: ["soft-theme/grupo-positivo/assets/medias/end-game-failed.mp3"],
+    //   loop: false,
+    //   volume: 1,
+    //   onend: function () {},
+    // }),
   },
 
   // Método inicial
@@ -186,6 +186,8 @@ var theme = {
 
   // Método útil para ações comuns em todas ou na maioria das telas
   default: function () {
+    $("#soft main #soft-pages #top-buttons").css("display", "none");
+
     $("#soft main #soft-pages .soft-current-page *").each(function () {
       if ($(this).attr("soft-global-content") != undefined) {
         if ($(this).attr("soft-global-content") == "title") {
@@ -227,7 +229,7 @@ var theme = {
     $(document)
       .off("click", "#soft main .btn")
       .on("click", "#soft main .btn", function () {
-        if (theme.vars.initApp == false) theme.audios.click.play();
+        // if (theme.vars.initApp == false) theme.audios.click.play();
       });
   },
 
@@ -307,9 +309,6 @@ var theme = {
     theme.default();
     theme.resetVars();
 
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #intro #top-buttons").css("display", "none");
-
     gsap.to($("#soft main #soft-pages #intro .logo"), {
       delay: 1.4,
       duration: 1,
@@ -335,19 +334,13 @@ var theme = {
         theme.goToPage("charSelection");
         if (theme.vars.initApp == true) {
           theme.vars.initApp = false;
-          theme.audios.bg.play();
+          // theme.audios.bg.play();
         }
       });
   },
 
   charSelection: function () {
     theme.default();
-
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #charSelection #top-buttons").css(
-        "display",
-        "none"
-      );
 
     gsap.to($("#soft main #soft-pages #charSelection .character-bg"), {
       delay: 0.4,
@@ -405,9 +398,6 @@ var theme = {
   opening: function () {
     theme.default();
 
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #opening #top-buttons").css("display", "none");
-
     gsap.to($("#soft main #soft-pages #opening .opening-text-bg"), {
       delay: 1.4,
       duration: 1,
@@ -446,12 +436,6 @@ var theme = {
 
   description: function () {
     theme.default();
-
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #description #top-buttons").css(
-        "display",
-        "none"
-      );
 
     $(".tables").each(function () {
       var text = $(this).html();
@@ -525,9 +509,6 @@ var theme = {
   gameplay: function () {
     theme.default();
     theme.scoreControll();
-
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #gameplay #top-buttons").css("display", "none");
 
     var $pawns = $(".pawns");
     var $prateleira = $(".prateleira");
@@ -604,40 +585,28 @@ var theme = {
       movePawn();
     });
 
-    $(document)
-      .off("mouseenter", "#gameplay .prateleira")
-      .on("mouseenter", "#gameplay .prateleira", function () {
-        gsap.to($(this), {
-          duration: 0.05,
-          x: -10,
-          yoyo: true,
-          repeat: 5,
-          ease: "power1.inOut",
-        });
-      });
-
-    $(document)
-      .off("mouseenter", "#gameplay .prateleira")
-      .on("mouseenter", "#gameplay .prateleira", function () {
-        gsap.to($(this), {
-          duration: 0.05,
-          x: -10,
-          yoyo: true,
-          repeat: 5,
-          ease: "power1.inOut",
-        });
-      });
+    // $(document)
+    //   .off("mouseenter", "#gameplay .prateleira")
+    //   .on("mouseenter", "#gameplay .prateleira", function () {
+    //     gsap.to($(this), {
+    //       duration: 0.05,
+    //       x: -10,
+    //       yoyo: true,
+    //       repeat: 5,
+    //       ease: "power1.inOut",
+    //     });
+    //   });
 
     $(document)
       .off("click", "#gameplay .prateleira")
       .on("click", "#gameplay .prateleira", function () {
-        gsap.to($(this), {
-          duration: 0.05,
-          y: -10,
-          yoyo: true,
-          repeat: 5,
-          ease: "power1.inOut",
-        });
+        // gsap.to($(this), {
+        //   duration: 0.05,
+        //   y: -10,
+        //   yoyo: true,
+        //   repeat: 5,
+        //   ease: "power1.inOut",
+        // });
         theme.goToPage($(this).attr("data-screen"));
       });
 
@@ -661,9 +630,6 @@ var theme = {
 
   tips: function () {
     theme.default();
-
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #top-buttons").css("display", "none");
 
     gsap.to($("#soft main #soft-pages #tips .tips-text-bg"), {
       delay: 1.4,
@@ -693,18 +659,21 @@ var theme = {
   },
 
   scoreControll: function () {
+    var complete = true;
+    const charIndex = theme.vars.selectedChar;
+    const charData = theme.vars.charData[charIndex];
+    const correctAnswers = charData.correctAnswer;
     ["carb", "prot", "fat", "vit"].forEach(function (type) {
-      const charIndex = theme.vars.selectedChar;
-      const charData = theme.vars.charData[charIndex];
-      const correctAnswers = charData.correctAnswer;
       const key = type + "s";
       const answer = correctAnswers[key];
       const selected = theme.vars.choices[key].length;
+
       var content = [...new Array(answer)]
         .map(function (_, i) {
           return "<li class='" + (i < selected ? "selected" : "") + "'/>";
         })
         .join("");
+
       $(".bar." + type + " ul").html(content);
       var label = {
         carb: "Carboidratos",
@@ -712,18 +681,34 @@ var theme = {
         fat: "Lipídios",
         vit: "Vitaminas",
       };
+
       $(".bar." + type + " p").html(
         label[type] + ": " + selected + "/" + answer
       );
+
+      complete = complete && selected === answer;
     });
+
+    if (complete) {
+      charData.finished = true;
+
+      const completeCount = theme.vars.charData.filter(function (char) {
+        return char.finished;
+      }).length;
+
+      const totalChars = theme.vars.charData.length;
+
+      if (completeCount === totalChars) {
+        this.goToPage("ending");
+      } else {
+        this.goToPage("newChar");
+      }
+    }
   },
 
   freezerScreens: function () {
     theme.default();
     theme.scoreControll();
-
-    if (theme.vars.initApp == true)
-      $("#soft main #soft-pages #top-buttons").css("display", "none");
 
     var char = parseInt(theme.vars.selectedChar) + 1;
     var selector = ".character-" + char;
@@ -796,6 +781,14 @@ var theme = {
               theme.scoreControll();
               me.off("click");
             },
+          });
+        } else {
+          gsap.to($(this), {
+            duration: 0.05,
+            x: -10,
+            yoyo: true,
+            repeat: 5,
+            ease: "power1.inOut",
           });
         }
       });
@@ -872,14 +865,97 @@ var theme = {
     });
   },
 
-  nextChar: function () {
+  newChar: function () {
     theme.default();
+
+    gsap.to($("#soft main #soft-pages .text-bg"), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
+
+    gsap.to($("#soft main #soft-pages .btn-next"), {
+      delay: 2.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {
+        theme.endTransition();
+      },
+    });
+
+    $(document)
+      .off("click", "#soft main #soft-pages .btn-next")
+      .on("click", "#soft main #soft-pages .btn-next", function () {
+        theme.goToPage("charSelection");
+        theme.resetVars();
+      });
   },
   ending: function () {
-    theme.default();
+    theme.newChar();
   },
 
-  resetVars: function () {},
+  resetVars: function () {
+    theme.vars = {
+      ...theme.vars,
+      ...{
+        selectedChar: 0,
+        food: {
+          fats: [
+            "Azeite",
+            "Manteiga",
+            "Cookies",
+            "Castanhas",
+            "Bolinho",
+            "Chocolate",
+          ],
+          vits: [
+            "Mamao",
+            "Maca",
+            "Abobrinha",
+            "Couve",
+            "Tomates",
+            "Banana",
+            "Laranjas",
+            "Brocolis",
+            "Cenoura",
+            "Melancia",
+          ],
+          prots: [
+            "Ovos",
+            "Ervilhas",
+            "Feijao",
+            "Iogurte",
+            "Queijo",
+            "Carne",
+            "Frango",
+            "Peixe",
+            "Leite",
+          ],
+          carbs: [
+            "Cereal",
+            "Mandioca",
+            "Arroz",
+            "Massa",
+            "Pao",
+            "Aveia",
+            "Milho",
+            "Carbos",
+          ],
+        },
+        choices: {
+          fats: [],
+          vits: [],
+          prots: [],
+          carbs: [],
+        },
+      },
+    };
+  },
 };
 
 $(document).on("ready", function () {

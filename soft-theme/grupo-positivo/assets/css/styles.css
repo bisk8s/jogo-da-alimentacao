@@ -561,6 +561,124 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
 body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
   display: none;
 }
+body#soft main #soft-pages .soft-current-page#newChar {
+  background-image: url(../img/../img/bg/bg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#newChar .text-bg {
+  background-image: url(../img/../img/newChar/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 106.0185185185vh;
+  height: 42.1296296296vh;
+  top: 28.7962962963vh;
+  left: 38.4259259259vh;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#newChar .text-bg p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 83.3333333333vh;
+  height: 7.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#newChar .btn-next {
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25.7407407407vh;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  width: 25.9259259259vh;
+  height: 7.7777777778vh;
+  background-image: url(../img/../img/newChar/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#newChar .btn-next::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#newChar .btn-next p {
+  font-size: 3.2407407407vh;
+  letter-spacing: 0.1851851852vh;
+  margin-top: -0.462962963vh;
+  text-align: center;
+}
+body#soft main #soft-pages .soft-current-page#newChar #top-buttons .buttons .btn-home {
+  display: none;
+}
+body#soft main #soft-pages .soft-current-page#ending {
+  background-image: url(../img/../img/bg/bg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#ending .text-bg {
+  background-image: url(../img/../img/ending/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 106.0185185185vh;
+  height: 42.1296296296vh;
+  top: 28.7962962963vh;
+  left: 38.4259259259vh;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#ending .text-bg p {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 83.3333333333vh;
+  height: 27.7777777778vh;
+}
+body#soft main #soft-pages .soft-current-page#ending .btn-next {
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25.7407407407vh;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  width: 32.4074074074vh;
+  height: 7.7777777778vh;
+  background-image: url(../img/../img/ending/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#ending .btn-next::before {
+  content: none;
+}
+body#soft main #soft-pages .soft-current-page#ending .btn-next p {
+  font-size: 3.2407407407vh;
+  letter-spacing: 0.1851851852vh;
+  margin-top: -0.462962963vh;
+  text-align: center;
+}
+body#soft main #soft-pages .soft-current-page#ending #top-buttons .buttons .btn-home {
+  display: none;
+}
 body#soft main #soft-pages .soft-current-page#description {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
