@@ -17,6 +17,7 @@ var theme = {
           "Os carboidratos são importantes, mas, por certo tempo, evite comer muitas porções.",
           "Beba mais água e evite sucos  industrializados e refrigerantes.",
         ],
+        finished: false,
       },
       {
         name: "João",
@@ -29,6 +30,7 @@ var theme = {
           "Consuma também proteínas.",
           "Frutas e verduras podem ser consumidas à vontade. ",
         ],
+        finished: false,
       },
       {
         name: "Ana",
@@ -41,6 +43,7 @@ var theme = {
           "Frutas e verduras podem ser consumidas à vontade.",
           "Reduza o consumo de carboidratos e evite doces.",
         ],
+        finished: false,
       },
     ],
   },
@@ -564,6 +567,12 @@ var theme = {
           repeat: 5,
           ease: "power1.inOut",
         });
+        theme.goToPage($(this).attr("data-screen"));
+      });
+
+    $(document)
+      .off("click", "#gameplay .icon")
+      .on("click", "#gameplay .icon", function () {
         theme.goToPage($(this).attr("data-screen"));
       });
 

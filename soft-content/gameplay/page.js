@@ -24,25 +24,25 @@ var pageGameplay = {
         <div class="profile-pic character-3"></div>\
     </div>\
     <div class="bars">\
-      <div class="items carb">\
+      <div class="bar carb">\
         <p>Carboidratos: 0/0</p>\
         <ul><li/><li/><li/><li/><li/><li/></ul>\
       </div>\
-      <div class="items prot">\
+      <div class="bar prot">\
         <p>Carboidratos: 0/0</p>\
         <ul><li/><li/><li/><li/><li/><li/></ul>\
       </div>\
-      <div class="items fat">\
+      <div class="bar fat">\
         <p>Carboidratos: 0/0</p>\
         <ul><li/><li/><li/><li/><li/><li/></ul>\
       </div>\
-      <div class="items vit">\
+      <div class="bar vit">\
         <p>Carboidratos: 0/0</p>\
         <ul><li/><li/><li/><li/><li/><li/></ul>\
       </div>\
     </div>\
-    <div data-screen="tips" class="icon icon-tips"></div>\
-    <div data-screen="choices" class="icon icon-choices"></div>\
+    <div data-screen="tips" class="icon icon-tips"><p soft-page-content="tipsText"/></div>\
+    <div data-screen="choices" class="icon icon-choices"><p/ soft-page-content="choicesText"></div>\
     ',
 
   pageTemplate: "no-template",

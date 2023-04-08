@@ -582,7 +582,7 @@ body#soft main #soft-pages .soft-current-page#description .tables .table-1 {
   height: 8.3333333333vh;
 }
 body#soft main #soft-pages .soft-current-page#description .tables .table-2 th {
-  height: 8.3333333333vh;
+  height: 4.6296296296vh;
 }
 body#soft main #soft-pages .soft-current-page#description th {
   text-transform: uppercase;
@@ -704,6 +704,43 @@ body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
   left: 3.7037037037vh;
   bottom: 0vh;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .icon {
+  pointer-events: auto !important;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .icon p {
+  position: absolute;
+  bottom: -3.7037037037vh;
+  font-size: 1.8518518519vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .icon:hover {
+  transform: scale(1.2);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-tips {
+  background-image: url(../img/../img/gameplay/HUD/icons/tips.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 11.8518518519vh;
+  height: 9.8148148148vh;
+  position: absolute;
+  left: 45.3703703704vh;
+  bottom: 6.4814814815vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-choices {
+  background-image: url(../img/../img/gameplay/HUD/icons/bag.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10.2777777778vh;
+  height: 10.462962963vh;
+  position: absolute;
+  left: 62.037037037vh;
+  bottom: 6.4814814815vh;
+}
 body#soft main #soft-pages .soft-current-page#gameplay .pawns {
   position: absolute;
   left: 0vh;
@@ -814,6 +851,52 @@ body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-vi
   position: absolute;
   left: 129.6296296296vh;
   top: 32.4074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars {
+  position: absolute;
+  left: 80.5555555556vh;
+  top: 76.8518518519vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar {
+  width: 27.7777777778vh;
+  position: absolute;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.carb {
+  left: 0vh;
+  top: 0vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.prot {
+  left: 0vh;
+  top: 12.962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.fat {
+  left: 38.8888888889vh;
+  top: 0vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.vit {
+  left: 38.8888888889vh;
+  top: 12.962962963vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  left: 0vh;
+  top: 5.5555555556vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul li {
+  width: 3.8888888889vh;
+  height: 2.2222222222vh;
+  background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul.selected {
+  background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);

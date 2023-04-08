@@ -82,7 +82,10 @@ var softContent = [
         pageFilePath: "gameplay/page.js",
         pageVarBase: "pageGameplay",
         pageActive: true,
-        pageContent: {},
+        pageContent: {
+          tipsText: "Dicas",
+          choicesText: "Sacola",
+        },
       },
       {
         pageTitle: "Suas Escolhas",
