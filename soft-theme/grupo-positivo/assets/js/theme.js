@@ -463,11 +463,8 @@ var theme = {
 
     // Function to check for overlap
     function checkOverlap() {
-      $prateleira.each(function () {
-        if ($(this).overlaps($pawns.find(".pawn")).length) {
-          $(this).trigger(customEvent);
-        }
-      });
+      var element = $prateleira.overlaps($pawns.find(".pawn")).first();
+      $(element).trigger(customEvent);
     }
 
     // Listen for the custom event
@@ -569,6 +566,17 @@ var theme = {
         });
         theme.goToPage($(this).attr("data-screen"));
       });
+
+    var char = parseInt(theme.vars.selectedChar) + 1;
+    var selector = "#soft main #soft-pages #gameplay .character-" + char;
+    gsap.to($(selector), {
+      delay: 1.4,
+      duration: 1,
+      autoAlpha: 1,
+      scale: 1,
+      ease: "expo.out",
+      onComplete: function () {},
+    });
   },
   choices: function () {
     theme.default();

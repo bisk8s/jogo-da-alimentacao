@@ -23,21 +23,23 @@ var pageGameplay = {
         <div class="profile-pic character-2"></div>\
         <div class="profile-pic character-3"></div>\
     </div>\
-    <div class="items carb">\
-      <p>Carboidratos: 0/0</p>\
-      <ul><li/><li/><li/><li/><li/><li/></ul>\
-    </div>\
-    <div class="items prot">\
-      <p>Carboidratos: 0/0</p>\
-      <ul><li/><li/><li/><li/><li/><li/></ul>\
-    </div>\
-    <div class="items fat">\
-      <p>Carboidratos: 0/0</p>\
-      <ul><li/><li/><li/><li/><li/><li/></ul>\
-    </div>\
-    <div class="items vit">\
-      <p>Carboidratos: 0/0</p>\
-      <ul><li/><li/><li/><li/><li/><li/></ul>\
+    <div class="bars">\
+      <div class="items carb">\
+        <p>Carboidratos: 0/0</p>\
+        <ul><li/><li/><li/><li/><li/><li/></ul>\
+      </div>\
+      <div class="items prot">\
+        <p>Carboidratos: 0/0</p>\
+        <ul><li/><li/><li/><li/><li/><li/></ul>\
+      </div>\
+      <div class="items fat">\
+        <p>Carboidratos: 0/0</p>\
+        <ul><li/><li/><li/><li/><li/><li/></ul>\
+      </div>\
+      <div class="items vit">\
+        <p>Carboidratos: 0/0</p>\
+        <ul><li/><li/><li/><li/><li/><li/></ul>\
+      </div>\
     </div>\
     <div data-screen="tips" class="icon icon-tips"></div>\
     <div data-screen="choices" class="icon icon-choices"></div>\

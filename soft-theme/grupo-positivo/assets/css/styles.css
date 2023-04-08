@@ -715,6 +715,8 @@ body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
   position: absolute;
   left: -9.9074074074vh;
   top: -19.9074074074vh;
+  opacity: 0;
+  transform: scale(0);
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn.character-1 {
   background-image: url(../img/../img/gameplay/balao-manu.png);
@@ -745,6 +747,8 @@ body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pi
   position: absolute;
   width: 25.8333333333vh;
   height: 25vh;
+  opacity: 0;
+  transform: scale(0);
 }
 body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic.character-1 {
   background-image: url(../img/../img/gameplay/HUD/perfil-manu.png);
