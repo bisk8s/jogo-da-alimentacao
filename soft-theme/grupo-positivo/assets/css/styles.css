@@ -693,6 +693,77 @@ body#soft main #soft-pages .soft-current-page#gameplay {
   background-size: contain;
   background-size: cover;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
+  background-image: url(../img/../img/gameplay/HUD/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 166.6666666667vh;
+  height: 33.9814814815vh;
+  position: absolute;
+  left: 3.7037037037vh;
+  bottom: 0vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns {
+  position: absolute;
+  left: 0vh;
+  top: 0vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
+  width: 19.9074074074vh;
+  height: 19.9074074074vh;
+  position: absolute;
+  left: -9.9074074074vh;
+  top: -19.9074074074vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn.character-1 {
+  background-image: url(../img/../img/gameplay/balao-manu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn.character-2 {
+  background-image: url(../img/../img/gameplay/balao-joao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn.character-3 {
+  background-image: url(../img/../img/gameplay/balao-ana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile-pics {
+  position: absolute;
+  left: 12.4074074074vh;
+  bottom: 2.7777777778vh;
+  width: 25.8333333333vh;
+  height: 25vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic {
+  position: absolute;
+  width: 25.8333333333vh;
+  height: 25vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic.character-1 {
+  background-image: url(../img/../img/gameplay/HUD/perfil-manu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic.character-2 {
+  background-image: url(../img/../img/gameplay/HUD/perfil-joao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic.character-3 {
+  background-image: url(../img/../img/gameplay/HUD/perfil-ana.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira {
   pointer-events: auto !important;
 }

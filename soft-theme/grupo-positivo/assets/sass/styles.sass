@@ -524,6 +524,48 @@ body#soft
           @include background('../img/gameplay/Cenario.png')
           background-size: cover
 
+          .hud-bg
+            @include background('../img/gameplay/HUD/box.png')
+            width: px(1800)
+            height: px(367)
+            position: absolute
+            left: px(40)
+            bottom: px(0)
+
+          .pawns
+            position: absolute
+            left: px(0)
+            top: px(0)
+            .pawn
+              width: px(215)
+              height: px(215)
+              position: absolute
+              left: px(-107)
+              top: px(-215)
+              &.character-1
+                @include background('../img/gameplay/balao-manu.png')
+              &.character-2
+                @include background('../img/gameplay/balao-joao.png')
+              &.character-3
+                @include background('../img/gameplay/balao-ana.png')
+
+          .profile-pics
+            position: absolute
+            left: px(134)
+            bottom: px(30)
+            width: px(279)
+            height: px(270)
+            .profile-pic
+              position: absolute
+              width: px(279)
+              height: px(270)
+              &.character-1
+                @include background('../img/gameplay/HUD/perfil-manu.png')
+              &.character-2
+                @include background('../img/gameplay/HUD/perfil-joao.png')
+              &.character-3
+                @include background('../img/gameplay/HUD/perfil-ana.png')
+
           .prateleira
             pointer-events: auto !important
             &.prateleira-lipidios

@@ -452,9 +452,98 @@ var theme = {
   },
   gameplay: function () {
     theme.default();
-
     if (theme.vars.initApp == true)
       $("#soft main #soft-pages #gameplay #top-buttons").css("display", "none");
+
+    var $pawns = $(".pawns");
+    var $prateleira = $(".prateleira");
+
+    // Define the custom event to be triggered
+    var customEvent = jQuery.Event("pawnsOverlappingPrateleira");
+
+    // Function to check for overlap
+    function checkOverlap() {
+      $prateleira.each(function () {
+        if ($(this).overlaps($pawns.find(".pawn")).length) {
+          $(this).trigger(customEvent);
+        }
+      });
+    }
+
+    // Listen for the custom event
+    $prateleira.on("pawnsOverlappingPrateleira", function () {
+      // console.log("Pawns are overlapping Prateleira ", this);
+      theme.goToPage($(this).attr("data-screen"));
+    });
+
+    var viewportWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+    var viewportHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+
+    var target = {
+      x: viewportWidth * 0.5,
+      y: viewportHeight * 0.75,
+    };
+
+    function movePawn() {
+      target.x = Math.max(target.x, 100);
+      target.x = Math.min(target.x, 1701);
+
+      target.y = Math.max(target.y, 517);
+      target.y = Math.min(target.y, 941);
+
+      gsap.to($pawns, {
+        duration: 0.05,
+        ease: "power1.inOut",
+        ...target,
+        onComplete: function () {
+          checkOverlap();
+        },
+      });
+    }
+    movePawn();
+
+    $(document).on("mousedown", function (e) {
+      target.x = e.pageX;
+      target.y = e.pageY;
+      movePawn();
+    });
+
+    $(document).keydown(function (e) {
+      const moviment = 50;
+      switch (e.keyCode) {
+        case 37:
+          // Left arrow key pressed
+          target.x -= moviment;
+          break;
+        case 38:
+          // Up arrow key pressed
+          target.y -= moviment;
+          break;
+        case 39:
+          // Right arrow key pressed
+          target.x += moviment;
+          break;
+        case 40:
+          // Down arrow key pressed
+          target.y += moviment;
+          break;
+      }
+      movePawn();
+    });
+
+    $(document)
+      .off("mouseenter", "#gameplay .prateleira")
+      .on("mouseenter", "#gameplay .prateleira", function () {
+        gsap.to($(this), {
+          duration: 0.05,
+          x: -10,
+          yoyo: true,
+          repeat: 5,
+          ease: "power1.inOut",
+        });
+      });
 
     $(document)
       .off("mouseenter", "#gameplay .prateleira")
