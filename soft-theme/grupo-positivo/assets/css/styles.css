@@ -746,6 +746,15 @@ body#soft main #soft-pages .soft-current-page#gameplay .pawns {
   position: absolute;
   left: 0vh;
   top: 0vh;
+  width: 0.1851851852vh;
+  height: 0.1851851852vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .pawns .hit-test {
+  position: absolute;
+  left: -5.5555555556vh;
+  top: -13.8888888889vh;
+  width: 9.2592592593vh;
+  height: 9.2592592593vh;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
   width: 19.9074074074vh;
@@ -893,7 +902,7 @@ body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul li {
   background-repeat: no-repeat;
   background-size: contain;
 }
-body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul.selected {
+body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul li.selected {
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -971,6 +980,30 @@ body#soft main #soft-pages .soft-current-page#choices {
 }
 body#soft main #soft-pages .soft-current-page#choices .icon-choices {
   display: none;
+}
+body#soft main #soft-pages .soft-current-page#choices .freezer-content-1 {
+  width: 50.9259259259vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body#soft main #soft-pages .soft-current-page#choices .freezer-content-2 {
+  width: 50.9259259259vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body#soft main #soft-pages .soft-current-page#choices .freezer-content-3 {
+  width: 50.9259259259vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 body#soft main #soft-pages .soft-current-page#fats {
   background-image: url(../img/../img/bg/bg3.png);
@@ -1058,7 +1091,7 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul li {
   background-repeat: no-repeat;
   background-size: contain;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul.selected {
+body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul li.selected {
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1084,10 +1117,9 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-conte
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: flex-end;
   flex-wrap: wrap;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food {
   pointer-events: auto !important;
   display: inline-block;
   margin-top: 9.8148148148vh;
@@ -1095,228 +1127,228 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-conte
   background-position-y: bottom !important;
   margin-bottom: -5.0925925926vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.blank {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.blank {
   pointer-events: none !important;
   width: 13.8888888889vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Azeite {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Azeite {
   background-image: url(../img/../img/food/fats/Azeite.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 9.3518518519vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Manteiga {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Manteiga {
   background-image: url(../img/../img/food/fats/Manteiga.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 15.3703703704vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Cookies {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cookies {
   background-image: url(../img/../img/food/fats/Cookies.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 18.1481481481vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Castanhas {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Castanhas {
   background-image: url(../img/../img/food/fats/Castanhas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 14.0740740741vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Bolinho {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Bolinho {
   background-image: url(../img/../img/food/fats/Bolinho.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 7.8703703704vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Chocolate {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Chocolate {
   background-image: url(../img/../img/food/fats/Chocolate.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 8.8888888889vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Mamao {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Mamao {
   background-image: url(../img/../img/food/vits/Mamao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 17.8703703704vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Maca {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Maca {
   background-image: url(../img/../img/food/vits/Maca.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 9.0740740741vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Abobrinha {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Abobrinha {
   background-image: url(../img/../img/food/vits/Abobrinha.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 13.1481481481vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Couve {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Couve {
   background-image: url(../img/../img/food/vits/Couve.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 15.5555555556vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Tomates {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Tomates {
   background-image: url(../img/../img/food/vits/Tomates.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 14.1666666667vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Banana {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Banana {
   background-image: url(../img/../img/food/vits/Banana.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 13.6111111111vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Laranjas {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Laranjas {
   background-image: url(../img/../img/food/vits/Laranjas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 14.0740740741vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Brocolis {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Brocolis {
   background-image: url(../img/../img/food/vits/Brocolis.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 10.5555555556vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Cenoura {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cenoura {
   background-image: url(../img/../img/food/vits/Cenoura.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 14.1666666667vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Melancia {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Melancia {
   background-image: url(../img/../img/food/vits/Melancia.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 12.5925925926vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Ovos {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Ovos {
   background-image: url(../img/../img/food/prots/Ovos.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 17.6851851852vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Ervilhas {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Ervilhas {
   background-image: url(../img/../img/food/prots/Ervilhas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 8.0555555556vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Feijao {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Feijao {
   background-image: url(../img/../img/food/prots/Feijao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 15.7407407407vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Iogurte {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Iogurte {
   background-image: url(../img/../img/food/prots/Iogurte.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 9.537037037vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Queijo {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Queijo {
   background-image: url(../img/../img/food/prots/Queijo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 15vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Carne {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Carne {
   background-image: url(../img/../img/food/prots/Carne.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 21.2962962963vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Frango {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Frango {
   background-image: url(../img/../img/food/prots/Frango.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 21.7592592593vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Peixe {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Peixe {
   background-image: url(../img/../img/food/prots/Peixe.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 18.0555555556vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Leite {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Leite {
   background-image: url(../img/../img/food/prots/Leite.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 10.2777777778vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Cereal {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cereal {
   background-image: url(../img/../img/food/carbs/Cereal.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 13.9814814815vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Mandioca {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Mandioca {
   background-image: url(../img/../img/food/carbs/Mandioca.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 14.6296296296vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Arroz {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Arroz {
   background-image: url(../img/../img/food/carbs/Arroz.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 16.2037037037vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Massa {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Massa {
   background-image: url(../img/../img/food/carbs/Massa.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 12.6851851852vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Pao {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Pao {
   background-image: url(../img/../img/food/carbs/Pao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 21.2962962963vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Aveia {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Aveia {
   background-image: url(../img/../img/food/carbs/Aveia.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 10.6481481481vh;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content .food.Milho {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Milho {
   background-image: url(../img/../img/food/carbs/Milho.png);
   background-position: center;
   background-repeat: no-repeat;

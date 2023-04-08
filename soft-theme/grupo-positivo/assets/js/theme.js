@@ -67,6 +67,12 @@ var theme = {
           "Beba mais água e evite sucos  industrializados e refrigerantes.",
         ],
         finished: false,
+        correctAnswer: {
+          vits: 6,
+          fats: 1,
+          carbs: 4,
+          prots: 3,
+        },
       },
       {
         name: "João",
@@ -80,6 +86,12 @@ var theme = {
           "Frutas e verduras podem ser consumidas à vontade. ",
         ],
         finished: false,
+        correctAnswer: {
+          vits: 6,
+          fats: 2,
+          carbs: 7,
+          prots: 4,
+        },
       },
       {
         name: "Ana",
@@ -93,6 +105,12 @@ var theme = {
           "Reduza o consumo de carboidratos e evite doces.",
         ],
         finished: false,
+        correctAnswer: {
+          vits: 6,
+          fats: 0,
+          carbs: 5,
+          prots: 6,
+        },
       },
     ],
   },
@@ -506,6 +524,8 @@ var theme = {
 
   gameplay: function () {
     theme.default();
+    theme.scoreControll();
+
     if (theme.vars.initApp == true)
       $("#soft main #soft-pages #gameplay #top-buttons").css("display", "none");
 
@@ -517,7 +537,7 @@ var theme = {
 
     // Function to check for overlap
     function checkOverlap() {
-      var element = $prateleira.overlaps($pawns.find(".pawn")).first();
+      var element = $prateleira.overlaps($pawns.find(".hit-test")).first();
       $(element).trigger(customEvent);
     }
 
@@ -672,8 +692,35 @@ var theme = {
       });
   },
 
+  scoreControll: function () {
+    ["carb", "prot", "fat", "vit"].forEach(function (type) {
+      const charIndex = theme.vars.selectedChar;
+      const charData = theme.vars.charData[charIndex];
+      const correctAnswers = charData.correctAnswer;
+      const key = type + "s";
+      const answer = correctAnswers[key];
+      const selected = theme.vars.choices[key].length;
+      var content = [...new Array(answer)]
+        .map(function (_, i) {
+          return "<li class='" + (i < selected ? "selected" : "") + "'/>";
+        })
+        .join("");
+      $(".bar." + type + " ul").html(content);
+      var label = {
+        carb: "Carboidratos",
+        prot: "Proteínas",
+        fat: "Lipídios",
+        vit: "Vitaminas",
+      };
+      $(".bar." + type + " p").html(
+        label[type] + ": " + selected + "/" + answer
+      );
+    });
+  },
+
   freezerScreens: function () {
     theme.default();
+    theme.scoreControll();
 
     if (theme.vars.initApp == true)
       $("#soft main #soft-pages #top-buttons").css("display", "none");
@@ -721,39 +768,77 @@ var theme = {
     $(document)
       .off("click", ".food")
       .on("click", ".food", function () {
-        const me = $(this);
-        gsap.to(me, {
-          opacity: 0,
-          onComplete: function () {
-            const page = $(".soft-page").attr("id");
-            const food = me
-              .attr("class")
-              .split(" ")
-              .filter(function (s) {
-                return s != "food";
-              });
-            theme.vars.food[page] = theme.vars.food[page].filter(function (s) {
-              return s != food;
+        const charIndex = theme.vars.selectedChar;
+        const charData = theme.vars.charData[charIndex];
+        const correctAnswers = charData.correctAnswer;
+        const key = $(".soft-page").attr("id");
+        const answer = correctAnswers[key];
+        const selected = theme.vars.choices[key].length;
+
+        if (selected < answer) {
+          const me = $(this);
+
+          const page = $(".soft-page").attr("id");
+          const food = me
+            .attr("class")
+            .split(" ")
+            .filter(function (s) {
+              return s != "food";
             });
-            theme.vars.choices[page].push(food);
-            me.off("click");
-          },
-        });
+          theme.vars.food[page] = theme.vars.food[page].filter(function (s) {
+            return s != food;
+          });
+          theme.vars.choices[page].push(food);
+
+          gsap.to(me, {
+            opacity: 0,
+            onComplete: function () {
+              theme.scoreControll();
+              me.off("click");
+            },
+          });
+        }
       });
   },
 
   choices: function () {
     theme.freezerScreens();
 
-    var choices = [
+    const originalArray = [
       ...theme.vars.choices.carbs,
       ...theme.vars.choices.fats,
       ...theme.vars.choices.prots,
       ...theme.vars.choices.vits,
     ];
 
-    fillAndShuffle(choices).forEach(function (item) {
-      $(".freezer-content").append('<div class="food ' + item + '">');
+    const arrayLength = originalArray.length;
+    const newArrayLength = Math.floor(arrayLength / 3);
+
+    const newArray1 = [];
+    const newArray2 = [];
+    const newArray3 = [];
+
+    for (let i = 0; i < arrayLength; i++) {
+      const item = originalArray[i];
+      const newIndex = i % 3;
+
+      if (newIndex === 0) {
+        newArray1.push(item);
+      } else if (newIndex === 1) {
+        newArray2.push(item);
+      } else {
+        newArray3.push(item);
+      }
+    }
+
+    newArray1.forEach(function (item) {
+      $(".freezer-content-1").append('<div class="food ' + item + '">');
+    });
+    newArray2.forEach(function (item) {
+      $(".freezer-content-2").append('<div class="food ' + item + '">');
+    });
+    newArray3.forEach(function (item) {
+      $(".freezer-content-3").append('<div class="food ' + item + '">');
     });
 
     $(document).off("click", ".food");
@@ -838,7 +923,7 @@ $(document)
 
 function fillAndShuffle(arr) {
   const newarray = [...arr]; // cria uma cópia do array original
-  while (newarray.length < 9) {
+  while (newarray.length < 7) {
     // enquanto o novo array tiver menos de 9 itens
     newarray.push("blank"); // adiciona uma string vazia ao final do novo array
   }
@@ -847,5 +932,5 @@ function fillAndShuffle(arr) {
     const j = Math.floor(Math.random() * (i + 1)); // escolhe um índice aleatório entre 0 e i
     [newarray[i], newarray[j]] = [newarray[j], newarray[i]]; // troca os valores dos índices i e j
   }
-  return newarray.slice(0, 9); // retorna o novo array com 9 itens embaralhados
+  return newarray.slice(0, 7); // retorna o novo array com 9 itens embaralhados
 }

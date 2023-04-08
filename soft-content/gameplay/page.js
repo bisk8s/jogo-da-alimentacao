@@ -16,6 +16,7 @@ var pageGameplay = {
         <div class="pawn character-1"></div>\
         <div class="pawn character-2"></div>\
         <div class="pawn character-3"></div>\
+        <div class="hit-test"/>\
     </div>\
     <div class="hud-bg"></div>\
     <div class="profile-pics">\

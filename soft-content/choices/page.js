@@ -9,7 +9,9 @@ var pageChoices = {
   pageHtml:
     '\
     <div class="freezer">\
-    <div class="freezer-content"/>\
+      <div class="freezer-content-1"/>\
+      <div class="freezer-content-2"/>\
+      <div class="freezer-content-3"/>\
     </div>\
     <div class="profile-pics">\
         <div class="profile-pic character-1"></div>\

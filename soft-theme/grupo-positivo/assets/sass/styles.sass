@@ -564,6 +564,15 @@ body#soft
             position: absolute
             left: px(0)
             top: px(0)
+            width: px(2)
+            height: px(2)
+            .hit-test
+              position: absolute
+              left: px(-60)
+              top: px(-150)
+              width: px(100)
+              height: px(100)
+
             .pawn
               width: px(215)
               height: px(215)
@@ -658,8 +667,8 @@ body#soft
                   width: px(42)
                   height: px(24)
                   @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
-                &.selected
-                  @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
+                  &.selected
+                    @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
 
         // opening
         &#tips
@@ -714,12 +723,33 @@ body#soft
               .btn-home
                 display: none
 
-        // opening
+        // choices
         &#choices
           @include background('../img/bg/bg2.png')
           background-size: cover
           .icon-choices
             display: none
+          .freezer-content-1
+            width: px(550)
+            margin: auto
+            display: flex
+            justify-content: space-evenly
+            flex-direction: row
+            flex-wrap: nowrap
+          .freezer-content-2
+            width: px(550)
+            margin: auto
+            display: flex
+            justify-content: space-evenly
+            flex-direction: row
+            flex-wrap: nowrap
+          .freezer-content-3
+            width: px(550)
+            margin: auto
+            display: flex
+            justify-content: space-evenly
+            flex-direction: row
+            flex-wrap: nowrap
 
         &#fats
           @include background('../img/bg/bg3.png')
@@ -771,8 +801,8 @@ body#soft
                   width: px(42)
                   height: px(24)
                   @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
-                &.selected
-                  @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
+                  &.selected
+                    @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
           .freezer
             @include background('../img/choices/Prateleira.png')
             position: absolute
@@ -789,114 +819,113 @@ body#soft
               display: flex
               justify-content: space-evenly
               flex-direction: row
-              align-items: flex-end
               flex-wrap: wrap
-              .food
-                pointer-events: auto !important
-                display: inline-block
-                margin-top: px(106)
-                height: px(200)
-                background-position-y: bottom !important
-                margin-bottom: px(-55)
-                &.blank
-                  pointer-events: none !important
-                  width: px(150)
-                &.Azeite
-                  @include background('../img/food/fats/Azeite.png')
-                  width: px(101)
-                &.Manteiga
-                  @include background('../img/food/fats/Manteiga.png')
-                  width: px(166)
-                &.Cookies
-                  @include background('../img/food/fats/Cookies.png')
-                  width: px(196)
-                &.Castanhas
-                  @include background('../img/food/fats/Castanhas.png')
-                  width: px(152)
-                &.Bolinho
-                  @include background('../img/food/fats/Bolinho.png')
-                  width: px(85)
-                &.Chocolate
-                  @include background('../img/food/fats/Chocolate.png')
-                  width: px(96)
-                &.Mamao
-                  @include background('../img/food/vits/Mamao.png')
-                  width: px(193)
-                &.Maca
-                  @include background('../img/food/vits/Maca.png')
-                  width: px(98)
-                &.Abobrinha
-                  @include background('../img/food/vits/Abobrinha.png')
-                  width: px(142)
-                &.Couve
-                  @include background('../img/food/vits/Couve.png')
-                  width: px(168)
-                &.Tomates
-                  @include background('../img/food/vits/Tomates.png')
-                  width: px(153)
-                &.Banana
-                  @include background('../img/food/vits/Banana.png')
-                  width: px(147)
-                &.Laranjas
-                  @include background('../img/food/vits/Laranjas.png')
-                  width: px(152)
-                &.Brocolis
-                  @include background('../img/food/vits/Brocolis.png')
-                  width: px(114)
-                &.Cenoura
-                  @include background('../img/food/vits/Cenoura.png')
-                  width: px(153)
-                &.Melancia
-                  @include background('../img/food/vits/Melancia.png')
-                  width: px(136)
-                &.Ovos
-                  @include background('../img/food/prots/Ovos.png')
-                  width: px(191)
-                &.Ervilhas
-                  @include background('../img/food/prots/Ervilhas.png')
-                  width: px(87)
-                &.Feijao
-                  @include background('../img/food/prots/Feijao.png')
-                  width: px(170)
-                &.Iogurte
-                  @include background('../img/food/prots/Iogurte.png')
-                  width: px(103)
-                &.Queijo
-                  @include background('../img/food/prots/Queijo.png')
-                  width: px(162)
-                &.Carne
-                  @include background('../img/food/prots/Carne.png')
-                  width: px(230)
-                &.Frango
-                  @include background('../img/food/prots/Frango.png')
-                  width: px(235)
-                &.Peixe
-                  @include background('../img/food/prots/Peixe.png')
-                  width: px(195)
-                &.Leite
-                  @include background('../img/food/prots/Leite.png')
-                  width: px(111)
-                &.Cereal
-                  @include background('../img/food/carbs/Cereal.png')
-                  width: px(151)
-                &.Mandioca
-                  @include background('../img/food/carbs/Mandioca.png')
-                  width: px(158)
-                &.Arroz
-                  @include background('../img/food/carbs/Arroz.png')
-                  width: px(175)
-                &.Massa
-                  @include background('../img/food/carbs/Massa.png')
-                  width: px(137)
-                &.Pao
-                  @include background('../img/food/carbs/Pao.png')
-                  width: px(230)
-                &.Aveia
-                  @include background('../img/food/carbs/Aveia.png')
-                  width: px(115)
-                &.Milho
-                  @include background('../img/food/carbs/Milho.png')
-                  width: px(194)
+            .food
+              pointer-events: auto !important
+              display: inline-block
+              margin-top: px(106)
+              height: px(200)
+              background-position-y: bottom !important
+              margin-bottom: px(-55)
+              &.blank
+                pointer-events: none !important
+                width: px(150)
+              &.Azeite
+                @include background('../img/food/fats/Azeite.png')
+                width: px(101)
+              &.Manteiga
+                @include background('../img/food/fats/Manteiga.png')
+                width: px(166)
+              &.Cookies
+                @include background('../img/food/fats/Cookies.png')
+                width: px(196)
+              &.Castanhas
+                @include background('../img/food/fats/Castanhas.png')
+                width: px(152)
+              &.Bolinho
+                @include background('../img/food/fats/Bolinho.png')
+                width: px(85)
+              &.Chocolate
+                @include background('../img/food/fats/Chocolate.png')
+                width: px(96)
+              &.Mamao
+                @include background('../img/food/vits/Mamao.png')
+                width: px(193)
+              &.Maca
+                @include background('../img/food/vits/Maca.png')
+                width: px(98)
+              &.Abobrinha
+                @include background('../img/food/vits/Abobrinha.png')
+                width: px(142)
+              &.Couve
+                @include background('../img/food/vits/Couve.png')
+                width: px(168)
+              &.Tomates
+                @include background('../img/food/vits/Tomates.png')
+                width: px(153)
+              &.Banana
+                @include background('../img/food/vits/Banana.png')
+                width: px(147)
+              &.Laranjas
+                @include background('../img/food/vits/Laranjas.png')
+                width: px(152)
+              &.Brocolis
+                @include background('../img/food/vits/Brocolis.png')
+                width: px(114)
+              &.Cenoura
+                @include background('../img/food/vits/Cenoura.png')
+                width: px(153)
+              &.Melancia
+                @include background('../img/food/vits/Melancia.png')
+                width: px(136)
+              &.Ovos
+                @include background('../img/food/prots/Ovos.png')
+                width: px(191)
+              &.Ervilhas
+                @include background('../img/food/prots/Ervilhas.png')
+                width: px(87)
+              &.Feijao
+                @include background('../img/food/prots/Feijao.png')
+                width: px(170)
+              &.Iogurte
+                @include background('../img/food/prots/Iogurte.png')
+                width: px(103)
+              &.Queijo
+                @include background('../img/food/prots/Queijo.png')
+                width: px(162)
+              &.Carne
+                @include background('../img/food/prots/Carne.png')
+                width: px(230)
+              &.Frango
+                @include background('../img/food/prots/Frango.png')
+                width: px(235)
+              &.Peixe
+                @include background('../img/food/prots/Peixe.png')
+                width: px(195)
+              &.Leite
+                @include background('../img/food/prots/Leite.png')
+                width: px(111)
+              &.Cereal
+                @include background('../img/food/carbs/Cereal.png')
+                width: px(151)
+              &.Mandioca
+                @include background('../img/food/carbs/Mandioca.png')
+                width: px(158)
+              &.Arroz
+                @include background('../img/food/carbs/Arroz.png')
+                width: px(175)
+              &.Massa
+                @include background('../img/food/carbs/Massa.png')
+                width: px(137)
+              &.Pao
+                @include background('../img/food/carbs/Pao.png')
+                width: px(230)
+              &.Aveia
+                @include background('../img/food/carbs/Aveia.png')
+                width: px(115)
+              &.Milho
+                @include background('../img/food/carbs/Milho.png')
+                width: px(194)
 
           .btn-back
             width: px(116)
