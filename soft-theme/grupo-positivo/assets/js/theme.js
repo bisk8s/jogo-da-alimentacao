@@ -452,6 +452,34 @@ var theme = {
   },
   gameplay: function () {
     theme.default();
+
+    if (theme.vars.initApp == true)
+      $("#soft main #soft-pages #gameplay #top-buttons").css("display", "none");
+
+    $(document)
+      .off("mouseenter", "#gameplay .prateleira")
+      .on("mouseenter", "#gameplay .prateleira", function () {
+        gsap.to($(this), {
+          duration: 0.05,
+          x: -10,
+          yoyo: true,
+          repeat: 5,
+          ease: "power1.inOut",
+        });
+      });
+
+    $(document)
+      .off("click", "#gameplay .prateleira")
+      .on("click", "#gameplay .prateleira", function () {
+        gsap.to($(this), {
+          duration: 0.05,
+          y: -10,
+          yoyo: true,
+          repeat: 5,
+          ease: "power1.inOut",
+        });
+        theme.goToPage($(this).attr("data-screen"));
+      });
   },
   choices: function () {
     theme.default();

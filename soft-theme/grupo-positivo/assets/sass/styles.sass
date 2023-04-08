@@ -519,6 +519,42 @@ body#soft
               .btn-home
                 display: none
 
+        // gameplay
+        &#gameplay
+          @include background('../img/gameplay/Cenario.png')
+          background-size: cover
+
+          .prateleira
+            pointer-events: auto !important
+            &.prateleira-lipidios
+              @include background('../img/gameplay/prateleira-lipidios.png')
+              width: px(303)
+              height: px(348)
+              position: absolute
+              left: px(250)
+              top: px(71)
+            &.prateleira-proteinas
+              @include background('../img/gameplay/prateleira-proteinas.png')
+              width: px(306)
+              height: px(338)
+              position: absolute
+              left: px(580)
+              top: px(65)
+            &.prateleira-carboidratos
+              @include background('../img/gameplay/prateleira-carboidratos.png')
+              width: px(268)
+              height: px(354)
+              position: absolute
+              left: px(940)
+              top: px(50)
+            &.prateleira-vitaminas
+              @include background('../img/gameplay/prateleira-vitaminas.png')
+              width: px(427)
+              height: px(349)
+              position: absolute
+              left: px(1400)
+              top: px(350)
+
   .overlay
     background-color: rgba(255, 255, 255, 0.5)
     position: absolute

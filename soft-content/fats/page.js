@@ -18,6 +18,6 @@ var pageFats = {
     },
   ],
 
-  pageShowMethod: "theme.gameplay()",
+  pageShowMethod: "theme.fats()",
   pageHideMethod: "",
 };

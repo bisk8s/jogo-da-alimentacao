@@ -18,6 +18,6 @@ var pageEnding = {
     },
   ],
 
-  pageShowMethod: "theme.gameplay()",
+  pageShowMethod: "theme.ending()",
   pageHideMethod: "",
 };

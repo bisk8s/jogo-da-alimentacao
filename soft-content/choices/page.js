@@ -1,4 +1,4 @@
-var pageGameplay = {
+var pageChoices = {
   pageLoader: {
     loaderShowMethod: "theme.showLoader()",
     loaderFiles: {
@@ -18,6 +18,6 @@ var pageGameplay = {
     },
   ],
 
-  pageShowMethod: "theme.gameplay()",
+  pageShowMethod: "theme.choices()",
   pageHideMethod: "",
 };

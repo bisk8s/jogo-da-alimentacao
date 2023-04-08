@@ -686,6 +686,60 @@ body#soft main #soft-pages .soft-current-page#description .btn-description p {
 body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons .btn-home {
   display: none;
 }
+body#soft main #soft-pages .soft-current-page#gameplay {
+  background-image: url(../img/../img/gameplay/Cenario.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira {
+  pointer-events: auto !important;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-lipidios {
+  background-image: url(../img/../img/gameplay/prateleira-lipidios.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 28.0555555556vh;
+  height: 32.2222222222vh;
+  position: absolute;
+  left: 23.1481481481vh;
+  top: 6.5740740741vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-proteinas {
+  background-image: url(../img/../img/gameplay/prateleira-proteinas.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 28.3333333333vh;
+  height: 31.2962962963vh;
+  position: absolute;
+  left: 53.7037037037vh;
+  top: 6.0185185185vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-carboidratos {
+  background-image: url(../img/../img/gameplay/prateleira-carboidratos.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24.8148148148vh;
+  height: 32.7777777778vh;
+  position: absolute;
+  left: 87.037037037vh;
+  top: 4.6296296296vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-vitaminas {
+  background-image: url(../img/../img/gameplay/prateleira-vitaminas.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 39.537037037vh;
+  height: 32.3148148148vh;
+  position: absolute;
+  left: 129.6296296296vh;
+  top: 32.4074074074vh;
+}
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
