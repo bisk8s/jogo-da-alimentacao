@@ -208,6 +208,18 @@ body#soft
             margin: auto
             transform: scale(0)
 
+        .centred
+          position: absolute
+          margin: auto
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          box-sizing: border-box
+          z-index: 2
+          width: px(1920)
+          height: px(1080)
+
         // Início
         &#intro
           @include background('../img/bg/bg1.png')
@@ -345,6 +357,7 @@ body#soft
             z-index: 2
             p
               font-size: px(25)
+              line-height: px(25)
               color: #98B8A8
               letter-spacing: px(2)
 
@@ -374,20 +387,22 @@ body#soft
             @include background('../img/opening/bg.png')
             width: px(1145)
             height: px(455)
-            top: px(311)
-            left: px(415)
             position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
             opacity: 0
             transform: scale(0)
             p
               position: absolute
-              margin: auto
-              top: 0
-              bottom: 0
-              left: 0
-              right: 0
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
               width: px(900)
-              height: px(80)
+              font-size: px(40)
+              line-height: px(40)
 
           .btn-opening
             width: px(246)
@@ -409,8 +424,9 @@ body#soft
               @include background('../img/opening/botao.png')
             p
               font-size: px(35)
+              line-height: px(35)
               letter-spacing: px(2)
-              margin-top: -5%
+              margin-top: px(20)
 
           #top-buttons
             .buttons
@@ -426,20 +442,22 @@ body#soft
             @include background('../img/newChar/bg.png')
             width: px(1145)
             height: px(455)
-            top: px(311)
-            left: px(415)
             position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
             opacity: 0
             transform: scale(0)
             p
               position: absolute
-              margin: auto
-              top: 0
-              bottom: 0
-              left: 0
-              right: 0
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
               width: px(900)
-              height: px(80)
+              font-size: px(40)
+              line-height: px(40)
 
           .btn-next
             box-sizing: border-box
@@ -458,11 +476,11 @@ body#soft
               content: none
             p
               font-size: px(35)
+              line-height: px(35)
               letter-spacing: px(2)
-              margin-top: px(-5)
-              text-align: center
+              margin-top: px(20)
 
-          #top-buttons
+            #top-buttons
             .buttons
               .btn-home
                 display: none
@@ -476,20 +494,22 @@ body#soft
             @include background('../img/ending/bg.png')
             width: px(1145)
             height: px(455)
-            top: px(311)
-            left: px(415)
             position: absolute
+            margin: auto
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
             opacity: 0
             transform: scale(0)
             p
               position: absolute
-              margin: auto
-              top: 0
-              bottom: 0
-              left: 0
-              right: 0
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
               width: px(900)
-              height: px(300)
+              font-size: px(40)
+              line-height: px(40)
 
           .btn-next
             box-sizing: border-box
@@ -503,16 +523,16 @@ body#soft
             z-index: 2
             width: px(350)
             height: px(84)
-            @include background('../img/ending/botao.png')
+            @include background('../img/newChar/botao.png')
             &::before
               content: none
             p
               font-size: px(35)
+              line-height: px(35)
               letter-spacing: px(2)
-              margin-top: px(-5)
-              text-align: center
+              margin-top: px(20)
 
-          #top-buttons
+            #top-buttons
             .buttons
               .btn-home
                 display: none
@@ -539,10 +559,14 @@ body#soft
                 height: px(50)
 
           th
+            font-size: px(35)
+            line-height: px(40)
             text-transform: uppercase
             text-align: left
             white-space: nowrap
           td
+            font-size: px(35)
+            line-height: px(40)
             color: #A77655
 
           .character
@@ -582,14 +606,11 @@ body#soft
             opacity: 0
             transform: scale(0)
             p
-              position: absolute
-              margin: auto
-              top: 0
-              bottom: 0
-              left: 0
-              right: 0
+              pposition: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
               width: px(900)
-              height: px(80)
 
           .btn-description
             width: px(246)
@@ -611,54 +632,60 @@ body#soft
               @include background('../img/description/botao.png')
             p
               font-size: px(35)
+              line-height: px(35)
               letter-spacing: px(2)
-              margin-top: -5%
+              margin-top: px(20)
 
           #top-buttons
             .buttons
               .btn-home
                 display: none
 
+        .icon
+          pointer-events: auto !important
+          p
+            position: absolute
+            bottom: px(-40)
+            font-size: px(20)
+            line-height: px(20)
+            left: 0
+            right: 0
+            margin: auto
+            text-align: center
+          &:hover
+            transform: scale(1.2)
+          &.icon-tips
+            @include background('../img/gameplay/HUD/icons/tips.png')
+            width: px(128)
+            height: px(106)
+            position: absolute
+            left: px(490)
+            bottom: px(70)
+          &.icon-choices
+            @include background('../img/gameplay/HUD/icons/bag.png')
+            width: px(111)
+            height: px(113)
+            position: absolute
+            left: px(670)
+            bottom: px(70)
         // gameplay
         &#gameplay
-          @include background('../img/gameplay/Cenario.png')
-          background-size: cover
+          background-color: #000
+          .centred
+            @include background('../img/gameplay/Cenario.png')
+            background-size: cover
+            pointer-events: auto !important
 
           .hud-bg
             @include background('../img/gameplay/HUD/box.png')
             width: px(1800)
             height: px(367)
             position: absolute
-            left: px(40)
-            bottom: px(0)
-
-          .icon
-            pointer-events: auto !important
-            transition: all 0.5s
-            p
-              position: absolute
-              bottom: px(-40)
-              font-size: px(20)
-              left: 0
-              right: 0
-              margin: auto
-              text-align: center
-            &:hover
-              transform: scale(1.2)
-            &.icon-tips
-              @include background('../img/gameplay/HUD/icons/tips.png')
-              width: px(128)
-              height: px(106)
-              position: absolute
-              left: px(490)
-              bottom: px(70)
-            &.icon-choices
-              @include background('../img/gameplay/HUD/icons/bag.png')
-              width: px(111)
-              height: px(113)
-              position: absolute
-              left: px(670)
-              bottom: px(70)
+            margin: 0 auto
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
 
           .pawns
             position: absolute
@@ -742,6 +769,9 @@ body#soft
             position: absolute
             left: px(870)
             top: px(830)
+            p
+              font-size: px(27)
+              line-height: px(27)
             .bar
               width: px(300)
               position: absolute
@@ -766,6 +796,7 @@ body#soft
                 li
                   width: px(42)
                   height: px(24)
+                  margin-left: px(3)
                   @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
                   &.selected
                     @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
@@ -789,13 +820,12 @@ body#soft
             transform: scale(0)
             p
               position: absolute
-              margin: auto
-              top: 0
-              bottom: 0
-              left: 0
-              right: 0
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
               width: px(900)
-              height: px(350)
+              font-size: px(25)
+              line-height: px(30)
 
           .btn-tips
             width: px(116)
@@ -892,6 +922,8 @@ body#soft
               height: px(140)
               p
                 text-align: right
+                font-size: px(27)
+                line-height: px(27)
               ul
                 list-style: none
                 display: flex
@@ -900,6 +932,7 @@ body#soft
                 li
                   width: px(42)
                   height: px(24)
+                  margin-left: px(3)
                   @include background('../img/gameplay/HUD/quanto-de-quanto-2.png')
                   &.selected
                     @include background('../img/gameplay/HUD/quanto-de-quanto-1.png')
@@ -909,8 +942,11 @@ body#soft
             width: px(647)
             height: px(337)
             position: absolute
-            left: px(1000)
-            top: px(570)
+            margin: auto
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
             opacity: 0
             transform: scale(0)
             display: flex
@@ -920,6 +956,8 @@ body#soft
               color: #fff
               text-align: center
               width: px(550)
+              font-size: px(27)
+              line-height: px(27)
 
           .freezer
             @include background('../img/choices/Prateleira.png')
@@ -1065,11 +1103,11 @@ body#soft
           .icon
             pointer-events: auto !important
             opacity: 0
-            transition: all 0.5s
             p
               position: absolute
               bottom: px(-40)
               font-size: px(20)
+              line-height: px(20)
               left: 0
               right: 0
               margin: auto

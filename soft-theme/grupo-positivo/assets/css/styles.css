@@ -304,6 +304,18 @@ body#soft main #soft-pages .soft-current-page#splash-screen .logo-aprende-brasil
   margin: auto;
   transform: scale(0);
 }
+body#soft main #soft-pages .soft-current-page .centred {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  width: 177.7777777778vh;
+  height: 100vh;
+}
 body#soft main #soft-pages .soft-current-page#intro {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
@@ -481,6 +493,7 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-name {
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name p {
   font-size: 2.3148148148vh;
+  line-height: 2.3148148148vh;
   color: #98B8A8;
   letter-spacing: 0.1851851852vh;
 }
@@ -513,21 +526,23 @@ body#soft main #soft-pages .soft-current-page#opening .opening-text-bg {
   background-size: contain;
   width: 106.0185185185vh;
   height: 42.1296296296vh;
-  top: 28.7962962963vh;
-  left: 38.4259259259vh;
-  position: absolute;
-  opacity: 0;
-  transform: scale(0);
-}
-body#soft main #soft-pages .soft-current-page#opening .opening-text-bg p {
   position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#opening .opening-text-bg p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 83.3333333333vh;
-  height: 7.4074074074vh;
+  font-size: 3.7037037037vh;
+  line-height: 3.7037037037vh;
 }
 body#soft main #soft-pages .soft-current-page#opening .btn-opening {
   width: 22.7777777778vh;
@@ -555,8 +570,9 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening .bg {
 }
 body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
   font-size: 3.2407407407vh;
+  line-height: 3.2407407407vh;
   letter-spacing: 0.1851851852vh;
-  margin-top: -5%;
+  margin-top: 1.8518518519vh;
 }
 body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
   display: none;
@@ -575,21 +591,23 @@ body#soft main #soft-pages .soft-current-page#newChar .text-bg {
   background-size: contain;
   width: 106.0185185185vh;
   height: 42.1296296296vh;
-  top: 28.7962962963vh;
-  left: 38.4259259259vh;
-  position: absolute;
-  opacity: 0;
-  transform: scale(0);
-}
-body#soft main #soft-pages .soft-current-page#newChar .text-bg p {
   position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#newChar .text-bg p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 83.3333333333vh;
-  height: 7.4074074074vh;
+  font-size: 3.7037037037vh;
+  line-height: 3.7037037037vh;
 }
 body#soft main #soft-pages .soft-current-page#newChar .btn-next {
   box-sizing: border-box;
@@ -613,11 +631,11 @@ body#soft main #soft-pages .soft-current-page#newChar .btn-next::before {
 }
 body#soft main #soft-pages .soft-current-page#newChar .btn-next p {
   font-size: 3.2407407407vh;
+  line-height: 3.2407407407vh;
   letter-spacing: 0.1851851852vh;
-  margin-top: -0.462962963vh;
-  text-align: center;
+  margin-top: 1.8518518519vh;
 }
-body#soft main #soft-pages .soft-current-page#newChar #top-buttons .buttons .btn-home {
+body#soft main #soft-pages .soft-current-page#newChar .btn-next .buttons .btn-home {
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#ending {
@@ -634,21 +652,23 @@ body#soft main #soft-pages .soft-current-page#ending .text-bg {
   background-size: contain;
   width: 106.0185185185vh;
   height: 42.1296296296vh;
-  top: 28.7962962963vh;
-  left: 38.4259259259vh;
-  position: absolute;
-  opacity: 0;
-  transform: scale(0);
-}
-body#soft main #soft-pages .soft-current-page#ending .text-bg p {
   position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#ending .text-bg p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 83.3333333333vh;
-  height: 27.7777777778vh;
+  font-size: 3.7037037037vh;
+  line-height: 3.7037037037vh;
 }
 body#soft main #soft-pages .soft-current-page#ending .btn-next {
   box-sizing: border-box;
@@ -662,7 +682,7 @@ body#soft main #soft-pages .soft-current-page#ending .btn-next {
   z-index: 2;
   width: 32.4074074074vh;
   height: 7.7777777778vh;
-  background-image: url(../img/../img/ending/botao.png);
+  background-image: url(../img/../img/newChar/botao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -672,11 +692,11 @@ body#soft main #soft-pages .soft-current-page#ending .btn-next::before {
 }
 body#soft main #soft-pages .soft-current-page#ending .btn-next p {
   font-size: 3.2407407407vh;
+  line-height: 3.2407407407vh;
   letter-spacing: 0.1851851852vh;
-  margin-top: -0.462962963vh;
-  text-align: center;
+  margin-top: 1.8518518519vh;
 }
-body#soft main #soft-pages .soft-current-page#ending #top-buttons .buttons .btn-home {
+body#soft main #soft-pages .soft-current-page#ending .btn-next .buttons .btn-home {
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#description {
@@ -703,11 +723,15 @@ body#soft main #soft-pages .soft-current-page#description .tables .table-2 th {
   height: 4.6296296296vh;
 }
 body#soft main #soft-pages .soft-current-page#description th {
+  font-size: 3.2407407407vh;
+  line-height: 3.7037037037vh;
   text-transform: uppercase;
   text-align: left;
   white-space: nowrap;
 }
 body#soft main #soft-pages .soft-current-page#description td {
+  font-size: 3.2407407407vh;
+  line-height: 3.7037037037vh;
   color: #A77655;
 }
 body#soft main #soft-pages .soft-current-page#description .character {
@@ -763,14 +787,11 @@ body#soft main #soft-pages .soft-current-page#description .description-text-bg {
   transform: scale(0);
 }
 body#soft main #soft-pages .soft-current-page#description .description-text-bg p {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  pposition: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 83.3333333333vh;
-  height: 7.4074074074vh;
 }
 body#soft main #soft-pages .soft-current-page#description .btn-description {
   width: 22.7777777778vh;
@@ -798,47 +819,30 @@ body#soft main #soft-pages .soft-current-page#description .btn-description .bg {
 }
 body#soft main #soft-pages .soft-current-page#description .btn-description p {
   font-size: 3.2407407407vh;
+  line-height: 3.2407407407vh;
   letter-spacing: 0.1851851852vh;
-  margin-top: -5%;
+  margin-top: 1.8518518519vh;
 }
 body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons .btn-home {
   display: none;
 }
-body#soft main #soft-pages .soft-current-page#gameplay {
-  background-image: url(../img/../img/gameplay/Cenario.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
-  background-image: url(../img/../img/gameplay/HUD/box.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 166.6666666667vh;
-  height: 33.9814814815vh;
-  position: absolute;
-  left: 3.7037037037vh;
-  bottom: 0vh;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .icon {
+body#soft main #soft-pages .soft-current-page .icon {
   pointer-events: auto !important;
-  transition: all 0.5s;
 }
-body#soft main #soft-pages .soft-current-page#gameplay .icon p {
+body#soft main #soft-pages .soft-current-page .icon p {
   position: absolute;
   bottom: -3.7037037037vh;
   font-size: 1.8518518519vh;
+  line-height: 1.8518518519vh;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center;
 }
-body#soft main #soft-pages .soft-current-page#gameplay .icon:hover {
+body#soft main #soft-pages .soft-current-page .icon:hover {
   transform: scale(1.2);
 }
-body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-tips {
+body#soft main #soft-pages .soft-current-page .icon.icon-tips {
   background-image: url(../img/../img/gameplay/HUD/icons/tips.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -849,7 +853,7 @@ body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-tips {
   left: 45.3703703704vh;
   bottom: 6.4814814815vh;
 }
-body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-choices {
+body#soft main #soft-pages .soft-current-page .icon.icon-choices {
   background-image: url(../img/../img/gameplay/HUD/icons/bag.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -859,6 +863,31 @@ body#soft main #soft-pages .soft-current-page#gameplay .icon.icon-choices {
   position: absolute;
   left: 62.037037037vh;
   bottom: 6.4814814815vh;
+}
+body#soft main #soft-pages .soft-current-page#gameplay {
+  background-color: #000;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .centred {
+  background-image: url(../img/../img/gameplay/Cenario.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  pointer-events: auto !important;
+}
+body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
+  background-image: url(../img/../img/gameplay/HUD/box.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 166.6666666667vh;
+  height: 33.9814814815vh;
+  position: absolute;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns {
   position: absolute;
@@ -985,6 +1014,10 @@ body#soft main #soft-pages .soft-current-page#gameplay .bars {
   left: 80.5555555556vh;
   top: 76.8518518519vh;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .bars p {
+  font-size: 2.5vh;
+  line-height: 2.5vh;
+}
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar {
   width: 27.7777777778vh;
   position: absolute;
@@ -1015,6 +1048,7 @@ body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul {
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul li {
   width: 3.8888888889vh;
   height: 2.2222222222vh;
+  margin-left: 0.2777777778vh;
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1051,13 +1085,12 @@ body#soft main #soft-pages .soft-current-page#tips .tips-text-bg {
 }
 body#soft main #soft-pages .soft-current-page#tips .tips-text-bg p {
   position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 83.3333333333vh;
-  height: 32.4074074074vh;
+  font-size: 2.3148148148vh;
+  line-height: 2.7777777778vh;
 }
 body#soft main #soft-pages .soft-current-page#tips .btn-tips {
   width: 10.7407407407vh;
@@ -1194,6 +1227,8 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar {
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar p {
   text-align: right;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul {
   list-style: none;
@@ -1204,6 +1239,7 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul {
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul li {
   width: 3.8888888889vh;
   height: 2.2222222222vh;
+  margin-left: 0.2777777778vh;
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1223,8 +1259,11 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback {
   width: 59.9074074074vh;
   height: 31.2037037037vh;
   position: absolute;
-  left: 92.5925925926vh;
-  top: 52.7777777778vh;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   opacity: 0;
   transform: scale(0);
   display: flex;
@@ -1235,6 +1274,8 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback p {
   color: #fff;
   text-align: center;
   width: 50.9259259259vh;
+  font-size: 2.5vh;
+  line-height: 2.5vh;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer {
   background-image: url(../img/../img/choices/Prateleira.png);
@@ -1519,12 +1560,12 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back .bg {
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon {
   pointer-events: auto !important;
   opacity: 0;
-  transition: all 0.5s;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon p {
   position: absolute;
   bottom: -3.7037037037vh;
   font-size: 1.8518518519vh;
+  line-height: 1.8518518519vh;
   left: 0;
   right: 0;
   margin: auto;

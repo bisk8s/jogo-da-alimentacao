@@ -8,6 +8,7 @@ var charSelection = {
 
   pageHtml:
     '\
+    <div class="centred">\
         <div class="character-bg character-bg-1"></div>\
         <div class="character-bg character-bg-2"></div>\
         <div class="character-bg character-bg-3"></div>\
@@ -23,6 +24,7 @@ var charSelection = {
         <div class="soft-btn btn-select btn-select-1 btn" data-char="0"><div class="bg"></div><p soft-page-content="selectText"></p></div>\
         <div class="soft-btn btn-select btn-select-2 btn" data-char="1"><div class="bg"></div><p soft-page-content="selectText"></p></div>\
         <div class="soft-btn btn-select btn-select-3 btn" data-char="2"><div class="bg"></div><p soft-page-content="selectText"></p></div>\
+    </div>\
     ',
 
   pageTemplate: "no-template",

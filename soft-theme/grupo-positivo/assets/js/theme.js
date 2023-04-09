@@ -527,22 +527,23 @@ var theme = {
       theme.goToPage($(this).attr("data-screen"));
     });
 
-    var viewportWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-    var viewportHeight =
-      window.innerHeight || document.documentElement.clientHeight;
+    var viewportWidth = $(".centred").width();
+    var viewportHeight = $(".centred").height();
 
     var target = {
       x: viewportWidth * 0.5,
       y: viewportHeight * 0.75,
     };
 
-    function movePawn() {
-      target.x = Math.max(target.x, 100);
-      target.x = Math.min(target.x, 1701);
+    const x = viewportWidth / 1920;
+    const y = viewportHeight / 1080;
 
-      target.y = Math.max(target.y, 517);
-      target.y = Math.min(target.y, 941);
+    function movePawn() {
+      target.x = Math.max(target.x, 100 * x);
+      target.x = Math.min(target.x, 1701 * x);
+
+      target.y = Math.max(target.y, 517 * y);
+      target.y = Math.min(target.y, 941 * y);
 
       gsap.to($pawns, {
         duration: 0.05,
@@ -555,9 +556,12 @@ var theme = {
     }
     movePawn();
 
-    $(document).on("mousedown", function (e) {
-      target.x = e.pageX;
-      target.y = e.pageY;
+    $(".centred").on("mousedown", function (e) {
+      var offset = $(this).offset(); // Obtem o deslocamento da posição do elemento
+      var posX = e.pageX - offset.left; // Calcula a posição X interna
+      var posY = e.pageY - offset.top; // Calcula a posição Y interna
+      target.x = posX;
+      target.y = posY;
       movePawn();
     });
 
@@ -785,7 +789,7 @@ var theme = {
           });
           const message =
             charData.name +
-            " não precisa de mais uma porção desse tipo de alimento.<br/>Continue o jogo.";
+            " não precisa de mais uma porção desse tipo de alimento. Continue o jogo.";
           theme.showAlert(message);
         }
       });
@@ -851,6 +855,12 @@ var theme = {
     });
 
     $(document).off("click", ".food");
+
+    $(document)
+      .off("click", "#soft main #soft-pages .btn-back")
+      .on("click", "#soft main #soft-pages .btn-back", function () {
+        history.back();
+      });
   },
   fats: function () {
     theme.freezerScreens();

@@ -184,7 +184,7 @@ var softContent = [
         pageVarBase: "pageNewChar",
         pageActive: true,
         pageContent: {
-          nextText: "Legal! <br/> <br/> Agora selecione um novo personagem.",
+          nextText: "Legal! Agora selecione um novo personagem.",
           bntNext: "Tela seleção",
         },
       },
@@ -198,7 +198,7 @@ var softContent = [
         pageActive: true,
         pageContent: {
           nextText:
-            "Fim de jogo! <br/> <br/> Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, é só abrir o menu inferior.",
+            "Fim de jogo! Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, é só abrir o menu inferior.",
           bntNext: "Jogar novamente",
         },
       },
