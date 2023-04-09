@@ -532,13 +532,13 @@ var theme = {
 
     var target = {
       x: viewportWidth * 0.5,
-      y: viewportHeight * 0.75,
+      y: viewportHeight * 0.65,
     };
 
-    const x = viewportWidth / 1920;
-    const y = viewportHeight / 1080;
-
     function movePawn() {
+      const x = viewportWidth / 1920;
+      const y = viewportHeight / 1080;
+
       target.x = Math.max(target.x, 100 * x);
       target.x = Math.min(target.x, 1701 * x);
 
@@ -555,6 +555,19 @@ var theme = {
       });
     }
     movePawn();
+
+    $(window)
+      .off("resize")
+      .on("resize", function () {
+        viewportWidth = $(".centred").width();
+        viewportHeight = $(".centred").height();
+        target = {
+          x: viewportWidth * 0.5,
+          y: viewportHeight * 0.65,
+        };
+        console.log("resize");
+        movePawn();
+      });
 
     $(".centred").on("mousedown", function (e) {
       var offset = $(this).offset(); // Obtem o deslocamento da posição do elemento

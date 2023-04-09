@@ -882,10 +882,9 @@ body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
   background-size: contain;
   width: 166.6666666667vh;
   height: 33.9814814815vh;
-  position: absolute;
   margin: 0 auto;
   position: absolute;
-  left: 0;
+  left: 1.3888888889vh;
   right: 0;
   bottom: 0;
 }
