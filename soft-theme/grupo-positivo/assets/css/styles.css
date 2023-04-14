@@ -313,8 +313,8 @@ body#soft main #soft-pages .soft-current-page .centred {
   right: 0;
   box-sizing: border-box;
   z-index: 2;
-  width: 177.7777777778vh;
-  height: 100vh;
+  width: 1920px;
+  height: 1080px;
 }
 body#soft main #soft-pages .soft-current-page#intro {
   background-image: url(../img/../img/bg/bg1.png);
@@ -331,8 +331,8 @@ body#soft main #soft-pages .soft-current-page#intro .logo {
   right: 0;
   bottom: 0;
   transform: scale(0);
-  width: 111.2037037037vh;
-  height: 34.3518518519vh;
+  width: 1201px;
+  height: 371px;
   margin: auto;
   background-image: url(../img/../img/intro/Logo.png);
   background-position: center;
@@ -341,7 +341,7 @@ body#soft main #soft-pages .soft-current-page#intro .logo {
 }
 body#soft main #soft-pages .soft-current-page#intro .btn-intro {
   position: absolute;
-  bottom: 18.5185185185vh;
+  bottom: 200px;
   left: 0;
   right: 0;
   margin: auto;
@@ -349,8 +349,8 @@ body#soft main #soft-pages .soft-current-page#intro .btn-intro {
   opacity: 0;
   transform: scale(0);
   z-index: 2;
-  width: 30.1851851852vh;
-  height: 11.2962962963vh;
+  width: 326px;
+  height: 122px;
 }
 body#soft main #soft-pages .soft-current-page#intro .btn-intro::before {
   content: none;
@@ -362,8 +362,8 @@ body#soft main #soft-pages .soft-current-page#intro .btn-intro .bg {
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#intro .btn-intro p {
-  font-size: 4.6296296296vh;
-  line-height: 11.2962962963vh;
+  font-size: 50px;
+  line-height: 122px;
 }
 body#soft main #soft-pages .soft-current-page#intro #top-buttons .buttons .btn-home {
   display: none;
@@ -377,25 +377,25 @@ body#soft main #soft-pages .soft-current-page#charSelection {
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select {
   position: absolute;
-  bottom: 7.4074074074vh;
+  bottom: 80px;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
-  width: 21.8518518519vh;
-  height: 7.962962963vh;
+  width: 236px;
+  height: 86px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-1 {
-  left: 25vh;
+  left: 270px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-2 {
-  left: 80.2777777778vh;
+  left: 867px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-3 {
-  left: 132.4074074074vh;
+  left: 1430px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select .bg {
   background-image: url(../img/../img/charSelection/Botao2.png);
@@ -404,13 +404,13 @@ body#soft main #soft-pages .soft-current-page#charSelection .btn-select .bg {
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select p {
-  font-size: 2.7777777778vh;
-  line-height: 7.962962963vh;
-  letter-spacing: 0.3703703704vh;
+  font-size: 30px;
+  line-height: 86px;
+  letter-spacing: 4px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character {
   position: absolute;
-  bottom: 18.5185185185vh;
+  bottom: 200px;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0);
@@ -424,31 +424,31 @@ body#soft main #soft-pages .soft-current-page#charSelection .character.character
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 24.0740740741vh;
-  height: 59.1666666667vh;
-  left: 22.1296296296vh;
+  width: 260px;
+  height: 639px;
+  left: 239px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character.character-2 {
   background-image: url(../img/../img/charSelection/Joao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 21.0185185185vh;
-  height: 64.6296296296vh;
-  left: 78.7037037037vh;
+  width: 227px;
+  height: 698px;
+  left: 850px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character.character-3 {
   background-image: url(../img/../img/charSelection/Ana.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 21.0185185185vh;
-  height: 37.2222222222vh;
-  left: 132.4074074074vh;
+  width: 227px;
+  height: 402px;
+  left: 1430px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-bg {
   position: absolute;
-  bottom: 12.5vh;
+  bottom: 135px;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0);
@@ -462,27 +462,27 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-bg.charac
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 42.037037037vh;
-  height: 74.1666666667vh;
-  left: 12.962962963vh;
+  width: 454px;
+  height: 801px;
+  left: 140px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-bg.character-bg-2 {
   background-image: url(../img/../img/charSelection/Joaobg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 46.8518518519vh;
-  height: 80.2777777778vh;
-  left: 67.3148148148vh;
+  width: 506px;
+  height: 867px;
+  left: 727px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-bg.character-bg-3 {
   background-image: url(../img/../img/charSelection/Anabg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 42.1296296296vh;
-  height: 75.5555555556vh;
-  left: 122.4074074074vh;
+  width: 455px;
+  height: 816px;
+  left: 1322px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name {
   position: absolute;
@@ -492,22 +492,22 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-name {
   z-index: 2;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name p {
-  font-size: 2.3148148148vh;
-  line-height: 2.3148148148vh;
+  font-size: 25px;
+  line-height: 25px;
   color: #98B8A8;
-  letter-spacing: 0.1851851852vh;
+  letter-spacing: 2px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-1 {
-  left: 29.6296296296vh;
-  top: 16.2037037037vh;
+  left: 320px;
+  top: 175px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-2 {
-  left: 86.2962962963vh;
-  top: 11.5740740741vh;
+  left: 932px;
+  top: 125px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection .character-name.character-name-3 {
-  left: 141.0185185185vh;
-  top: 37.7777777778vh;
+  left: 1523px;
+  top: 408px;
 }
 body#soft main #soft-pages .soft-current-page#charSelection #top-buttons .buttons .btn-home {
   display: none;
@@ -524,8 +524,8 @@ body#soft main #soft-pages .soft-current-page#opening .opening-text-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 106.0185185185vh;
-  height: 42.1296296296vh;
+  width: 1145px;
+  height: 455px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -540,19 +540,19 @@ body#soft main #soft-pages .soft-current-page#opening .opening-text-bg p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 83.3333333333vh;
-  font-size: 3.7037037037vh;
-  line-height: 3.7037037037vh;
+  width: 900px;
+  font-size: 40px;
+  line-height: 40px;
 }
 body#soft main #soft-pages .soft-current-page#opening .btn-opening {
-  width: 22.7777777778vh;
-  height: 7.7777777778vh;
+  width: 246px;
+  height: 84px;
   box-sizing: border-box;
   margin: 0 auto;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 25.7407407407vh;
+  bottom: 278px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -561,18 +561,18 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#opening .btn-opening .bg {
-  width: 22.7777777778vh;
-  height: 7.7777777778vh;
+  width: 246px;
+  height: 84px;
   background-image: url(../img/../img/opening/botao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
-  font-size: 3.2407407407vh;
-  line-height: 3.2407407407vh;
-  letter-spacing: 0.1851851852vh;
-  margin-top: 1.8518518519vh;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin-top: 20px;
 }
 body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
   display: none;
@@ -589,8 +589,8 @@ body#soft main #soft-pages .soft-current-page#newChar .text-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 106.0185185185vh;
-  height: 42.1296296296vh;
+  width: 1145px;
+  height: 455px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -605,9 +605,9 @@ body#soft main #soft-pages .soft-current-page#newChar .text-bg p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 83.3333333333vh;
-  font-size: 3.7037037037vh;
-  line-height: 3.7037037037vh;
+  width: 900px;
+  font-size: 40px;
+  line-height: 40px;
 }
 body#soft main #soft-pages .soft-current-page#newChar .btn-next {
   box-sizing: border-box;
@@ -615,12 +615,12 @@ body#soft main #soft-pages .soft-current-page#newChar .btn-next {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 25.7407407407vh;
+  bottom: 278px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
-  width: 25.9259259259vh;
-  height: 7.7777777778vh;
+  width: 280px;
+  height: 84px;
   background-image: url(../img/../img/newChar/botao.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -630,10 +630,10 @@ body#soft main #soft-pages .soft-current-page#newChar .btn-next::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#newChar .btn-next p {
-  font-size: 3.2407407407vh;
-  line-height: 3.2407407407vh;
-  letter-spacing: 0.1851851852vh;
-  margin-top: 1.8518518519vh;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin-top: 20px;
 }
 body#soft main #soft-pages .soft-current-page#newChar .btn-next .buttons .btn-home {
   display: none;
@@ -650,8 +650,8 @@ body#soft main #soft-pages .soft-current-page#ending .text-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 106.0185185185vh;
-  height: 42.1296296296vh;
+  width: 1145px;
+  height: 455px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -666,9 +666,9 @@ body#soft main #soft-pages .soft-current-page#ending .text-bg p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 83.3333333333vh;
-  font-size: 3.7037037037vh;
-  line-height: 3.7037037037vh;
+  width: 900px;
+  font-size: 40px;
+  line-height: 40px;
 }
 body#soft main #soft-pages .soft-current-page#ending .btn-next {
   box-sizing: border-box;
@@ -676,12 +676,12 @@ body#soft main #soft-pages .soft-current-page#ending .btn-next {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 25.7407407407vh;
+  bottom: 278px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
-  width: 32.4074074074vh;
-  height: 7.7777777778vh;
+  width: 350px;
+  height: 84px;
   background-image: url(../img/../img/newChar/botao.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -691,10 +691,10 @@ body#soft main #soft-pages .soft-current-page#ending .btn-next::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#ending .btn-next p {
-  font-size: 3.2407407407vh;
-  line-height: 3.2407407407vh;
-  letter-spacing: 0.1851851852vh;
-  margin-top: 1.8518518519vh;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin-top: 20px;
 }
 body#soft main #soft-pages .soft-current-page#ending .btn-next .buttons .btn-home {
   display: none;
@@ -707,37 +707,37 @@ body#soft main #soft-pages .soft-current-page#description {
   background-size: cover;
 }
 body#soft main #soft-pages .soft-current-page#description .tables {
-  width: 91.6666666667vh;
-  height: 47.6851851852vh;
+  width: 990px;
+  height: 515px;
   position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
-  left: 8.6111111111vh;
+  left: 93px;
 }
 body#soft main #soft-pages .soft-current-page#description .tables .table-1 {
-  width: 58.3333333333vh;
-  height: 8.3333333333vh;
+  width: 630px;
+  height: 90px;
 }
 body#soft main #soft-pages .soft-current-page#description .tables .table-2 th {
-  height: 4.6296296296vh;
+  height: 50px;
 }
 body#soft main #soft-pages .soft-current-page#description th {
-  font-size: 3.2407407407vh;
-  line-height: 3.7037037037vh;
+  font-size: 35px;
+  line-height: 40px;
   text-transform: uppercase;
   text-align: left;
   white-space: nowrap;
 }
 body#soft main #soft-pages .soft-current-page#description td {
-  font-size: 3.2407407407vh;
-  line-height: 3.7037037037vh;
+  font-size: 35px;
+  line-height: 40px;
   color: #A77655;
 }
 body#soft main #soft-pages .soft-current-page#description .character {
   position: absolute;
-  left: 18.5185185185vh;
-  bottom: 25vh;
+  left: 200px;
+  bottom: 270px;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0);
@@ -751,32 +751,32 @@ body#soft main #soft-pages .soft-current-page#description .character.character-1
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 20.462962963vh;
-  height: 50.2916666667vh;
+  width: 221px;
+  height: 543.15px;
 }
 body#soft main #soft-pages .soft-current-page#description .character.character-2 {
   background-image: url(../img/../img/charSelection/Joao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 17.8657407407vh;
-  height: 54.9351851852vh;
+  width: 192.95px;
+  height: 593.3px;
 }
 body#soft main #soft-pages .soft-current-page#description .character.character-3 {
   background-image: url(../img/../img/charSelection/Ana.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 17.8657407407vh;
-  height: 31.6388888889vh;
+  width: 192.95px;
+  height: 341.7px;
 }
 body#soft main #soft-pages .soft-current-page#description .description-text-bg {
   background-image: url(../img/../img/description/bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 108.7962962963vh;
-  height: 58.9814814815vh;
+  width: 1175px;
+  height: 637px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -791,17 +791,17 @@ body#soft main #soft-pages .soft-current-page#description .description-text-bg p
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 83.3333333333vh;
+  width: 900px;
 }
 body#soft main #soft-pages .soft-current-page#description .btn-description {
-  width: 22.7777777778vh;
-  height: 7.7777777778vh;
+  width: 246px;
+  height: 84px;
   box-sizing: border-box;
   margin: 0 auto;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 15.7407407407vh;
+  bottom: 170px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -810,18 +810,18 @@ body#soft main #soft-pages .soft-current-page#description .btn-description::befo
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#description .btn-description .bg {
-  width: 22.7777777778vh;
-  height: 7.7777777778vh;
+  width: 246px;
+  height: 84px;
   background-image: url(../img/../img/description/botao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#description .btn-description p {
-  font-size: 3.2407407407vh;
-  line-height: 3.2407407407vh;
-  letter-spacing: 0.1851851852vh;
-  margin-top: 1.8518518519vh;
+  font-size: 35px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  margin-top: 20px;
 }
 body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons .btn-home {
   display: none;
@@ -831,9 +831,9 @@ body#soft main #soft-pages .soft-current-page .icon {
 }
 body#soft main #soft-pages .soft-current-page .icon p {
   position: absolute;
-  bottom: -3.7037037037vh;
-  font-size: 1.8518518519vh;
-  line-height: 1.8518518519vh;
+  bottom: -40px;
+  font-size: 20px;
+  line-height: 20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -842,27 +842,30 @@ body#soft main #soft-pages .soft-current-page .icon p {
 body#soft main #soft-pages .soft-current-page .icon:hover {
   transform: scale(1.2);
 }
+body#soft main #soft-pages .soft-current-page .icon:active {
+  transform: scale(1);
+}
 body#soft main #soft-pages .soft-current-page .icon.icon-tips {
   background-image: url(../img/../img/gameplay/HUD/icons/tips.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 11.8518518519vh;
-  height: 9.8148148148vh;
+  width: 128px;
+  height: 106px;
   position: absolute;
-  left: 45.3703703704vh;
-  bottom: 6.4814814815vh;
+  left: 490px;
+  bottom: 70px;
 }
 body#soft main #soft-pages .soft-current-page .icon.icon-choices {
   background-image: url(../img/../img/gameplay/HUD/icons/bag.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10.2777777778vh;
-  height: 10.462962963vh;
+  width: 111px;
+  height: 113px;
   position: absolute;
-  left: 62.037037037vh;
-  bottom: 6.4814814815vh;
+  left: 670px;
+  bottom: 70px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay {
   background-color: #000;
@@ -880,34 +883,34 @@ body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 166.6666666667vh;
-  height: 33.9814814815vh;
+  width: 1800px;
+  height: 367px;
   margin: 0 auto;
   position: absolute;
-  left: 1.3888888889vh;
+  left: 15px;
   right: 0;
   bottom: 0;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns {
   position: absolute;
-  left: 0vh;
-  top: 0vh;
-  width: 0.1851851852vh;
-  height: 0.1851851852vh;
+  left: 0px;
+  top: 0px;
+  width: 2px;
+  height: 2px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .hit-test {
   position: absolute;
-  left: -5.5555555556vh;
-  top: -13.8888888889vh;
-  width: 9.2592592593vh;
-  height: 9.2592592593vh;
+  left: -60px;
+  top: -150px;
+  width: 100px;
+  height: 100px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
-  width: 19.9074074074vh;
-  height: 19.9074074074vh;
+  width: 215px;
+  height: 215px;
   position: absolute;
-  left: -9.9074074074vh;
-  top: -19.9074074074vh;
+  left: -107px;
+  top: -215px;
   opacity: 0;
   transform: scale(0);
 }
@@ -931,15 +934,15 @@ body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn.character-3 
 }
 body#soft main #soft-pages .soft-current-page#gameplay .profile-pics {
   position: absolute;
-  left: 12.4074074074vh;
-  bottom: 2.7777777778vh;
-  width: 25.8333333333vh;
-  height: 25vh;
+  left: 134px;
+  bottom: 30px;
+  width: 279px;
+  height: 270px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pic {
   position: absolute;
-  width: 25.8333333333vh;
-  height: 25vh;
+  width: 279px;
+  height: 270px;
   opacity: 0;
   transform: scale(0);
 }
@@ -964,90 +967,96 @@ body#soft main #soft-pages .soft-current-page#gameplay .profile-pics .profile-pi
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira {
   pointer-events: auto !important;
 }
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira:hover {
+  transform: scale(1.1);
+}
+body#soft main #soft-pages .soft-current-page#gameplay .prateleira:active {
+  transform: scale(1);
+}
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-lipidios {
   background-image: url(../img/../img/gameplay/prateleira-lipidios.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 28.0555555556vh;
-  height: 32.2222222222vh;
+  width: 303px;
+  height: 348px;
   position: absolute;
-  left: 23.1481481481vh;
-  top: 6.5740740741vh;
+  left: 250px;
+  top: 71px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-proteinas {
   background-image: url(../img/../img/gameplay/prateleira-proteinas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 28.3333333333vh;
-  height: 31.2962962963vh;
+  width: 306px;
+  height: 338px;
   position: absolute;
-  left: 53.7037037037vh;
-  top: 6.0185185185vh;
+  left: 580px;
+  top: 65px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-carboidratos {
   background-image: url(../img/../img/gameplay/prateleira-carboidratos.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 24.8148148148vh;
-  height: 32.7777777778vh;
+  width: 268px;
+  height: 354px;
   position: absolute;
-  left: 87.037037037vh;
-  top: 4.6296296296vh;
+  left: 940px;
+  top: 50px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .prateleira.prateleira-vitaminas {
   background-image: url(../img/../img/gameplay/prateleira-vitaminas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 39.537037037vh;
-  height: 32.3148148148vh;
+  width: 427px;
+  height: 349px;
   position: absolute;
-  left: 129.6296296296vh;
-  top: 32.4074074074vh;
+  left: 1400px;
+  top: 350px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars {
   position: absolute;
-  left: 80.5555555556vh;
-  top: 76.8518518519vh;
+  left: 870px;
+  top: 830px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars p {
-  font-size: 2.5vh;
-  line-height: 2.5vh;
+  font-size: 27px;
+  line-height: 27px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar {
-  width: 27.7777777778vh;
+  width: 300px;
   position: absolute;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.carb {
-  left: 0vh;
-  top: 0vh;
+  left: 0px;
+  top: 0px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.prot {
-  left: 0vh;
-  top: 11.1111111111vh;
+  left: 0px;
+  top: 120px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.fat {
-  left: 38.8888888889vh;
-  top: 0vh;
+  left: 420px;
+  top: 0px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar.vit {
-  left: 38.8888888889vh;
-  top: 11.1111111111vh;
+  left: 420px;
+  top: 120px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul {
   list-style: none;
   display: flex;
   position: absolute;
-  left: 0vh;
-  top: 5.5555555556vh;
+  left: 0px;
+  top: 60px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .bars .bar ul li {
-  width: 3.8888888889vh;
-  height: 2.2222222222vh;
-  margin-left: 0.2777777778vh;
+  width: 42px;
+  height: 24px;
+  margin-left: 3px;
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1071,8 +1080,8 @@ body#soft main #soft-pages .soft-current-page#tips .tips-text-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 106.0185185185vh;
-  height: 45vh;
+  width: 1145px;
+  height: 486px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1087,17 +1096,17 @@ body#soft main #soft-pages .soft-current-page#tips .tips-text-bg p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 83.3333333333vh;
-  font-size: 2.3148148148vh;
-  line-height: 2.7777777778vh;
+  width: 900px;
+  font-size: 25px;
+  line-height: 30px;
 }
 body#soft main #soft-pages .soft-current-page#tips .btn-tips {
-  width: 10.7407407407vh;
-  height: 8.0555555556vh;
+  width: 116px;
+  height: 87px;
   box-sizing: border-box;
   position: absolute;
-  right: 37.962962963vh;
-  top: 29.6296296296vh;
+  right: 410px;
+  top: 320px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -1106,16 +1115,16 @@ body#soft main #soft-pages .soft-current-page#tips .btn-tips::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page#tips .btn-tips .bg {
-  width: 10.7407407407vh;
-  height: 8.0555555556vh;
+  width: 116px;
+  height: 87px;
   background-image: url(../img/../img/tips/Botao-fechar.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page#tips .btn-tips p {
-  font-size: 3.2407407407vh;
-  letter-spacing: 0.1851851852vh;
+  font-size: 35px;
+  letter-spacing: 2px;
   margin-top: -5%;
 }
 body#soft main #soft-pages .soft-current-page#tips #top-buttons .buttons .btn-home {
@@ -1132,7 +1141,7 @@ body#soft main #soft-pages .soft-current-page#choices .icon-choices {
   display: none;
 }
 body#soft main #soft-pages .soft-current-page#choices .freezer-content-1 {
-  width: 50.9259259259vh;
+  width: 550px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -1140,7 +1149,7 @@ body#soft main #soft-pages .soft-current-page#choices .freezer-content-1 {
   flex-wrap: nowrap;
 }
 body#soft main #soft-pages .soft-current-page#choices .freezer-content-2 {
-  width: 50.9259259259vh;
+  width: 550px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -1148,7 +1157,7 @@ body#soft main #soft-pages .soft-current-page#choices .freezer-content-2 {
   flex-wrap: nowrap;
 }
 body#soft main #soft-pages .soft-current-page#choices .freezer-content-3 {
-  width: 50.9259259259vh;
+  width: 550px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -1185,15 +1194,15 @@ body#soft main #soft-pages .soft-current-page#carbs {
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .profile-pics {
   position: absolute;
-  left: 6.9444444444vh;
-  top: 5.5555555556vh;
-  width: 25.8333333333vh;
-  height: 25vh;
+  left: 75px;
+  top: 60px;
+  width: 279px;
+  height: 270px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .profile-pics .profile-pic {
   position: absolute;
-  width: 25.8333333333vh;
-  height: 25vh;
+  width: 279px;
+  height: 270px;
   opacity: 0;
   transform: scale(0);
 }
@@ -1217,28 +1226,28 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .profile-pics .profile-
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars {
   position: absolute;
-  right: 7.4074074074vh;
-  top: 26.8518518519vh;
+  right: 80px;
+  top: 290px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar {
-  width: 46.2962962963vh;
-  height: 12.962962963vh;
+  width: 500px;
+  height: 140px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar p {
   text-align: right;
-  font-size: 2.5vh;
-  line-height: 2.5vh;
+  font-size: 27px;
+  line-height: 27px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul {
   list-style: none;
   display: flex;
   justify-content: end;
-  margin-top: 1.8518518519vh;
+  margin-top: 20px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .bars .bar ul li {
-  width: 3.8888888889vh;
-  height: 2.2222222222vh;
-  margin-left: 0.2777777778vh;
+  width: 42px;
+  height: 24px;
+  margin-left: 3px;
   background-image: url(../img/../img/gameplay/HUD/quanto-de-quanto-2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1255,8 +1264,8 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 59.9074074074vh;
-  height: 31.2037037037vh;
+  width: 647px;
+  height: 337px;
   position: absolute;
   margin: auto;
   top: 0;
@@ -1272,9 +1281,9 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback {
 body#soft main #soft-pages .soft-current-page.hasFreezer .box-feedback p {
   color: #fff;
   text-align: center;
-  width: 50.9259259259vh;
-  font-size: 2.5vh;
-  line-height: 2.5vh;
+  width: 550px;
+  font-size: 27px;
+  line-height: 27px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer {
   background-image: url(../img/../img/choices/Prateleira.png);
@@ -1287,11 +1296,11 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 56.2037037037vh;
-  height: 90.2777777778vh;
+  width: 607px;
+  height: 975px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content {
-  width: 50.9259259259vh;
+  width: 550px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -1301,246 +1310,253 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-conte
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food {
   pointer-events: auto !important;
   display: inline-block;
-  margin-top: 9.8148148148vh;
-  height: 18.5185185185vh;
+  margin-top: 106px;
+  height: 200px;
   background-position-y: bottom !important;
-  margin-bottom: -5.0925925926vh;
+  margin-bottom: -55px;
+  transform-origin: bottom center;
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food:hover {
+  transform: scale(1.1);
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food:active {
+  transform: scale(1);
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.blank {
   pointer-events: none !important;
-  width: 13.8888888889vh;
+  width: 150px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Azeite {
   background-image: url(../img/../img/food/fats/Azeite.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 9.3518518519vh;
+  width: 101px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Manteiga {
   background-image: url(../img/../img/food/fats/Manteiga.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15.3703703704vh;
+  width: 166px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cookies {
   background-image: url(../img/../img/food/fats/Cookies.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 18.1481481481vh;
+  width: 196px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Castanhas {
   background-image: url(../img/../img/food/fats/Castanhas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14.0740740741vh;
+  width: 152px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Bolinho {
   background-image: url(../img/../img/food/fats/Bolinho.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 7.8703703704vh;
+  width: 85px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Chocolate {
   background-image: url(../img/../img/food/fats/Chocolate.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 8.8888888889vh;
+  width: 96px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Mamao {
   background-image: url(../img/../img/food/vits/Mamao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 17.8703703704vh;
+  width: 193px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Maca {
   background-image: url(../img/../img/food/vits/Maca.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 9.0740740741vh;
+  width: 98px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Abobrinha {
   background-image: url(../img/../img/food/vits/Abobrinha.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 13.1481481481vh;
+  width: 142px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Couve {
   background-image: url(../img/../img/food/vits/Couve.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15.5555555556vh;
+  width: 168px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Tomates {
   background-image: url(../img/../img/food/vits/Tomates.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14.1666666667vh;
+  width: 153px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Banana {
   background-image: url(../img/../img/food/vits/Banana.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 13.6111111111vh;
+  width: 147px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Laranjas {
   background-image: url(../img/../img/food/vits/Laranjas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14.0740740741vh;
+  width: 152px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Brocolis {
   background-image: url(../img/../img/food/vits/Brocolis.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10.5555555556vh;
+  width: 114px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cenoura {
   background-image: url(../img/../img/food/vits/Cenoura.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14.1666666667vh;
+  width: 153px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Melancia {
   background-image: url(../img/../img/food/vits/Melancia.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 12.5925925926vh;
+  width: 136px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Ovos {
   background-image: url(../img/../img/food/prots/Ovos.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 17.6851851852vh;
+  width: 191px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Ervilhas {
   background-image: url(../img/../img/food/prots/Ervilhas.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 8.0555555556vh;
+  width: 87px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Feijao {
   background-image: url(../img/../img/food/prots/Feijao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15.7407407407vh;
+  width: 170px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Iogurte {
   background-image: url(../img/../img/food/prots/Iogurte.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 9.537037037vh;
+  width: 103px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Queijo {
   background-image: url(../img/../img/food/prots/Queijo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15vh;
+  width: 162px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Carne {
   background-image: url(../img/../img/food/prots/Carne.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 21.2962962963vh;
+  width: 230px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Frango {
   background-image: url(../img/../img/food/prots/Frango.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 21.7592592593vh;
+  width: 235px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Peixe {
   background-image: url(../img/../img/food/prots/Peixe.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 18.0555555556vh;
+  width: 195px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Leite {
   background-image: url(../img/../img/food/prots/Leite.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10.2777777778vh;
+  width: 111px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Cereal {
   background-image: url(../img/../img/food/carbs/Cereal.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 13.9814814815vh;
+  width: 151px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Mandioca {
   background-image: url(../img/../img/food/carbs/Mandioca.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 14.6296296296vh;
+  width: 158px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Arroz {
   background-image: url(../img/../img/food/carbs/Arroz.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16.2037037037vh;
+  width: 175px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Massa {
   background-image: url(../img/../img/food/carbs/Massa.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 12.6851851852vh;
+  width: 137px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Pao {
   background-image: url(../img/../img/food/carbs/Pao.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 21.2962962963vh;
+  width: 230px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Aveia {
   background-image: url(../img/../img/food/carbs/Aveia.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10.6481481481vh;
+  width: 115px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food.Milho {
   background-image: url(../img/../img/food/carbs/Milho.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 17.962962963vh;
+  width: 194px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back {
-  width: 10.7407407407vh;
-  height: 8.0555555556vh;
+  width: 116px;
+  height: 87px;
   box-sizing: border-box;
   position: absolute;
-  right: 7.4074074074vh;
-  top: 6.4814814815vh;
+  right: 80px;
+  top: 70px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -1549,8 +1565,8 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back::before {
   content: none;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back .bg {
-  width: 10.7407407407vh;
-  height: 8.0555555556vh;
+  width: 116px;
+  height: 87px;
   background-image: url(../img/../img/tips/Botao-fechar.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1562,9 +1578,9 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .icon {
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon p {
   position: absolute;
-  bottom: -3.7037037037vh;
-  font-size: 1.8518518519vh;
-  line-height: 1.8518518519vh;
+  bottom: -40px;
+  font-size: 20px;
+  line-height: 20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -1573,27 +1589,30 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .icon p {
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon:hover {
   transform: scale(1.2);
 }
+body#soft main #soft-pages .soft-current-page.hasFreezer .icon:active {
+  transform: scale(1);
+}
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon.icon-tips {
   background-image: url(../img/../img/gameplay/HUD/icons/tips.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 11.8518518519vh;
-  height: 9.8148148148vh;
+  width: 128px;
+  height: 106px;
   position: absolute;
-  left: 13.8888888889vh;
-  top: 36.1111111111vh;
+  left: 150px;
+  top: 390px;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon.icon-choices {
   background-image: url(../img/../img/gameplay/HUD/icons/bag.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10.2777777778vh;
-  height: 10.462962963vh;
+  width: 111px;
+  height: 113px;
   position: absolute;
-  left: 13.8888888889vh;
-  top: 50.9259259259vh;
+  left: 150px;
+  top: 550px;
 }
 body#soft .overlay {
   background-color: rgba(255, 255, 255, 0.5);
@@ -2089,20 +2108,6 @@ body#soft.fullscreen .btn-fullscreen .bg {
 }
 body#soft.iOS .btn-fullscreen {
   display: none !important;
-}
-body#soft #snow {
-  background-image: url(../img/../img/snow.gif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-repeat: repeat;
-  background-size: 30%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none !important;
-  z-index: 9999;
-  opacity: 0.1;
 }
 
 @media print {

@@ -116,54 +116,42 @@ var theme = {
   },
 
   audios: {
-    // bg: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/bg-sound.mp3"],
-    //   loop: true,
-    //   volume: 0.4,
-    //   onend: function () {},
-    // }),
-    // click: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/click.mp3"],
-    //   loop: false,
-    //   volume: 0.2,
-    //   onend: function () {},
-    // }),
-    // overlayOpen: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/overlay-open.mp3"],
-    //   loop: false,
-    //   volume: 1,
-    //   onend: function () {},
-    // }),
-    // lauraJump: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/laura-jump.mp3"],
-    //   loop: false,
-    //   volume: 0.4,
-    //   onend: function () {},
-    // }),
-    // correctAnswer: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/correct-answer.mp3"],
-    //   loop: false,
-    //   volume: 0.6,
-    //   onend: function () {},
-    // }),
-    // incorrectAnswer: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3"],
-    //   loop: false,
-    //   volume: 0.6,
-    //   onend: function () {},
-    // }),
-    // endGameSuccess: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/end-game-success.mp3"],
-    //   loop: false,
-    //   volume: 1,
-    //   onend: function () {},
-    // }),
-    // endGameFailed: new Howl({
-    //   src: ["soft-theme/grupo-positivo/assets/medias/end-game-failed.mp3"],
-    //   loop: false,
-    //   volume: 1,
-    //   onend: function () {},
-    // }),
+    bg: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/bg-sound.mp3"],
+      loop: true,
+      volume: 0.4,
+      onend: function () {},
+    }),
+    click: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/click.mp3"],
+      loop: false,
+      volume: 0.2,
+      onend: function () {},
+    }),
+    overlayOpen: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/overlay-open.mp3"],
+      loop: false,
+      volume: 1,
+      onend: function () {},
+    }),
+    correctAnswer: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/correct-answer.mp3"],
+      loop: false,
+      volume: 0.6,
+      onend: function () {},
+    }),
+    incorrectAnswer: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3"],
+      loop: false,
+      volume: 0.6,
+      onend: function () {},
+    }),
+    endGameSuccess: new Howl({
+      src: ["soft-theme/grupo-positivo/assets/medias/end-game-success.mp3"],
+      loop: false,
+      volume: 1,
+      onend: function () {},
+    }),
   },
 
   // Método inicial
@@ -186,6 +174,9 @@ var theme = {
 
   // Método útil para ações comuns em todas ou na maioria das telas
   default: function () {
+    if (!theme.audios.bg.playing()) {
+      theme.audios.bg.play();
+    }
     $("#soft main #soft-pages #top-buttons").css("display", "none");
 
     $("#soft main #soft-pages .soft-current-page *").each(function () {
@@ -229,7 +220,7 @@ var theme = {
     $(document)
       .off("click", "#soft main .btn")
       .on("click", "#soft main .btn", function () {
-        // if (theme.vars.initApp == false) theme.audios.click.play();
+        if (theme.vars.initApp == false) theme.audios.click.play();
       });
   },
 
@@ -334,7 +325,7 @@ var theme = {
         theme.goToPage("charSelection");
         if (theme.vars.initApp == true) {
           theme.vars.initApp = false;
-          // theme.audios.bg.play();
+          theme.audios.bg.play();
         }
       });
   },
@@ -527,54 +518,50 @@ var theme = {
       theme.goToPage($(this).attr("data-screen"));
     });
 
-    var viewportWidth = $(".centred").width();
-    var viewportHeight = $(".centred").height();
-
     var target = {
-      x: viewportWidth * 0.5,
-      y: viewportHeight * 0.65,
+      x: 960,
+      y: 702,
+    };
+
+    const boundingBox = {
+      x1: 301,
+      x2: 1401,
+      y1: 500,
+      y2: 741,
     };
 
     function movePawn() {
-      const x = viewportWidth / 1920;
-      const y = viewportHeight / 1080;
+      // Obtém o valor do atributo "current-scale" do elemento de classe ".soft-scaled" usando a biblioteca jQuery
+      const scale = $(".soft-scaled").attr("current-scale");
 
-      target.x = Math.max(target.x, 100 * x);
-      target.x = Math.min(target.x, 1701 * x);
+      // Limita as coordenadas do objeto "target" para garantir que ele permaneça dentro dos limites da "bounding box" definida pela variável "boundingBox"
+      target.x = Math.max(target.x, boundingBox.x1); // define o valor de "x" como o maior valor entre "target.x" e "boundingBox.x1"
+      target.x = Math.min(target.x, boundingBox.x2); // define o valor de "x" como o menor valor entre "target.x" e "boundingBox.x2"
+      target.y = Math.max(target.y, boundingBox.y1); // define o valor de "y" como o maior valor entre "target.y" e "boundingBox.y1"
+      target.y = Math.min(target.y, boundingBox.y2); // define o valor de "y" como o menor valor entre "target.y" e "boundingBox.y2"
 
-      target.y = Math.max(target.y, 517 * y);
-      target.y = Math.min(target.y, 941 * y);
-
+      // Usa a biblioteca GSAP para animar os elementos selecionados pela variável "$pawns" até as coordenadas finais definidas em "target"
       gsap.to($pawns, {
-        duration: 0.05,
-        ease: "power1.inOut",
-        ...target,
+        duration: 0.05, // duração da animação em segundos
+        ease: "power1.inOut", // tipo de easing utilizado na animação
+        ...target, // passa as coordenadas finais do "target" como argumentos para a animação
         onComplete: function () {
-          checkOverlap();
+          // função a ser executada quando a animação é concluída
+          checkOverlap(); // chama a função "checkOverlap()"
         },
       });
     }
     movePawn();
 
-    $(window)
-      .off("resize")
-      .on("resize", function () {
-        viewportWidth = $(".centred").width();
-        viewportHeight = $(".centred").height();
-        target = {
-          x: viewportWidth * 0.5,
-          y: viewportHeight * 0.65,
-        };
-        console.log("resize");
-        movePawn();
-      });
-
     $(".centred").on("mousedown", function (e) {
-      var offset = $(this).offset(); // Obtem o deslocamento da posição do elemento
-      var posX = e.pageX - offset.left; // Calcula a posição X interna
-      var posY = e.pageY - offset.top; // Calcula a posição Y interna
-      target.x = posX;
-      target.y = posY;
+      const event = e.originalEvent;
+      const $centred = $(".centred").first()[0];
+      const rect = $centred.getBoundingClientRect(); // Obter as dimensões da div
+      const scaleX = $centred.clientWidth / rect.width; // Calcular o fator de escala horizontal
+      const scaleY = $centred.clientHeight / rect.height; // Calcular o fator de escala vertical
+      const x = (event.clientX - rect.left) * scaleX; // Calcular a posição horizontal escalada
+      const y = (event.clientY - rect.top) * scaleY; // Calcular a posição vertical escalada
+      target = { x, y };
       movePawn();
     });
 
@@ -604,12 +591,14 @@ var theme = {
     $(document)
       .off("click", "#gameplay .prateleira")
       .on("click", "#gameplay .prateleira", function () {
+        theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
       });
 
     $(document)
       .off("click", "#gameplay .icon")
       .on("click", "#gameplay .icon", function () {
+        theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
       });
 
@@ -788,11 +777,13 @@ var theme = {
           gsap.to(me, {
             opacity: 0,
             onComplete: function () {
+              theme.audios.correctAnswer.play();
               theme.scoreControll();
               me.off("click");
             },
           });
         } else {
+          theme.audios.incorrectAnswer.play();
           gsap.to($(this), {
             duration: 0.05,
             x: -10,
@@ -809,6 +800,8 @@ var theme = {
   },
 
   showAlert: function (message) {
+    theme.audios.overlayOpen.play();
+
     $(".box-feedback p").html(message);
     gsap.to($(".box-feedback"), {
       duration: 1,
@@ -838,7 +831,6 @@ var theme = {
     ];
 
     const arrayLength = originalArray.length;
-    const newArrayLength = Math.floor(arrayLength / 3);
 
     const newArray1 = [];
     const newArray2 = [];

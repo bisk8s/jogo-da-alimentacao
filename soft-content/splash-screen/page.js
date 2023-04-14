@@ -102,16 +102,6 @@ var pageSplashScreen = {
           sources: {
             mp3: {
               source:
-                "soft-theme/grupo-positivo/assets/medias/end-game-failed.mp3",
-              size: 45056,
-            },
-          },
-        },
-        {
-          type: "AUDIO",
-          sources: {
-            mp3: {
-              source:
                 "soft-theme/grupo-positivo/assets/medias/end-game-success.mp3",
               size: 77824,
             },
@@ -124,15 +114,6 @@ var pageSplashScreen = {
               source:
                 "soft-theme/grupo-positivo/assets/medias/incorrect-answer.mp3",
               size: 8192,
-            },
-          },
-        },
-        {
-          type: "AUDIO",
-          sources: {
-            mp3: {
-              source: "soft-theme/grupo-positivo/assets/medias/laura-jump.mp3",
-              size: 16384,
             },
           },
         },

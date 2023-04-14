@@ -220,12 +220,12 @@ var softContent = [
         includeId: "top-buttons",
         includeHtml:
           '\
-                    <div class="buttons">\
-                        <div title="Voltar ao início" class="soft-btn btn btn-home"><div class="bg"></div></div>\
-                        <div title="Créditos" class="soft-btn btn btn-credits"><div class="bg"></div></div>\
-                        <div title="Ligar/Desligar som" class="soft-btn btn btn-sound sound-on"><div class="bg"></div></div>\
-                        <div title="Ativar/Desativar tela cheia" class="soft-btn btn btn-fullscreen"><div class="bg"></div></div>\
-                    </div>',
+            <div class="buttons">\
+                <div title="Voltar ao início" class="soft-btn btn btn-home"><div class="bg"></div></div>\
+                <div title="Créditos" class="soft-btn btn btn-credits"><div class="bg"></div></div>\
+                <div title="Ligar/Desligar som" class="soft-btn btn btn-sound sound-on"><div class="bg"></div></div>\
+                <div title="Ativar/Desativar tela cheia" class="soft-btn btn btn-fullscreen"><div class="bg"></div></div>\
+            </div>',
       },
     ],
 
@@ -236,12 +236,6 @@ var softContent = [
         {
           includeLabel: "Device Rotate",
           includeId: "device-rotate",
-          includeClass: "",
-          includeHtml: "",
-        },
-        {
-          includeLabel: "Snow",
-          includeId: "snow",
           includeClass: "",
           includeHtml: "",
         },
