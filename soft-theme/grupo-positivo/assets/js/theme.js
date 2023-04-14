@@ -830,34 +830,7 @@ var theme = {
       ...theme.vars.choices.vits,
     ];
 
-    const arrayLength = originalArray.length;
-
-    const newArray1 = [];
-    const newArray2 = [];
-    const newArray3 = [];
-
-    for (let i = 0; i < arrayLength; i++) {
-      const item = originalArray[i];
-      const newIndex = i % 3;
-
-      if (newIndex === 0) {
-        newArray1.push(item);
-      } else if (newIndex === 1) {
-        newArray2.push(item);
-      } else {
-        newArray3.push(item);
-      }
-    }
-
-    newArray1.forEach(function (item) {
-      $(".freezer-content-1").append('<div class="food ' + item + '">');
-    });
-    newArray2.forEach(function (item) {
-      $(".freezer-content-2").append('<div class="food ' + item + '">');
-    });
-    newArray3.forEach(function (item) {
-      $(".freezer-content-3").append('<div class="food ' + item + '">');
-    });
+    fillAndShuffle(originalArray);
 
     $(document).off("click", ".food");
 
@@ -870,30 +843,22 @@ var theme = {
   fats: function () {
     theme.freezerScreens();
 
-    fillAndShuffle(theme.vars.food.fats).forEach(function (item) {
-      $(".freezer-content").append('<div class="food ' + item + '">');
-    });
+    fillAndShuffle(theme.vars.food.fats);
   },
   proteins: function () {
     theme.freezerScreens();
 
-    fillAndShuffle(theme.vars.food.prots).forEach(function (item) {
-      $(".freezer-content").append('<div class="food ' + item + '">');
-    });
+    fillAndShuffle(theme.vars.food.prots);
   },
   vitamins: function () {
     theme.freezerScreens();
 
-    fillAndShuffle(theme.vars.food.vits).forEach(function (item) {
-      $(".freezer-content").append('<div class="food ' + item + '">');
-    });
+    fillAndShuffle(theme.vars.food.vits);
   },
   carbs: function () {
     theme.freezerScreens();
 
-    fillAndShuffle(theme.vars.food.carbs).forEach(function (item) {
-      $(".freezer-content").append('<div class="food ' + item + '">');
-    });
+    fillAndShuffle(theme.vars.food.carbs);
   },
 
   newChar: function () {
@@ -1028,16 +993,33 @@ $(document)
     else soft.fullScreen("on");
   });
 
-function fillAndShuffle(arr) {
-  const newarray = [...arr]; // cria uma cópia do array original
-  while (newarray.length < 7) {
-    // enquanto o novo array tiver menos de 9 itens
-    newarray.push("blank"); // adiciona uma string vazia ao final do novo array
+function fillAndShuffle(originalArray) {
+  const arrayLength = originalArray.length;
+
+  const newArray1 = [];
+  const newArray2 = [];
+  const newArray3 = [];
+
+  for (let i = 0; i < arrayLength; i++) {
+    const item = originalArray[i];
+    const newIndex = i % 3;
+
+    if (newIndex === 0) {
+      newArray1.push(item);
+    } else if (newIndex === 1) {
+      newArray2.push(item);
+    } else {
+      newArray3.push(item);
+    }
   }
-  for (let i = newarray.length - 1; i > 0; i--) {
-    // começa do último item e vai até o segundo
-    const j = Math.floor(Math.random() * (i + 1)); // escolhe um índice aleatório entre 0 e i
-    [newarray[i], newarray[j]] = [newarray[j], newarray[i]]; // troca os valores dos índices i e j
-  }
-  return newarray.slice(0, 7); // retorna o novo array com 9 itens embaralhados
+
+  newArray1.forEach(function (item) {
+    $(".freezer-content-1").append('<div class="food ' + item + '">');
+  });
+  newArray2.forEach(function (item) {
+    $(".freezer-content-2").append('<div class="food ' + item + '">');
+  });
+  newArray3.forEach(function (item) {
+    $(".freezer-content-3").append('<div class="food ' + item + '">');
+  });
 }

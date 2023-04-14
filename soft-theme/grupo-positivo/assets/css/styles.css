@@ -1140,30 +1140,6 @@ body#soft main #soft-pages .soft-current-page#choices {
 body#soft main #soft-pages .soft-current-page#choices .icon-choices {
   display: none;
 }
-body#soft main #soft-pages .soft-current-page#choices .freezer-content-1 {
-  width: 550px;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-body#soft main #soft-pages .soft-current-page#choices .freezer-content-2 {
-  width: 550px;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-body#soft main #soft-pages .soft-current-page#choices .freezer-content-3 {
-  width: 550px;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 body#soft main #soft-pages .soft-current-page#fats {
   background-image: url(../img/../img/bg/bg3.png);
   background-position: center;
@@ -1299,13 +1275,29 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer {
   width: 607px;
   height: 975px;
 }
-body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content {
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content-1 {
   width: 550px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content-2 {
+  width: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .freezer-content-3 {
+  width: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food {
   pointer-events: auto !important;
