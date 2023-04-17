@@ -719,7 +719,7 @@ var theme = {
       .off("mouseup", ".centred")
       .off("mousemove", ".centred")
       .off("mouseup", ".prateleira")
-      .off("click", ".icon")
+      .off("click", ".centred .icon")
       .on("mousedown", ".centred", function (e) {
         dragging = true;
         updatePos(e);
@@ -739,7 +739,7 @@ var theme = {
         theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
       })
-      .on("click", ".icon", function () {
+      .on("click", ".centred .icon", function () {
         theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
       });
@@ -752,7 +752,9 @@ var theme = {
       autoAlpha: 1,
       scale: 1,
       ease: "expo.out",
-      onComplete: function () {},
+      onComplete: function () {
+        theme.endTransition();
+      },
     });
   },
 
@@ -854,7 +856,7 @@ var theme = {
     });
 
     if (!theme.vars.review) {
-      gsap.to($(".icon"), {
+      gsap.to($(".centred .icon"), {
         delay: 1.4,
         duration: 1,
         autoAlpha: 1,
@@ -863,8 +865,8 @@ var theme = {
     }
 
     $(document)
-      .off("click", ".icon")
-      .on("click", ".icon", function () {
+      .off("click", ".centred .icon")
+      .on("click", ".centred .icon", function () {
         theme.goToPage($(this).attr("data-screen"));
       });
 

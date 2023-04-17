@@ -795,20 +795,15 @@ body#soft main #soft-pages .soft-current-page#gameplay .hud-bg {
   bottom: 0;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns {
+  pointer-events: none !important;
   position: absolute;
   left: 0px;
   top: 0px;
   width: 2px;
   height: 2px;
 }
-body#soft main #soft-pages .soft-current-page#gameplay .pawns .hit-test {
-  position: absolute;
-  left: -15px;
-  top: -15px;
-  width: 50px;
-  height: 50px;
-}
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
+  pointer-events: none !important;
   width: 215px;
   height: 215px;
   position: absolute;
