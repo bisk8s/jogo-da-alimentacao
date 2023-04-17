@@ -270,6 +270,20 @@ body#soft
           @include background('../img/bg/bg1.png')
           background-size: cover
 
+          .icon-choices
+            cursor: pointer !important
+            z-index: 99
+            transform: scale(0)
+            &.icon-choices-1
+              bottom: 200px
+              left: 450px
+            &.icon-choices-2
+              bottom: 200px
+              left: 1050px
+            &.icon-choices-3
+              bottom: 200px
+              left: 1635px
+
           .btn-select
             position: absolute
             bottom: 80px
@@ -281,6 +295,16 @@ body#soft
             height: 86px
             &::before
               content: none
+            .check
+              @include background('../img/icon-check.png')
+              width: 45px
+              height: 45px
+              position: absolute
+              top: 20px
+              right: -20px
+              background-color: #FCD000
+              border-radius: 40px
+              transform: scale(0)
 
             &.btn-select-1
               left: 270px
@@ -643,6 +667,7 @@ body#soft
 
         .icon
           pointer-events: auto !important
+          cursor: pointer !important
           p
             position: absolute
             bottom: -40px
@@ -697,10 +722,10 @@ body#soft
             height: 2px
             .hit-test
               position: absolute
-              left: -60px
-              top: -150px
-              width: 100px
-              height: 100px
+              left: -15px
+              top: -15px
+              width: 50px
+              height: 50px
 
             .pawn
               width: 215px
@@ -983,6 +1008,7 @@ body#soft
               background-position-y: bottom !important
               margin-bottom: -55px
               transform-origin: bottom center
+              transition: all ease-in-out 0.2s
               &:hover
                 transform: scale(1.1)
               &:active
@@ -1093,7 +1119,7 @@ body#soft
             box-sizing: border-box
             position: absolute
             right: 80px
-            top: 70px
+            top: 110px
             opacity: 0
             transform: scale(0)
             z-index: 2
@@ -1105,8 +1131,8 @@ body#soft
               @include background('../img/tips/Botao-fechar.png')
 
           .icon
+            cursor: pointer !important
             pointer-events: auto !important
-            opacity: 0
             p
               position: absolute
               bottom: -40px
@@ -1611,9 +1637,20 @@ body#soft
       top: 25px
       transform-origin: top right
 
+      .icon
+        position: absolute !important
+        width: 25px
+        height: 25px
+        z-index: 10
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+
       & > div
         display: inline-block
-        width: 50px
+        width: 45px
         height: 45px
         margin: 0 2px
         position: relative
@@ -1626,23 +1663,34 @@ body#soft
           top: 7px
 
       .btn-home
+        display: none
         .bg
+          @include background('../img/description/botao.png')
+        .icon
           @include background('../img/top-buttons/icon-home.png')
 
       .btn-credits
         .bg
+          @include background('../img/description/botao.png')
+        .icon
           @include background('../img/top-buttons/icon-credits.png')
 
       .btn-sound
         &.sound-on
           .bg
+            @include background('../img/description/botao.png')
+          .icon
             @include background('../img/top-buttons/icon-sound-on.png')
         &.sound-off
           .bg
+            @include background('../img/description/botao.png')
+          .icon
             @include background('../img/top-buttons/icon-sound-off.png')
 
       .btn-fullscreen
         .bg
+          @include background('../img/description/botao.png')
+        .icon
           @include background('../img/top-buttons/icon-fullscreen-on.png')
 
       &.no-home
@@ -1667,7 +1715,7 @@ body#soft
 
   &.fullscreen
     .btn-fullscreen
-      .bg
+      .icon
         background-image: url('../img/top-buttons/icon-fullscreen-off.png') !important
 
   &.iOS

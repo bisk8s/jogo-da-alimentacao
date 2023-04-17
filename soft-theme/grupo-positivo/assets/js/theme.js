@@ -4,6 +4,7 @@ var theme = {
   // Variáveis globais
   vars: {
     initApp: true,
+    review: false,
     selectedChar: 0,
     food: {
       fats: [
@@ -61,12 +62,13 @@ var theme = {
         status:
           "Não pratica atividades físicas, quase não bebe água e está com sobrepeso.",
         diet: [
-          "Procure variar suas opções de alimento.",
-          "Frutas e verduras podem ser consumidas à vontade. ",
-          "Os carboidratos são importantes, mas, por certo tempo, evite comer muitas porções.",
-          "Beba mais água e evite sucos  industrializados e refrigerantes.",
+          "Procurar variar as opções de alimentos.",
+          "Consumir frutas e verduras à vontade.",
+          "Os carboidratos são importantes, mas, por certo tempo, evitar comer muitas porções.",
+          "Beber mais água e evitar sucos industrializados e refrigerantes.",
         ],
         finished: false,
+        choices: null,
         correctAnswer: {
           vits: 6,
           fats: 1,
@@ -80,12 +82,13 @@ var theme = {
         status:
           "É atleta e participa de maratonas quase todos os finais de semana. Como treina com frequência, precisa de muita energia.",
         diet: [
-          "Procure manter uma dieta balanceada, com todos os tipos de nutrientes.",
-          "Priorize alimentos energéticos para o ajudarem em seus treinos.",
-          "Consuma também proteínas.",
-          "Frutas e verduras podem ser consumidas à vontade. ",
+          "Procurar manter uma dieta balanceada, com todos os tipos de nutrientes",
+          "Priorizar alimentos energéticos para ajudar nos treinos.",
+          "Consumir também proteínas.",
+          "Frutas e verduras podem ser consumidas à vontade.",
         ],
         finished: false,
+        choices: null,
         correctAnswer: {
           vits: 6,
           fats: 2,
@@ -99,12 +102,13 @@ var theme = {
         status:
           "Depois de alguns exames, descobriu que está ingerindo muito açúcar e com falta de proteínas.",
         diet: [
-          "Mantenha uma dieta balanceada.",
-          "Aumente o consumo de proteínas.",
+          "Manter uma dieta balanceada.",
+          "Aumentar o consumo de proteínas.",
           "Frutas e verduras podem ser consumidas à vontade.",
-          "Reduza o consumo de carboidratos e evite doces.",
+          "Reduzir o consumo de carboidratos e evitar doces.",
         ],
         finished: false,
+        choices: null,
         correctAnswer: {
           vits: 6,
           fats: 0,
@@ -177,7 +181,8 @@ var theme = {
     if (!theme.audios.bg.playing()) {
       theme.audios.bg.play();
     }
-    $("#soft main #soft-pages #top-buttons").css("display", "none");
+
+    // $("#soft main #soft-pages #top-buttons").css("display", "none");
 
     $("#soft main #soft-pages .soft-current-page *").each(function () {
       if ($(this).attr("soft-global-content") != undefined) {
@@ -333,6 +338,13 @@ var theme = {
   charSelection: function () {
     theme.default();
 
+    theme.vars.choices = {
+      fats: [],
+      vits: [],
+      prots: [],
+      carbs: [],
+    };
+
     gsap.to($("#soft main #soft-pages #charSelection .character-bg"), {
       delay: 0.4,
       duration: 1,
@@ -367,7 +379,28 @@ var theme = {
             scale: 1,
             ease: "expo.out",
             onComplete: function () {
-              theme.endTransition();
+              if (index === btns.length - 1) {
+                const checks = [
+                  ...$(
+                    "#soft main #soft-pages #charSelection .btn-select .check"
+                  ),
+                ];
+                const bags = [
+                  ...$("#soft main #soft-pages #charSelection .choices"),
+                ];
+                checks.forEach(function (check, index) {
+                  const finished = theme.vars.charData[index].finished;
+                  const bag = bags[index];
+                  gsap.to([check, bag], {
+                    scale: finished ? 1 : 0,
+                    duration: 1,
+                    ease: "expo.out",
+                    onComplete: function () {
+                      theme.endTransition();
+                    },
+                  });
+                });
+              }
             },
           });
         });
@@ -382,6 +415,22 @@ var theme = {
         function () {
           theme.vars.selectedChar = $(this).attr("data-char");
           theme.goToPage("opening");
+        }
+      )
+      .off("click", "#soft main #soft-pages #charSelection .choices")
+      .on(
+        "click",
+        "#soft main #soft-pages #charSelection .choices",
+        function () {
+          const index = $(".choices").index(this);
+
+          theme.vars.choices = JSON.parse(
+            JSON.stringify(theme.vars.charData[index].choices)
+          );
+
+          theme.vars.selectedChar = index;
+          theme.vars.review = true;
+          theme.goToPage("choices");
         }
       );
   },
@@ -447,7 +496,7 @@ var theme = {
         '<tr char-diet=""></tr>',
         theme.vars.charData[theme.vars.selectedChar].diet
           .map(function (content) {
-            return '<tr><td colspan="2">- ' + content + "</td></tr>";
+            return "<tr><td width='30px'>-</td><td>" + content + "</td></tr>";
           })
           .join("")
       );
@@ -501,6 +550,8 @@ var theme = {
     theme.default();
     theme.scoreControll();
 
+    var selected = false;
+
     var $pawns = $(".pawns");
     var $prateleira = $(".prateleira");
 
@@ -509,12 +560,13 @@ var theme = {
 
     // Function to check for overlap
     function checkOverlap() {
-      var element = $prateleira.overlaps($pawns.find(".hit-test")).first();
+      var element = $prateleira.overlaps($(".pawns .hit-test")).first();
       $(element).trigger(customEvent);
     }
 
     // Listen for the custom event
     $prateleira.on("pawnsOverlappingPrateleira", function () {
+      $prateleira.off("pawnsOverlappingPrateleira");
       theme.goToPage($(this).attr("data-screen"));
     });
 
@@ -553,18 +605,6 @@ var theme = {
     }
     movePawn();
 
-    $(".centred").on("mousedown", function (e) {
-      const event = e.originalEvent;
-      const $centred = $(".centred").first()[0];
-      const rect = $centred.getBoundingClientRect(); // Obter as dimensões da div
-      const scaleX = $centred.clientWidth / rect.width; // Calcular o fator de escala horizontal
-      const scaleY = $centred.clientHeight / rect.height; // Calcular o fator de escala vertical
-      const x = (event.clientX - rect.left) * scaleX; // Calcular a posição horizontal escalada
-      const y = (event.clientY - rect.top) * scaleY; // Calcular a posição vertical escalada
-      target = { x, y };
-      movePawn();
-    });
-
     $(document).keydown(function (e) {
       const moviment = 50;
       switch (e.keyCode) {
@@ -589,17 +629,32 @@ var theme = {
     });
 
     $(document)
-      .off("click", "#gameplay .prateleira")
-      .on("click", "#gameplay .prateleira", function () {
+      .off("mousedown", ".prateleira")
+      .on("mousedown", ".prateleira", function (event) {
+        event.preventDefault();
+        selected = true;
+        theme.audios.click.play();
+        $(document).off("mousedown", ".centred");
+        $(document).off("pawnsOverlappingPrateleira", ".prateleira");
+        theme.goToPage($(this).attr("data-screen"));
+      })
+      .off("click", ".icon")
+      .on("click", ".icon", function () {
         theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
-      });
-
-    $(document)
-      .off("click", "#gameplay .icon")
-      .on("click", "#gameplay .icon", function () {
-        theme.audios.click.play();
-        theme.goToPage($(this).attr("data-screen"));
+      })
+      .off("mousedown", ".centred")
+      .on("mousedown", ".centred", function (e) {
+        if (selected) return;
+        const event = e.originalEvent;
+        const $centred = $(".centred").first()[0];
+        const rect = $centred.getBoundingClientRect(); // Obter as dimensões da div
+        const scaleX = $centred.clientWidth / rect.width; // Calcular o fator de escala horizontal
+        const scaleY = $centred.clientHeight / rect.height; // Calcular o fator de escala vertical
+        const x = (event.clientX - rect.left) * scaleX; // Calcular a posição horizontal escalada
+        const y = (event.clientY - rect.top) * scaleY; // Calcular a posição vertical escalada
+        target = { x, y };
+        movePawn();
       });
 
     var char = parseInt(theme.vars.selectedChar) + 1;
@@ -649,6 +704,7 @@ var theme = {
     const charIndex = theme.vars.selectedChar;
     const charData = theme.vars.charData[charIndex];
     const correctAnswers = charData.correctAnswer;
+
     ["carb", "prot", "fat", "vit"].forEach(function (type) {
       const key = type + "s";
       const answer = correctAnswers[key];
@@ -683,11 +739,14 @@ var theme = {
       }).length;
 
       const totalChars = theme.vars.charData.length;
+      charData.choices = JSON.parse(JSON.stringify(theme.vars.choices)); // deepclone de rato
 
-      if (completeCount === totalChars) {
-        this.goToPage("ending");
-      } else {
-        this.goToPage("newChar");
+      if (!theme.vars.review) {
+        if (completeCount === totalChars) {
+          this.goToPage("ending");
+        } else {
+          this.goToPage("newChar");
+        }
       }
     }
   },
@@ -707,12 +766,15 @@ var theme = {
       onComplete: function () {},
     });
 
-    gsap.to($(".icon"), {
-      delay: 1.4,
-      duration: 1,
-      autoAlpha: 1,
-      ease: "expo.out",
-    });
+    if (!theme.vars.review) {
+      gsap.to($(".icon"), {
+        delay: 1.4,
+        duration: 1,
+        autoAlpha: 1,
+        ease: "expo.out",
+      });
+    }
+
     $(document)
       .off("click", ".icon")
       .on("click", ".icon", function () {
@@ -733,20 +795,22 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages .btn-back")
       .on("click", "#soft main #soft-pages .btn-back", function () {
-        const charIndex = theme.vars.selectedChar;
-        const charData = theme.vars.charData[charIndex];
-        const correctAnswers = charData.correctAnswer;
-        const key = $(".soft-page").attr("id");
-        const answer = correctAnswers[key];
-        const selected = theme.vars.choices[key].length;
+        // const charIndex = theme.vars.selectedChar;
+        // const charData = theme.vars.charData[charIndex];
+        // const correctAnswers = charData.correctAnswer;
+        // const key = $(".soft-page").attr("id");
+        // const answer = correctAnswers[key];
+        // const selected = theme.vars.choices[key].length;
 
-        if (selected === answer) {
-          history.back();
-        } else {
-          theme.showAlert(
-            "OPS! Ainda falta uma porção desse tipo de alimento."
-          );
-        }
+        // if (selected === answer) {
+        //   history.back();
+        // } else {
+        //   theme.showAlert(
+        //     "OPS! Ainda falta uma porção desse tipo de alimento."
+        //   );
+        // }
+        theme.vars.review = false;
+        history.back();
       });
 
     $(document)

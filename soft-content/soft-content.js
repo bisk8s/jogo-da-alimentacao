@@ -53,7 +53,7 @@ var softContent = [
         pageActive: true,
         pageContent: {
           openingText:
-            "Caminhe pelos corredores do supermercado e encontre os alimentos que [char-name] deve priorizar na dieta.",
+            "Use as teclas direcionais, ou clique na tela para caminhar pelo corredor do supermercado e encontrar os alimentos que Manu deve priorizar na dieta.",
           bntOpening: "Começar",
         },
       },
@@ -198,8 +198,8 @@ var softContent = [
         pageActive: true,
         pageContent: {
           nextText:
-            "Fim de jogo! Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, é só abrir o menu inferior.",
-          bntNext: "Jogar novamente",
+            "Fim de jogo! Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, clique em reiniciar.",
+          bntNext: "Reiniciar",
         },
       },
     ],
@@ -221,10 +221,10 @@ var softContent = [
         includeHtml:
           '\
             <div class="buttons">\
-                <div title="Voltar ao início" class="soft-btn btn btn-home"><div class="bg"></div></div>\
-                <div title="Créditos" class="soft-btn btn btn-credits"><div class="bg"></div></div>\
-                <div title="Ligar/Desligar som" class="soft-btn btn btn-sound sound-on"><div class="bg"></div></div>\
-                <div title="Ativar/Desativar tela cheia" class="soft-btn btn btn-fullscreen"><div class="bg"></div></div>\
+                <div title="Voltar ao início" class="soft-btn btn btn-home"><div class="bg"></div><div class="icon"></div></div>\
+                <div title="Créditos" class="soft-btn btn btn-credits"><div class="bg"></div><div class="icon"></div></div>\
+                <div title="Ligar/Desligar som" class="soft-btn btn btn-sound sound-on"><div class="bg"></div><div class="icon"></div></div>\
+                <div title="Ativar/Desativar tela cheia" class="soft-btn btn btn-fullscreen"><div class="bg"></div><div class="icon"></div></div>\
             </div>',
       },
     ],

@@ -375,6 +375,23 @@ body#soft main #soft-pages .soft-current-page#charSelection {
   background-size: contain;
   background-size: cover;
 }
+body#soft main #soft-pages .soft-current-page#charSelection .icon-choices {
+  cursor: pointer !important;
+  z-index: 99;
+  transform: scale(0);
+}
+body#soft main #soft-pages .soft-current-page#charSelection .icon-choices.icon-choices-1 {
+  bottom: 200px;
+  left: 450px;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .icon-choices.icon-choices-2 {
+  bottom: 200px;
+  left: 1050px;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .icon-choices.icon-choices-3 {
+  bottom: 200px;
+  left: 1635px;
+}
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select {
   position: absolute;
   bottom: 80px;
@@ -387,6 +404,20 @@ body#soft main #soft-pages .soft-current-page#charSelection .btn-select {
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select::before {
   content: none;
+}
+body#soft main #soft-pages .soft-current-page#charSelection .btn-select .check {
+  background-image: url(../img/../img/icon-check.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background-color: #FCD000;
+  border-radius: 40px;
+  transform: scale(0);
 }
 body#soft main #soft-pages .soft-current-page#charSelection .btn-select.btn-select-1 {
   left: 270px;
@@ -828,6 +859,7 @@ body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons 
 }
 body#soft main #soft-pages .soft-current-page .icon {
   pointer-events: auto !important;
+  cursor: pointer !important;
 }
 body#soft main #soft-pages .soft-current-page .icon p {
   position: absolute;
@@ -900,10 +932,10 @@ body#soft main #soft-pages .soft-current-page#gameplay .pawns {
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .hit-test {
   position: absolute;
-  left: -60px;
-  top: -150px;
-  width: 100px;
-  height: 100px;
+  left: -15px;
+  top: -15px;
+  width: 50px;
+  height: 50px;
 }
 body#soft main #soft-pages .soft-current-page#gameplay .pawns .pawn {
   width: 215px;
@@ -1307,6 +1339,7 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food {
   background-position-y: bottom !important;
   margin-bottom: -55px;
   transform-origin: bottom center;
+  transition: all ease-in-out 0.2s;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .freezer .food:hover {
   transform: scale(1.1);
@@ -1548,7 +1581,7 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back {
   box-sizing: border-box;
   position: absolute;
   right: 80px;
-  top: 70px;
+  top: 110px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -1565,8 +1598,8 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back .bg {
   background-size: contain;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon {
+  cursor: pointer !important;
   pointer-events: auto !important;
-  opacity: 0;
 }
 body#soft main #soft-pages .soft-current-page.hasFreezer .icon p {
   position: absolute;
@@ -2028,9 +2061,20 @@ body#soft #top-buttons .buttons {
   top: 25px;
   transform-origin: top right;
 }
+body#soft #top-buttons .buttons .icon {
+  position: absolute !important;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 body#soft #top-buttons .buttons > div {
   display: inline-block;
-  width: 50px;
+  width: 45px;
   height: 45px;
   margin: 0 2px;
   position: relative;
@@ -2042,31 +2086,64 @@ body#soft #top-buttons .buttons > div::before {
   box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5);
   top: 7px;
 }
+body#soft #top-buttons .buttons .btn-home {
+  display: none;
+}
 body#soft #top-buttons .buttons .btn-home .bg {
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-home .icon {
   background-image: url(../img/../img/top-buttons/icon-home.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft #top-buttons .buttons .btn-credits .bg {
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-credits .icon {
   background-image: url(../img/../img/top-buttons/icon-credits.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft #top-buttons .buttons .btn-sound.sound-on .bg {
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-on .icon {
   background-image: url(../img/../img/top-buttons/icon-sound-on.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft #top-buttons .buttons .btn-sound.sound-off .bg {
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-sound.sound-off .icon {
   background-image: url(../img/../img/top-buttons/icon-sound-off.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft #top-buttons .buttons .btn-fullscreen .bg {
+  background-image: url(../img/../img/description/botao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body#soft #top-buttons .buttons .btn-fullscreen .icon {
   background-image: url(../img/../img/top-buttons/icon-fullscreen-on.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -2095,7 +2172,7 @@ body#soft #device-rotate {
   height: 100%;
   display: none;
 }
-body#soft.fullscreen .btn-fullscreen .bg {
+body#soft.fullscreen .btn-fullscreen .icon {
   background-image: url("../img/top-buttons/icon-fullscreen-off.png") !important;
 }
 body#soft.iOS .btn-fullscreen {

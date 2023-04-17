@@ -26,8 +26,10 @@ var pageDescription = {
             <table class="table-2">\
               <tbody>\
                 <tr>\
-                  <th>Situação Atual:</th>\
-                  <td>[char-status]</td>\
+                  <th colspan="2">Situação Atual:</th>\
+                <tr>\
+                </tr>\
+                  <td colspan="2">[char-status]</td>\
                 </tr>\
                 <tr>\
                   <th colspan="2">Sugestões para a dieta:</th>\
