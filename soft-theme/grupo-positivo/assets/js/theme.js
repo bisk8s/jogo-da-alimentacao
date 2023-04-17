@@ -3,7 +3,7 @@ var theme = {
 
   // Variáveis globais
   vars: {
-    initApp: true,
+    globalOverlayShow: false,
     review: false,
     selectedChar: 0,
     food: {
@@ -182,8 +182,6 @@ var theme = {
       theme.audios.bg.play();
     }
 
-    // $("#soft main #soft-pages #top-buttons").css("display", "none");
-
     $("#soft main #soft-pages .soft-current-page *").each(function () {
       if ($(this).attr("soft-global-content") != undefined) {
         if ($(this).attr("soft-global-content") == "title") {
@@ -225,7 +223,7 @@ var theme = {
     $(document)
       .off("click", "#soft main .btn")
       .on("click", "#soft main .btn", function () {
-        if (theme.vars.initApp == false) theme.audios.click.play();
+        theme.audios.click.play();
       });
   },
 
@@ -300,6 +298,130 @@ var theme = {
     });
   },
 
+  // Método do Overlay global
+  globalOverlay: function (action, globalOverlayIndex) {
+    theme.vars.globalOverlayShow = true;
+
+    theme.audios.overlayOpen.play();
+
+    if (action == "show") {
+      $("#soft main").append(
+        '\
+        <div id="' +
+          softContent[soft.languageIndex].contentGlobal.overlays[
+            globalOverlayIndex
+          ].overlayId +
+          '" class="overlay">\
+          <div class="wrap-scaled soft-scaled" initial-width="1920" initial-height="1080">\
+            <div class="content-box">\
+              <h2 soft-page-content="title">' +
+          softContent[soft.languageIndex].contentGlobal.overlays[
+            globalOverlayIndex
+          ].overlayContent.title +
+          '</h2>\
+              <div soft-page-content="text">' +
+          softContent[soft.languageIndex].contentGlobal.overlays[
+            globalOverlayIndex
+          ].overlayContent.text +
+          '</div>\
+              <div class="buttons">\
+                <div class="soft-btn btn-prev btn ease"><div class="bg"></div><p>' +
+          softContent[soft.languageIndex].contentGlobal.overlays[
+            globalOverlayIndex
+          ].overlayContent.btnPrev +
+          '</p></div>\
+                <div class="soft-btn btn-next btn ease"><div class="bg"></div><p>' +
+          softContent[soft.languageIndex].contentGlobal.overlays[
+            globalOverlayIndex
+          ].overlayContent.btnNext +
+          "</p></div>\
+              </div>\
+            </div>\
+          </div>\
+        </div>\
+      "
+      );
+
+      soft.toScale();
+
+      gsap.to(
+        $(
+          "#soft > main > #" +
+            softContent[soft.languageIndex].contentGlobal.overlays[
+              globalOverlayIndex
+            ].overlayId
+        ),
+        {
+          delay: 0,
+          duration: 0.5,
+          autoAlpha: 1,
+          scale: 1,
+          ease: "expo.out",
+          onComplete: function () {},
+        }
+      );
+    } else if (action == "hide") {
+      if (globalOverlayIndex == undefined) {
+        gsap.to($("#soft > main > .overlay"), {
+          delay: 0,
+          duration: 0.5,
+          autoAlpha: 0,
+          scale: 1.5,
+          ease: "expo.in",
+          onComplete: function () {
+            $("#soft > main > .overlay").remove();
+            theme.vars.globalOverlayShow = false;
+          },
+        });
+      } else {
+        gsap.to(
+          $(
+            "#soft > main > #" +
+              softContent[soft.languageIndex].contentGlobal.overlays[
+                globalOverlayIndex
+              ].overlayId
+          ),
+          {
+            delay: 0,
+            duration: 0.5,
+            autoAlpha: 0,
+            scale: 1.5,
+            ease: "expo.out",
+            onComplete: function () {
+              $(
+                "#soft > main > #" +
+                  softContent[soft.languageIndex].contentGlobal.overlays[
+                    globalOverlayIndex
+                  ].overlayId
+              ).remove();
+              theme.vars.globalOverlayShow = false;
+            },
+          }
+        );
+      }
+    }
+
+    $(document)
+      .off("click", "#soft > main > .overlay .btn-prev")
+      .on("click", "#soft > main > .overlay .btn-prev", function () {
+        theme.globalOverlay("hide");
+      });
+
+    $(document)
+      .off("click", "#soft > main > .overlay .btn-next")
+      .on("click", "#soft > main > .overlay .btn-next", function () {
+        theme.resetVars();
+        theme.globalOverlay("hide");
+        gsap.to($(document), {
+          delay: 0.5,
+          duration: 0,
+          onComplete: function () {
+            theme.goToPage("intro");
+          },
+        });
+      });
+  },
+
   // Método da tela Início
   intro: function () {
     theme.default();
@@ -328,10 +450,7 @@ var theme = {
       .off("click", "#soft main #soft-pages #intro .btn-intro")
       .on("click", "#soft main #soft-pages #intro .btn-intro", function () {
         theme.goToPage("charSelection");
-        if (theme.vars.initApp == true) {
-          theme.vars.initApp = false;
-          theme.audios.bg.play();
-        }
+        theme.audios.bg.play();
       });
   },
 
@@ -695,7 +814,7 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages #tips .btn-tips")
       .on("click", "#soft main #soft-pages #tips .btn-tips", function () {
-        history.back();
+        theme.prevPage();
       });
   },
 
@@ -803,14 +922,14 @@ var theme = {
         // const selected = theme.vars.choices[key].length;
 
         // if (selected === answer) {
-        //   history.back();
+        //   theme.prevPage();
         // } else {
         //   theme.showAlert(
         //     "OPS! Ainda falta uma porção desse tipo de alimento."
         //   );
         // }
         theme.vars.review = false;
-        history.back();
+        theme.prevPage();
       });
 
     $(document)
@@ -901,7 +1020,7 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages .btn-back")
       .on("click", "#soft main #soft-pages .btn-back", function () {
-        history.back();
+        theme.prevPage();
       });
   },
   fats: function () {

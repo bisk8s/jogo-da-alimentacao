@@ -395,13 +395,6 @@ body#soft
               left: 1523px
               top: 408px
 
-          #top-buttons
-
-            .buttons
-
-              .btn-home
-                display: none
-
         // opening
         &#opening
           @include background('../img/bg/bg1.png')
@@ -452,11 +445,6 @@ body#soft
               letter-spacing: 2px
               margin-top: 20px
 
-          #top-buttons
-            .buttons
-              .btn-home
-                display: none
-
         // newChar
         &#newChar
           @include background('../img/bg/bg1.png')
@@ -504,11 +492,6 @@ body#soft
               letter-spacing: 2px
               margin-top: 20px
 
-            #top-buttons
-            .buttons
-              .btn-home
-                display: none
-
         // ending
         &#ending
           @include background('../img/bg/bg1.png')
@@ -555,11 +538,6 @@ body#soft
               line-height: 35px
               letter-spacing: 2px
               margin-top: 20px
-
-            #top-buttons
-            .buttons
-              .btn-home
-                display: none
 
         // description
         &#description
@@ -659,11 +637,6 @@ body#soft
               line-height: 35px
               letter-spacing: 2px
               margin-top: 20px
-
-          #top-buttons
-            .buttons
-              .btn-home
-                display: none
 
         .icon
           pointer-events: auto !important
@@ -878,11 +851,6 @@ body#soft
               font-size: 35px
               letter-spacing: 2px
               margin-top: -5%
-
-          #top-buttons
-            .buttons
-              .btn-home
-                display: none
 
         // choices
         &#choices
@@ -1119,7 +1087,7 @@ body#soft
             box-sizing: border-box
             position: absolute
             right: 80px
-            top: 110px
+            bottom: 110px
             opacity: 0
             transform: scale(0)
             z-index: 2
@@ -1174,9 +1142,8 @@ body#soft
     transform: scale(1.5)
 
     .wrap-scaled
-
       .content-box
-        @include background('../img/content-box-bg.png')
+        @include background('../img/ending/bg.png')
         background-size: 100% 100%
         width: 78%
         max-width: 950px
@@ -1194,7 +1161,7 @@ body#soft
           font-size: 60px
           display: inline-block
           margin-bottom: 45px
-          color: #FDDE01
+          color: #000
           width: 100%
           border-bottom: 4px solid #fff
           padding-bottom: 20px
@@ -1217,7 +1184,7 @@ body#soft
             display: inline-block
             padding: 10px 0
             text-transform: initial
-            color: #FDDE01
+            color: #000
 
         img
           margin: 20px auto
@@ -1226,6 +1193,8 @@ body#soft
         .buttons
           text-align: center
           margin-top: 45px
+          .btn::before
+            content: none !important
 
           .btn-prev, .btn-next
             height: 120px
@@ -1235,390 +1204,22 @@ body#soft
             position: relative
 
             .bg
-              @include background('../img/button-bg1.png')
+              @include background('../img/charSelection/Botao2.png')
 
             p
-              color: #004AC6
+              color: #000
               line-height: 122px
 
 body#soft
-
   main
-
-    #soft-pages
-
-      .soft-current-page
-
-        &#gameplay
-
-          .overlay
-
-            .laura-ice-block
-              top: initial !important
-              bottom: 0 !important
-              margin: 0 !important
-              pointer-events: none
-
-              .laura
-                @include background('../img/gameplay/laura-2.png')
-                position: absolute
-                z-index: 1
-                bottom: -100%
-
-              .ice-block
-                position: absolute
-                bottom: -100%
-
-              &.left
-                transform-origin: left bottom
-                left: 0 !important
-                right: initial
-
-                .laura
-                  width: 450px
-                  height: 600px
-                  left: -100%
-
-                .ice-block
-                  @include background('../img/gameplay/left-ice-block.png')
-                  background-position: left bottom
-                  left: -100%
-                  width: 1000px
-                  height: 330px
-
-              &.right
-                transform-origin: right bottom
-                left: initial !important
-                right: 0 !important
-
-                .laura
-                  width: 450px
-                  height: 600px
-                  right: -100%
-                  transform: scale(-1, 1)
-
-                .ice-block
-                  @include background('../img/gameplay/right-ice-block.png')
-                  background-position: right bottom
-                  right: -100%
-                  width: 800px
-                  height: 470px
-
-              &.question
-                transform-origin: left bottom
-                left: 0 !important
-                right: initial
-
-                .laura
-                  @include background('../img/gameplay/laura-3.png')
-                  background-position: center bottom
-                  width: 730px
-                  height: 700px
-                  left: -100%
-
-            &.overlay-0
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 750px
-
-                  .btn-prev
-                    display: none
-
-            &.overlay-1
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 750px
-
-                  h2
-                    display: none
-
-                  p
-                    strong
-                      padding-top: 0
-
-            &.overlay-2
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 860px
-
-                  h2
-                    display: none
-
-                  p
-                    strong
-                      padding: 0
-
-                  img.coin
-                    display: inline-block
-                    margin: 0 0 -15px 10px
-
-            &.overlay-3
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 750px
-
-                  p
-                    strong
-                      padding: 10px 0 0
-                      font-size: 50px
-
-                  .btn-prev
-
-                    p
-                      line-height: 40px
-                      padding-top: 22px
-                      width: 70%
-                      margin: auto
-                      left: 0
-                      right: 0
-
-            &.overlay-4
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 700px
-
-                  .stars
-                    background-image: none !important
-                    top: 0 !important
-                    position: relative !important
-                    height: 120px !important
-                    transform: scale(1.5)
-
-                  p
-                    strong
-                      padding: 0
-
-                  .btn-prev
-
-                    p
-                      line-height: 40px
-                      padding-top: 22px
-                      width: 70%
-                      margin: auto
-                      left: 0
-                      right: 0
-
-                  .btn-next
-                    display: none
-
-            &.overlay-question
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 800px
-
-                  .photos
-                    width: 100%
-                    position: relative
-                    text-align: center
-
-                    .photo
-                      display: inline-block
-                      width: 250px
-                      transform: rotate(-10deg)
-                      margin: 0 15px
-
-                      &::before
-                        height: 75%
-
-                      img
-                        width: 100%
-                        display: block
-                        outline: 10px solid #fff
-                        outline-offset: -5px
-                        position: relative
-
-                      &::after
-                        @include background('../img/gameplay/photo-tape.png')
-                        content: ""
-                        display: block
-                        width: 100px
-                        height: 60px
-                        position: absolute
-                        top: -17px
-                        left: 70px
-
-                      &:hover
-                        z-index: 5
-
-                  p
-
-                    span
-                      font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
-                      text-transform: initial
-                      font-size: 38px
-                      border-bottom: 2px solid #fff
-                      text-align: center
-                      display: inline-block
-                      width: 200px
-                      text-indent: -9999px
-
-                      &.correct
-                        background-color: #7FFF00
-                        color: #004AC5
-                        text-indent: 0
-
-                      &.incorrect
-                        background-color: #FF2E1F
-                        text-indent: 0
-
-                  .buttons
-
-                    .alternative-btn
-                      width: 170px
-                      height: 100px
-                      display: inline-block
-                      position: relative
-                      margin: 0 10px
-
-                      &::before
-                        display: none
-
-                      .bg
-                        @include background('../img/gameplay/question-btn.png')
-
-                      p
-                        font-family: TriplexExtraboldOldstyle, 'Arial', sans-serif
-                        text-transform: initial
-                        color: #004AC6
-                        line-height: 84px
-
-                      &:active
-
-                        .bg
-                          @include background('../img/gameplay/question-btn-active.png')
-
-                        p
-                          line-height: 88px
-
-                      &.correct
-
-                        .bg
-                          @include background('../img/gameplay/question-btn-correct.png')
-
-                      &.correct-active
-
-                        .bg
-                          @include background('../img/gameplay/quest-btn-correct-active.png')
-
-                        p
-                          line-height: 88px
-
-                      &.incorrect-active
-
-                        .bg
-                          @include background('../img/gameplay/quest-btn-incorrect-active.png')
-
-                        p
-                          line-height: 88px
-                          color: #fff
-
-                    .btn-next
-                      margin-top: 40px
-
-                      &.inactive
-                        filter: grayscale(1)
-                        opacity: 0.5
-
-              &.overlay-question-9, &.overlay-question-10
-
-                .wrap-scaled
-
-                  .content-box
-
-                    & > div
-
-                      p
-
-                        span:first-letter
-                          text-transform: uppercase
-
-                    .buttons
-
-                      .alternative-btn
-
-                        p:first-letter
-                          text-transform: uppercase
-
-            &.photo-zoom
-              background-color: rgba(0, 0, 0, 0.5)
-
-              .wrap-scaled
-
-                .content-box
-                  background-image: none
-                  max-width: 100%
-
-                  img
-                    display: block
-                    outline: 30px solid #fff
-                    outline-offset: -5px
-                    margin-bottom: 80px
-                    box-shadow: 0px 50px 50px rgb(0 0 0 / 50%)
-
-        &#text-draw
-
-          .overlay
-
-            .laura-ice-block
-              top: initial !important
-              bottom: 0 !important
-              margin: 0 !important
-              pointer-events: none
-
-              .laura
-                @include background('../img/gameplay/laura-2.png')
-                position: absolute
-                z-index: 1
-                bottom: -100%
-
-              &.right
-                transform-origin: right bottom
-                left: initial !important
-                right: 0 !important
-
-                .laura
-                  width: 450px
-                  height: 600px
-                  right: -100%
-                  transform: scale(-2.5, 2.5) translate3d(-12%, 35%, 0)
-
-            &.overlay-0
-
-              .wrap-scaled
-
-                .content-box
-                  max-width: 830px
-
-                  .btn-prev
-                    display: none
-
   .overlay
-
     &#exit-home
-
       .wrap-scaled
-
         .content-box
           max-width: 720px
-
     &#credits
-
       .wrap-scaled
-
         .content-box
-
           .btn-next
             display: none
 
@@ -1663,7 +1264,6 @@ body#soft
           top: 7px
 
       .btn-home
-        display: none
         .bg
           @include background('../img/description/botao.png')
         .icon

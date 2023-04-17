@@ -540,9 +540,6 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-name.char
   left: 1523px;
   top: 408px;
 }
-body#soft main #soft-pages .soft-current-page#charSelection #top-buttons .buttons .btn-home {
-  display: none;
-}
 body#soft main #soft-pages .soft-current-page#opening {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
@@ -605,9 +602,6 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
   letter-spacing: 2px;
   margin-top: 20px;
 }
-body#soft main #soft-pages .soft-current-page#opening #top-buttons .buttons .btn-home {
-  display: none;
-}
 body#soft main #soft-pages .soft-current-page#newChar {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
@@ -666,9 +660,6 @@ body#soft main #soft-pages .soft-current-page#newChar .btn-next p {
   letter-spacing: 2px;
   margin-top: 20px;
 }
-body#soft main #soft-pages .soft-current-page#newChar .btn-next .buttons .btn-home {
-  display: none;
-}
 body#soft main #soft-pages .soft-current-page#ending {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
@@ -726,9 +717,6 @@ body#soft main #soft-pages .soft-current-page#ending .btn-next p {
   line-height: 35px;
   letter-spacing: 2px;
   margin-top: 20px;
-}
-body#soft main #soft-pages .soft-current-page#ending .btn-next .buttons .btn-home {
-  display: none;
 }
 body#soft main #soft-pages .soft-current-page#description {
   background-image: url(../img/../img/bg/bg1.png);
@@ -853,9 +841,6 @@ body#soft main #soft-pages .soft-current-page#description .btn-description p {
   line-height: 35px;
   letter-spacing: 2px;
   margin-top: 20px;
-}
-body#soft main #soft-pages .soft-current-page#description #top-buttons .buttons .btn-home {
-  display: none;
 }
 body#soft main #soft-pages .soft-current-page .icon {
   pointer-events: auto !important;
@@ -1158,9 +1143,6 @@ body#soft main #soft-pages .soft-current-page#tips .btn-tips p {
   font-size: 35px;
   letter-spacing: 2px;
   margin-top: -5%;
-}
-body#soft main #soft-pages .soft-current-page#tips #top-buttons .buttons .btn-home {
-  display: none;
 }
 body#soft main #soft-pages .soft-current-page#choices {
   background-image: url(../img/../img/bg/bg2.png);
@@ -1581,7 +1563,7 @@ body#soft main #soft-pages .soft-current-page.hasFreezer .btn-back {
   box-sizing: border-box;
   position: absolute;
   right: 80px;
-  top: 110px;
+  bottom: 110px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
@@ -1652,7 +1634,7 @@ body#soft .overlay {
   transform: scale(1.5);
 }
 body#soft .overlay .wrap-scaled .content-box {
-  background-image: url(../img/../img/content-box-bg.png);
+  background-image: url(../img/../img/ending/bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1673,7 +1655,7 @@ body#soft .overlay .wrap-scaled .content-box h2 {
   font-size: 60px;
   display: inline-block;
   margin-bottom: 45px;
-  color: #FDDE01;
+  color: #000;
   width: 100%;
   border-bottom: 4px solid #fff;
   padding-bottom: 20px;
@@ -1696,7 +1678,7 @@ body#soft .overlay .wrap-scaled .content-box > div * strong {
   display: inline-block;
   padding: 10px 0;
   text-transform: initial;
-  color: #FDDE01;
+  color: #000;
 }
 body#soft .overlay .wrap-scaled .content-box img {
   margin: 20px auto;
@@ -1706,6 +1688,9 @@ body#soft .overlay .wrap-scaled .content-box .buttons {
   text-align: center;
   margin-top: 45px;
 }
+body#soft .overlay .wrap-scaled .content-box .buttons .btn::before {
+  content: none !important;
+}
 body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next {
   height: 120px;
   width: 270px;
@@ -1714,332 +1699,16 @@ body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev, body#soft .over
   position: relative;
 }
 body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev .bg, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next .bg {
-  background-image: url(../img/../img/button-bg1.png);
+  background-image: url(../img/../img/charSelection/Botao2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 body#soft .overlay .wrap-scaled .content-box .buttons .btn-prev p, body#soft .overlay .wrap-scaled .content-box .buttons .btn-next p {
-  color: #004AC6;
+  color: #000;
   line-height: 122px;
 }
 
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block {
-  top: initial !important;
-  bottom: 0 !important;
-  margin: 0 !important;
-  pointer-events: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block .laura {
-  background-image: url(../img/../img/gameplay/laura-2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  z-index: 1;
-  bottom: -100%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block .ice-block {
-  position: absolute;
-  bottom: -100%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left {
-  transform-origin: left bottom;
-  left: 0 !important;
-  right: initial;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left .laura {
-  width: 450px;
-  height: 600px;
-  left: -100%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.left .ice-block {
-  background-image: url(../img/../img/gameplay/left-ice-block.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left bottom;
-  left: -100%;
-  width: 1000px;
-  height: 330px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right {
-  transform-origin: right bottom;
-  left: initial !important;
-  right: 0 !important;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right .laura {
-  width: 450px;
-  height: 600px;
-  right: -100%;
-  transform: scale(-1, 1);
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.right .ice-block {
-  background-image: url(../img/../img/gameplay/right-ice-block.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
-  right: -100%;
-  width: 800px;
-  height: 470px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.question {
-  transform-origin: left bottom;
-  left: 0 !important;
-  right: initial;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay .laura-ice-block.question .laura {
-  background-image: url(../img/../img/gameplay/laura-3.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  width: 730px;
-  height: 700px;
-  left: -100%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-0 .wrap-scaled .content-box {
-  max-width: 750px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-0 .wrap-scaled .content-box .btn-prev {
-  display: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box {
-  max-width: 750px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box h2 {
-  display: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-1 .wrap-scaled .content-box p strong {
-  padding-top: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box {
-  max-width: 860px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box h2 {
-  display: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box p strong {
-  padding: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-2 .wrap-scaled .content-box img.coin {
-  display: inline-block;
-  margin: 0 0 -15px 10px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box {
-  max-width: 750px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box p strong {
-  padding: 10px 0 0;
-  font-size: 50px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-3 .wrap-scaled .content-box .btn-prev p {
-  line-height: 40px;
-  padding-top: 22px;
-  width: 70%;
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box {
-  max-width: 700px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .stars {
-  background-image: none !important;
-  top: 0 !important;
-  position: relative !important;
-  height: 120px !important;
-  transform: scale(1.5);
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box p strong {
-  padding: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .btn-prev p {
-  line-height: 40px;
-  padding-top: 22px;
-  width: 70%;
-  margin: auto;
-  left: 0;
-  right: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-4 .wrap-scaled .content-box .btn-next {
-  display: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box {
-  max-width: 800px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos {
-  width: 100%;
-  position: relative;
-  text-align: center;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo {
-  display: inline-block;
-  width: 250px;
-  transform: rotate(-10deg);
-  margin: 0 15px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo::before {
-  height: 75%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo img {
-  width: 100%;
-  display: block;
-  outline: 10px solid #fff;
-  outline-offset: -5px;
-  position: relative;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo::after {
-  background-image: url(../img/../img/gameplay/photo-tape.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: "";
-  display: block;
-  width: 100px;
-  height: 60px;
-  position: absolute;
-  top: -17px;
-  left: 70px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .photos .photo:hover {
-  z-index: 5;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span {
-  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
-  text-transform: initial;
-  font-size: 38px;
-  border-bottom: 2px solid #fff;
-  text-align: center;
-  display: inline-block;
-  width: 200px;
-  text-indent: -9999px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span.correct {
-  background-color: #7FFF00;
-  color: #004AC5;
-  text-indent: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box p span.incorrect {
-  background-color: #FF2E1F;
-  text-indent: 0;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn {
-  width: 170px;
-  height: 100px;
-  display: inline-block;
-  position: relative;
-  margin: 0 10px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn::before {
-  display: none;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn .bg {
-  background-image: url(../img/../img/gameplay/question-btn.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn p {
-  font-family: TriplexExtraboldOldstyle, "Arial", sans-serif;
-  text-transform: initial;
-  color: #004AC6;
-  line-height: 84px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn:active .bg {
-  background-image: url(../img/../img/gameplay/question-btn-active.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn:active p {
-  line-height: 88px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct .bg {
-  background-image: url(../img/../img/gameplay/question-btn-correct.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct-active .bg {
-  background-image: url(../img/../img/gameplay/quest-btn-correct-active.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.correct-active p {
-  line-height: 88px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.incorrect-active .bg {
-  background-image: url(../img/../img/gameplay/quest-btn-incorrect-active.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .alternative-btn.incorrect-active p {
-  line-height: 88px;
-  color: #fff;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .btn-next {
-  margin-top: 40px;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question .wrap-scaled .content-box .buttons .btn-next.inactive {
-  filter: grayscale(1);
-  opacity: 0.5;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-9 .wrap-scaled .content-box > div p span:first-letter, body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-10 .wrap-scaled .content-box > div p span:first-letter {
-  text-transform: uppercase;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-9 .wrap-scaled .content-box .buttons .alternative-btn p:first-letter, body#soft main #soft-pages .soft-current-page#gameplay .overlay.overlay-question.overlay-question-10 .wrap-scaled .content-box .buttons .alternative-btn p:first-letter {
-  text-transform: uppercase;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom .wrap-scaled .content-box {
-  background-image: none;
-  max-width: 100%;
-}
-body#soft main #soft-pages .soft-current-page#gameplay .overlay.photo-zoom .wrap-scaled .content-box img {
-  display: block;
-  outline: 30px solid #fff;
-  outline-offset: -5px;
-  margin-bottom: 80px;
-  box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block {
-  top: initial !important;
-  bottom: 0 !important;
-  margin: 0 !important;
-  pointer-events: none;
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block .laura {
-  background-image: url(../img/../img/gameplay/laura-2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  z-index: 1;
-  bottom: -100%;
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block.right {
-  transform-origin: right bottom;
-  left: initial !important;
-  right: 0 !important;
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay .laura-ice-block.right .laura {
-  width: 450px;
-  height: 600px;
-  right: -100%;
-  transform: scale(-2.5, 2.5) translate3d(-12%, 35%, 0);
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay.overlay-0 .wrap-scaled .content-box {
-  max-width: 830px;
-}
-body#soft main #soft-pages .soft-current-page#text-draw .overlay.overlay-0 .wrap-scaled .content-box .btn-prev {
-  display: none;
-}
 body#soft .overlay#exit-home .wrap-scaled .content-box {
   max-width: 720px;
 }
@@ -2085,9 +1754,6 @@ body#soft #top-buttons .buttons > div::before {
   border-radius: 70% 70% 30px 30px;
   box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.5);
   top: 7px;
-}
-body#soft #top-buttons .buttons .btn-home {
-  display: none;
 }
 body#soft #top-buttons .buttons .btn-home .bg {
   background-image: url(../img/../img/description/botao.png);
