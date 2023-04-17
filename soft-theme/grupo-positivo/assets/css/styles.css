@@ -540,14 +540,14 @@ body#soft main #soft-pages .soft-current-page#charSelection .character-name.char
   left: 1523px;
   top: 408px;
 }
-body#soft main #soft-pages .soft-current-page#opening {
+body#soft main #soft-pages .soft-current-page.message-page {
   background-image: url(../img/../img/bg/bg1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
 }
-body#soft main #soft-pages .soft-current-page#opening .opening-text-bg {
+body#soft main #soft-pages .soft-current-page.message-page .text-bg {
   background-image: url(../img/../img/opening/bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -563,16 +563,18 @@ body#soft main #soft-pages .soft-current-page#opening .opening-text-bg {
   opacity: 0;
   transform: scale(0);
 }
-body#soft main #soft-pages .soft-current-page#opening .opening-text-bg p {
+body#soft main #soft-pages .soft-current-page.message-page .text-bg .text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 900px;
-  font-size: 40px;
-  line-height: 40px;
 }
-body#soft main #soft-pages .soft-current-page#opening .btn-opening {
+body#soft main #soft-pages .soft-current-page.message-page .text-bg .text p {
+  font-size: 30px;
+  line-height: 35px;
+}
+body#soft main #soft-pages .soft-current-page.message-page .btn-next {
   width: 246px;
   height: 84px;
   box-sizing: border-box;
@@ -580,15 +582,15 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 278px;
+  bottom: 265px;
   opacity: 0;
   transform: scale(0);
   z-index: 2;
 }
-body#soft main #soft-pages .soft-current-page#opening .btn-opening::before {
+body#soft main #soft-pages .soft-current-page.message-page .btn-next::before {
   content: none;
 }
-body#soft main #soft-pages .soft-current-page#opening .btn-opening .bg {
+body#soft main #soft-pages .soft-current-page.message-page .btn-next .bg {
   width: 246px;
   height: 84px;
   background-image: url(../img/../img/opening/botao.png);
@@ -596,123 +598,7 @@ body#soft main #soft-pages .soft-current-page#opening .btn-opening .bg {
   background-repeat: no-repeat;
   background-size: contain;
 }
-body#soft main #soft-pages .soft-current-page#opening .btn-opening p {
-  font-size: 35px;
-  line-height: 35px;
-  letter-spacing: 2px;
-  margin-top: 20px;
-}
-body#soft main #soft-pages .soft-current-page#newChar {
-  background-image: url(../img/../img/bg/bg1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
-}
-body#soft main #soft-pages .soft-current-page#newChar .text-bg {
-  background-image: url(../img/../img/newChar/bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 1145px;
-  height: 455px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transform: scale(0);
-}
-body#soft main #soft-pages .soft-current-page#newChar .text-bg p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  font-size: 40px;
-  line-height: 40px;
-}
-body#soft main #soft-pages .soft-current-page#newChar .btn-next {
-  box-sizing: border-box;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 278px;
-  opacity: 0;
-  transform: scale(0);
-  z-index: 2;
-  width: 280px;
-  height: 84px;
-  background-image: url(../img/../img/newChar/botao.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#newChar .btn-next::before {
-  content: none;
-}
-body#soft main #soft-pages .soft-current-page#newChar .btn-next p {
-  font-size: 35px;
-  line-height: 35px;
-  letter-spacing: 2px;
-  margin-top: 20px;
-}
-body#soft main #soft-pages .soft-current-page#ending {
-  background-image: url(../img/../img/bg/bg1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: cover;
-}
-body#soft main #soft-pages .soft-current-page#ending .text-bg {
-  background-image: url(../img/../img/ending/bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 1145px;
-  height: 455px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transform: scale(0);
-}
-body#soft main #soft-pages .soft-current-page#ending .text-bg p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  font-size: 40px;
-  line-height: 40px;
-}
-body#soft main #soft-pages .soft-current-page#ending .btn-next {
-  box-sizing: border-box;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 278px;
-  opacity: 0;
-  transform: scale(0);
-  z-index: 2;
-  width: 350px;
-  height: 84px;
-  background-image: url(../img/../img/newChar/botao.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-body#soft main #soft-pages .soft-current-page#ending .btn-next::before {
-  content: none;
-}
-body#soft main #soft-pages .soft-current-page#ending .btn-next p {
+body#soft main #soft-pages .soft-current-page.message-page .btn-next p {
   font-size: 35px;
   line-height: 35px;
   letter-spacing: 2px;

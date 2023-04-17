@@ -449,7 +449,7 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages #intro .btn-intro")
       .on("click", "#soft main #soft-pages #intro .btn-intro", function () {
-        theme.goToPage("charSelection");
+        theme.goToPage("opening");
         theme.audios.bg.play();
       });
   },
@@ -533,7 +533,7 @@ var theme = {
         "#soft main #soft-pages #charSelection .btn-select",
         function () {
           theme.vars.selectedChar = $(this).attr("data-char");
-          theme.goToPage("opening");
+          theme.goToPage("description");
         }
       )
       .off("click", "#soft main #soft-pages #charSelection .choices")
@@ -554,10 +554,9 @@ var theme = {
       );
   },
 
-  opening: function () {
+  messagePageDefault: function () {
     theme.default();
-
-    gsap.to($("#soft main #soft-pages #opening .opening-text-bg"), {
+    gsap.to($(".text-bg"), {
       delay: 1.4,
       duration: 1,
       autoAlpha: 1,
@@ -566,16 +565,7 @@ var theme = {
       onComplete: function () {},
     });
 
-    $("p").each(function () {
-      var text = $(this).html();
-      text = text.replace(
-        "[char-name]",
-        theme.vars.charData[theme.vars.selectedChar].name
-      );
-      $(this).html(text);
-    });
-
-    gsap.to($("#soft main #soft-pages #opening .btn-opening"), {
+    gsap.to($(".btn-next"), {
       delay: 2.4,
       duration: 1,
       autoAlpha: 1,
@@ -586,10 +576,33 @@ var theme = {
       },
     });
 
+    $(".text p").each(function () {
+      var text = $(this).html();
+      text = text.replace(
+        "[char-name]",
+        theme.vars.charData[theme.vars.selectedChar].name
+      );
+      $(this).html(text);
+    });
+
     $(document)
-      .off("click", "#soft main #soft-pages #opening .btn-opening")
-      .on("click", "#soft main #soft-pages #opening .btn-opening", function () {
-        theme.goToPage("description");
+      .off("click", "#opening .btn-next")
+      .on("click", "#opening .btn-next", function () {
+        theme.goToPage("charSelection");
+      })
+      .off("click", "#controlls .btn-next")
+      .on("click", "#controlls .btn-next", function () {
+        theme.goToPage("gameplay");
+      })
+      .off("click", "#ending .btn-next")
+      .on("click", "#ending .btn-next", function () {
+        theme.goToPage("charSelection");
+        theme.resetVars();
+      })
+      .off("click", "#newChar .btn-next")
+      .on("click", "#newChar .btn-next", function () {
+        theme.goToPage("charSelection");
+        theme.resetVars();
       });
   },
 
@@ -660,7 +673,7 @@ var theme = {
         "click",
         "#soft main #soft-pages #description .btn-description",
         function () {
-          theme.goToPage("gameplay");
+          theme.goToPage("controlls");
         }
       );
   },
@@ -997,40 +1010,6 @@ var theme = {
     theme.freezerScreens();
 
     fillAndShuffle(theme.vars.food.carbs);
-  },
-
-  newChar: function () {
-    theme.default();
-
-    gsap.to($("#soft main #soft-pages .text-bg"), {
-      delay: 1.4,
-      duration: 1,
-      autoAlpha: 1,
-      scale: 1,
-      ease: "expo.out",
-      onComplete: function () {},
-    });
-
-    gsap.to($("#soft main #soft-pages .btn-next"), {
-      delay: 2.4,
-      duration: 1,
-      autoAlpha: 1,
-      scale: 1,
-      ease: "expo.out",
-      onComplete: function () {
-        theme.endTransition();
-      },
-    });
-
-    $(document)
-      .off("click", "#soft main #soft-pages .btn-next")
-      .on("click", "#soft main #soft-pages .btn-next", function () {
-        theme.goToPage("charSelection");
-        theme.resetVars();
-      });
-  },
-  ending: function () {
-    theme.newChar();
   },
 
   resetVars: function () {

@@ -31,6 +31,9 @@ var pageDescription = {
                 </tr>\
                   <td colspan="2">[char-status]</td>\
                 </tr>\
+                </tr>\
+                  <td colspan="2">&nbsp;</td>\
+                </tr>\
                 <tr>\
                   <th colspan="2">Sugestões para a dieta:</th>\
                 </tr>\

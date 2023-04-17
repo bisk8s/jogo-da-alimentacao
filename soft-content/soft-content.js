@@ -27,7 +27,34 @@ var softContent = [
           btnIntro: "Começar",
         },
       },
-
+      {
+        pageTitle: "Abertura",
+        pageId: "opening",
+        pageClass: "message-page",
+        pageAttribute: "",
+        pageFilePath: "messagePage/page.js",
+        pageVarBase: "pageMessage",
+        pageActive: true,
+        pageContent: {
+          nextText:
+            "\
+            <p>\
+              Hoje, você vai fazer compras em um supermercado!\
+            </p>\
+            <p>&nbsp;</p>\
+            <p>\
+              Sua missão é ajudar três personagens. Cada um deles fez uma consulta a um nutricionista e recebeu uma dieta que indica os nutrientes que precisam priorizar para manter o corpo saudável.\
+            </p>\
+            <p>\
+              O seu desafio é escolher os alimentos corretos para cada personagem considerando a dieta para um dia.\
+            </p>\
+            <p>\
+              Selecione seu personagem para começar.\
+            </p>\
+            ",
+          bntNext: "Escolher",
+        },
+      },
       {
         pageTitle: "Seleção de Personagem",
         pageId: "charSelection",
@@ -44,17 +71,17 @@ var softContent = [
         },
       },
       {
-        pageTitle: "Abertura",
-        pageId: "opening",
-        pageClass: "",
+        pageTitle: "Controles",
+        pageId: "controlls",
+        pageClass: "message-page",
         pageAttribute: "",
-        pageFilePath: "opening/page.js",
-        pageVarBase: "pageOpening",
+        pageFilePath: "messagePage/page.js",
+        pageVarBase: "pageMessage",
         pageActive: true,
         pageContent: {
-          openingText:
-            "Clique e arraste o indicador na tela para caminhar pelo corredor do supermercado e encontrar os alimentos que [char-name] deve priorizar na dieta.",
-          bntOpening: "Começar",
+          nextText:
+            "<p>Clique e arraste o indicador na tela para caminhar pelo corredor do supermercado e encontrar os alimentos que [char-name] deve priorizar na dieta.</p>",
+          bntNext: "Começar",
         },
       },
       {
@@ -178,27 +205,36 @@ var softContent = [
       {
         pageTitle: "Proxima Fase",
         pageId: "newChar",
-        pageClass: "",
+        pageClass: "message-page",
         pageAttribute: "",
-        pageFilePath: "newChar/page.js",
-        pageVarBase: "pageNewChar",
+        pageFilePath: "messagePage/page.js",
+        pageVarBase: "pageMessage",
         pageActive: true,
         pageContent: {
-          nextText: "Legal! Agora selecione um novo personagem.",
-          bntNext: "Tela seleção",
+          nextText:
+            "\
+            <p>Legal!</p>\
+            <p>&nbsp;</p>\
+            <p>Agora selecione um novo personagem.</p>\
+            ",
+          bntNext: "Continuar",
         },
       },
       {
         pageTitle: "Fim",
         pageId: "ending",
-        pageClass: "",
+        pageClass: "message-page",
         pageAttribute: "",
-        pageFilePath: "ending/page.js",
-        pageVarBase: "pageEnding",
+        pageFilePath: "messagePage/page.js",
+        pageVarBase: "pageMessage",
         pageActive: true,
         pageContent: {
           nextText:
-            "Fim de jogo! Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, clique em reiniciar.",
+            "\
+            <p>Fim de jogo!</p>\
+            <p>&nbsp;</p>\
+            <p>Você analisou a dieta de cada personagem e encontrou alimentos com os nutrientes que devem ser priorizados nesse momento. Se quiser jogar novamente, clique em reiniciar.</p>\
+            ",
           bntNext: "Reiniciar",
         },
       },

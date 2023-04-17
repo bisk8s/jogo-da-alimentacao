@@ -395,12 +395,12 @@ body#soft
               left: 1523px
               top: 408px
 
-        // opening
-        &#opening
+        // messagePage
+        &.message-page
           @include background('../img/bg/bg1.png')
           background-size: cover
 
-          .opening-text-bg
+          .text-bg
             @include background('../img/opening/bg.png')
             width: 1145px
             height: 455px
@@ -412,16 +412,17 @@ body#soft
             right: 0
             opacity: 0
             transform: scale(0)
-            p
+            .text
               position: absolute
               top: 50%
               left: 50%
               transform: translate(-50%, -50%)
               width: 900px
-              font-size: 40px
-              line-height: 40px
+              p
+                font-size: 30px
+                line-height: 35px
 
-          .btn-opening
+          .btn-next
             width: 246px
             height: 84px
             box-sizing: border-box
@@ -429,7 +430,7 @@ body#soft
             position: absolute
             left: 0
             right: 0
-            bottom: 278px
+            bottom: 265px
             opacity: 0
             transform: scale(0)
             z-index: 2
@@ -439,100 +440,6 @@ body#soft
               width: 246px
               height: 84px
               @include background('../img/opening/botao.png')
-            p
-              font-size: 35px
-              line-height: 35px
-              letter-spacing: 2px
-              margin-top: 20px
-
-        // newChar
-        &#newChar
-          @include background('../img/bg/bg1.png')
-          background-size: cover
-
-          .text-bg
-            @include background('../img/newChar/bg.png')
-            width: 1145px
-            height: 455px
-            position: absolute
-            margin: auto
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            opacity: 0
-            transform: scale(0)
-            p
-              position: absolute
-              top: 50%
-              left: 50%
-              transform: translate(-50%, -50%)
-              width: 900px
-              font-size: 40px
-              line-height: 40px
-
-          .btn-next
-            box-sizing: border-box
-            margin: 0 auto
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 278px
-            opacity: 0
-            transform: scale(0)
-            z-index: 2
-            width: 280px
-            height: 84px
-            @include background('../img/newChar/botao.png')
-            &::before
-              content: none
-            p
-              font-size: 35px
-              line-height: 35px
-              letter-spacing: 2px
-              margin-top: 20px
-
-        // ending
-        &#ending
-          @include background('../img/bg/bg1.png')
-          background-size: cover
-
-          .text-bg
-            @include background('../img/ending/bg.png')
-            width: 1145px
-            height: 455px
-            position: absolute
-            margin: auto
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            opacity: 0
-            transform: scale(0)
-            p
-              position: absolute
-              top: 50%
-              left: 50%
-              transform: translate(-50%, -50%)
-              width: 900px
-              font-size: 40px
-              line-height: 40px
-
-          .btn-next
-            box-sizing: border-box
-            margin: 0 auto
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 278px
-            opacity: 0
-            transform: scale(0)
-            z-index: 2
-            width: 350px
-            height: 84px
-            @include background('../img/newChar/botao.png')
-            &::before
-              content: none
             p
               font-size: 35px
               line-height: 35px

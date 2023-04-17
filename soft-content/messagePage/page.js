@@ -1,4 +1,4 @@
-var pageOpening = {
+var pageMessage = {
   pageLoader: {
     loaderShowMethod: "theme.showLoader()",
     loaderFiles: {
@@ -10,8 +10,8 @@ var pageOpening = {
     '\
       <div class="soft-scaled" initial-width="1920" initial-height="1080">\
         <div class="centred">\
-          <div class="opening-text-bg"><p soft-page-content="openingText"></p></div>\
-          <div class="soft-btn btn-opening btn"><div class="bg"></div><p soft-page-content="bntOpening"></p></div>\
+          <div class="text-bg"><div class="text" soft-page-content="nextText"></div></div>\
+          <div class="soft-btn btn-next btn"><div class="bg"></div><p soft-page-content="bntNext"></p></div>\
         </div>\
       </div>\
     ',
@@ -26,6 +26,6 @@ var pageOpening = {
     },
   ],
 
-  pageShowMethod: "theme.opening()",
+  pageShowMethod: "theme.messagePageDefault()",
   pageHideMethod: "",
 };
