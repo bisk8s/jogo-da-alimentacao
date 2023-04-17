@@ -53,7 +53,7 @@ var softContent = [
         pageActive: true,
         pageContent: {
           openingText:
-            "Use as teclas direcionais, ou clique na tela para caminhar pelo corredor do supermercado e encontrar os alimentos que Manu deve priorizar na dieta.",
+            "Clique e arraste o indicador na tela para caminhar pelo corredor do supermercado e encontrar os alimentos que [char-name] deve priorizar na dieta.",
           bntOpening: "Começar",
         },
       },

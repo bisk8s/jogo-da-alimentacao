@@ -669,111 +669,66 @@ var theme = {
     theme.default();
     theme.scoreControll();
 
-    var selected = false;
-
-    var $pawns = $(".pawns");
-    var $prateleira = $(".prateleira");
-
-    // Define the custom event to be triggered
-    var customEvent = jQuery.Event("pawnsOverlappingPrateleira");
-
-    // Function to check for overlap
-    function checkOverlap() {
-      var element = $prateleira.overlaps($(".pawns .hit-test")).first();
-      $(element).trigger(customEvent);
-    }
-
-    // Listen for the custom event
-    $prateleira.on("pawnsOverlappingPrateleira", function () {
-      $prateleira.off("pawnsOverlappingPrateleira");
-      theme.goToPage($(this).attr("data-screen"));
-    });
+    var dragging = false;
 
     var target = {
       x: 960,
       y: 702,
     };
 
-    const boundingBox = {
-      x1: 301,
-      x2: 1401,
-      y1: 500,
-      y2: 741,
-    };
+    function updatePos(e) {
+      const event = e.originalEvent;
+      const $centred = $(".centred").first()[0];
+      const rect = $centred.getBoundingClientRect(); // Obter as dimensões da div
+      const scaleX = $centred.clientWidth / rect.width; // Calcular o fator de escala horizontal
+      const scaleY = $centred.clientHeight / rect.height; // Calcular o fator de escala vertical
+      const x = (event.clientX - rect.left) * scaleX; // Calcular a posição horizontal escalada
+      const y = (event.clientY - rect.top) * scaleY; // Calcular a posição vertical escalada
+      target = { x, y };
+    }
 
     function movePawn() {
       // Obtém o valor do atributo "current-scale" do elemento de classe ".soft-scaled" usando a biblioteca jQuery
       const scale = $(".soft-scaled").attr("current-scale");
 
-      // Limita as coordenadas do objeto "target" para garantir que ele permaneça dentro dos limites da "bounding box" definida pela variável "boundingBox"
-      target.x = Math.max(target.x, boundingBox.x1); // define o valor de "x" como o maior valor entre "target.x" e "boundingBox.x1"
-      target.x = Math.min(target.x, boundingBox.x2); // define o valor de "x" como o menor valor entre "target.x" e "boundingBox.x2"
-      target.y = Math.max(target.y, boundingBox.y1); // define o valor de "y" como o maior valor entre "target.y" e "boundingBox.y1"
-      target.y = Math.min(target.y, boundingBox.y2); // define o valor de "y" como o menor valor entre "target.y" e "boundingBox.y2"
-
       // Usa a biblioteca GSAP para animar os elementos selecionados pela variável "$pawns" até as coordenadas finais definidas em "target"
+      var $pawns = $(".pawns");
       gsap.to($pawns, {
         duration: 0.05, // duração da animação em segundos
         ease: "power1.inOut", // tipo de easing utilizado na animação
         ...target, // passa as coordenadas finais do "target" como argumentos para a animação
-        onComplete: function () {
-          // função a ser executada quando a animação é concluída
-          checkOverlap(); // chama a função "checkOverlap()"
-        },
       });
     }
     movePawn();
 
-    $(document).keydown(function (e) {
-      const moviment = 50;
-      switch (e.keyCode) {
-        case 37:
-          // Left arrow key pressed
-          target.x -= moviment;
-          break;
-        case 38:
-          // Up arrow key pressed
-          target.y -= moviment;
-          break;
-        case 39:
-          // Right arrow key pressed
-          target.x += moviment;
-          break;
-        case 40:
-          // Down arrow key pressed
-          target.y += moviment;
-          break;
-      }
-      movePawn();
-    });
-
     $(document)
-      .off("mousedown", ".prateleira")
-      .on("mousedown", ".prateleira", function (event) {
-        event.preventDefault();
-        selected = true;
+      .off("mousedown", ".centred")
+      .off("mouseup", ".centred")
+      .off("mousemove", ".centred")
+      .off("mouseup", ".prateleira")
+      .off("click", ".icon")
+      .on("mousedown", ".centred", function (e) {
+        dragging = true;
+        updatePos(e);
+        movePawn();
+      })
+      .on("mouseup", ".centred", function (e) {
+        dragging = false;
+        updatePos(e);
+        movePawn();
+      })
+      .on("mousemove", ".centred", function (e) {
+        if (!dragging) return;
+        updatePos(e);
+        movePawn();
+      })
+      .on("mouseup", ".prateleira", function (event) {
         theme.audios.click.play();
-        $(document).off("mousedown", ".centred");
-        $(document).off("pawnsOverlappingPrateleira", ".prateleira");
         theme.goToPage($(this).attr("data-screen"));
       })
-      .off("click", ".icon")
       .on("click", ".icon", function () {
         theme.audios.click.play();
         theme.goToPage($(this).attr("data-screen"));
-      })
-      .off("mousedown", ".centred")
-      .on("mousedown", ".centred", function (e) {
-        if (selected) return;
-        const event = e.originalEvent;
-        const $centred = $(".centred").first()[0];
-        const rect = $centred.getBoundingClientRect(); // Obter as dimensões da div
-        const scaleX = $centred.clientWidth / rect.width; // Calcular o fator de escala horizontal
-        const scaleY = $centred.clientHeight / rect.height; // Calcular o fator de escala vertical
-        const x = (event.clientX - rect.left) * scaleX; // Calcular a posição horizontal escalada
-        const y = (event.clientY - rect.top) * scaleY; // Calcular a posição vertical escalada
-        target = { x, y };
-        movePawn();
       });
 
     var char = parseInt(theme.vars.selectedChar) + 1;
@@ -814,7 +769,7 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages #tips .btn-tips")
       .on("click", "#soft main #soft-pages #tips .btn-tips", function () {
-        theme.prevPage();
+        history.back();
       });
   },
 
@@ -922,14 +877,14 @@ var theme = {
         // const selected = theme.vars.choices[key].length;
 
         // if (selected === answer) {
-        //   theme.prevPage();
+        //   history.back();
         // } else {
         //   theme.showAlert(
         //     "OPS! Ainda falta uma porção desse tipo de alimento."
         //   );
         // }
         theme.vars.review = false;
-        theme.prevPage();
+        history.back();
       });
 
     $(document)
@@ -1020,7 +975,7 @@ var theme = {
     $(document)
       .off("click", "#soft main #soft-pages .btn-back")
       .on("click", "#soft main #soft-pages .btn-back", function () {
-        theme.prevPage();
+        history.back();
       });
   },
   fats: function () {
