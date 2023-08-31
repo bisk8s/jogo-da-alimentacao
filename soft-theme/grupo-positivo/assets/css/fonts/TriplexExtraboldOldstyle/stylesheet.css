@@ -1,0 +1,13 @@
+/* https://transfonter.org/ */
+@font-face {
+  font-family: "TriplexExtraboldOldstyle";
+  src: url("TriplexExtraboldOldstyle.eot");
+  src: url("TriplexExtraboldOldstyle.eot?#iefix") format("embedded-opentype"),
+    url("TriplexExtraboldOldstyle.woff2") format("woff2"),
+    url("TriplexExtraboldOldstyle.woff") format("woff"),
+    url("TriplexExtraboldOldstyle.ttf") format("truetype"),
+    url("TriplexExtraboldOldstyle.svg#TriplexExtraboldOldstyle") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
